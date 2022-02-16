@@ -7,7 +7,7 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
-apt update && apt upgrade -y && apt install terminator gobuster feroxbuster joplin python3-pip neofetch lolcat apt-transport-https sublime-text seclists socat gdebi-core -y
+apt update && apt upgrade -y && apt install terminator gobuster feroxbuster joplin python3-pip neofetch lolcat apt-transport-https sublime-text seclists socat gdebi-core kali-wallpapers-2019.4 kali-wallpapers-2020.4 kali-wallpapers-2021.4 kali-wallpapers-2022 -y
 
 gem install evil-winrm
 
