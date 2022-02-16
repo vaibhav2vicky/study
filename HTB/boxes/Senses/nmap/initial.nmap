@@ -1,0 +1,29 @@
+# Nmap 7.92 scan initiated Sun Feb  6 09:20:11 2022 as: nmap -A -sC -sV -oA nmap/initial 10.10.10.60
+Nmap scan report for 10.10.10.60
+Host is up (0.18s latency).
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     lighttpd 1.4.35
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Did not follow redirect to https://10.10.10.60/
+443/tcp open  ssl/http lighttpd 1.4.35
+|_http-server-header: lighttpd/1.4.35
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=Common Name (eg, YOUR name)/organizationName=CompanyName/stateOrProvinceName=Somewhere/countryName=US
+| Not valid before: 2017-10-14T19:21:35
+|_Not valid after:  2023-04-06T19:21:35
+|_http-title: Login
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized
+Running (JUST GUESSING): Comau embedded (92%)
+Aggressive OS guesses: Comau C4G robot control unit (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT       ADDRESS
+1   214.18 ms 10.10.16.1
+2   214.24 ms 10.10.10.60
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb  6 09:20:55 2022 -- 1 IP address (1 host up) scanned in 44.52 seconds

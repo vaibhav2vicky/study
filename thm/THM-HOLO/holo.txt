@@ -1,0 +1,74 @@
+# Nmap 7.92 scan initiated Wed Feb  2 07:12:30 2022 as: nmap -sS -A -oN holo.txt 10.200.122.0/24
+Nmap scan report for holo.live (10.200.122.33)
+Host is up (0.16s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 5e:61:e8:d4:e5:ba:34:23:ed:6d:21:40:4d:ca:48:90 (RSA)
+|   256 e3:38:61:37:bf:3b:cb:9a:a0:c0:62:f5:b7:59:a3:8f (ECDSA)
+|_  256 55:78:dd:d6:4a:4d:aa:f3:68:63:a5:09:ad:14:60:a2 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+| http-robots.txt: 21 disallowed entries (15 shown)
+| /var/www/wordpress/index.php 
+| /var/www/wordpress/readme.html /var/www/wordpress/wp-activate.php 
+| /var/www/wordpress/wp-blog-header.php /var/www/wordpress/wp-config.php 
+| /var/www/wordpress/wp-content /var/www/wordpress/wp-includes 
+| /var/www/wordpress/wp-load.php /var/www/wordpress/wp-mail.php 
+| /var/www/wordpress/wp-signup.php /var/www/wordpress/xmlrpc.php 
+| /var/www/wordpress/license.txt /var/www/wordpress/upgrade 
+|_/var/www/wordpress/wp-admin /var/www/wordpress/wp-comments-post.php
+|_http-title: Did not follow redirect to http://www.holo.live/
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=2/2%OT=22%CT=1%CU=43950%PV=Y%DS=2%DC=T%G=Y%TM=61FA755F
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=103%TI=Z%CI=Z%II=I%TS=A)OPS(
+OS:O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11
+OS:NW7%O6=M506ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(
+OS:R=Y%DF=Y%T=40%W=F507%O=M506NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T
+OS:=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=
+OS:S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   164.00 ms 10.50.119.1
+2   164.70 ms holo.live (10.200.122.33)
+
+Nmap scan report for 10.200.122.250
+Host is up (0.16s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 45:4d:84:15:8b:08:82:ba:b8:8a:7a:ad:2e:85:5c:d5 (RSA)
+|   256 15:a7:43:fb:11:54:5e:be:da:ca:76:b2:a3:79:9f:9e (ECDSA)
+|_  256 e3:8a:89:ce:1b:bd:3c:94:12:a6:f6:dd:70:6b:10:1b (ED25519)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=2/2%OT=22%CT=1%CU=43607%PV=Y%DS=1%DC=T%G=Y%TM=61FA755F
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=109%TI=Z%CI=Z%II=I%TS=A)OPS(
+OS:O1=M506ST11NW7%O2=M506ST11NW7%O3=M506NNT11NW7%O4=M506ST11NW7%O5=M506ST11
+OS:NW7%O6=M506ST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(
+OS:R=Y%DF=Y%T=40%W=FAF0%O=M506NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T
+OS:=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=
+OS:S)
+
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 110/tcp)
+HOP RTT       ADDRESS
+1   164.08 ms 10.200.122.250
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb  2 07:13:19 2022 -- 256 IP addresses (2 hosts up) scanned in 49.61 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Mon Feb  7 04:01:52 2022 as: nmap -A -sC -sV -p- -oA nmap/initial-full 10.10.10.58
+Host: 10.10.10.58 ()	Status: Up
+Host: 10.10.10.58 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)/, 3000/open/tcp//hadoop-datanode//Apache Hadoop/	Ignored State: filtered (65533)	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Mon Feb  7 04:05:23 2022 -- 1 IP address (1 host up) scanned in 213.07 seconds
