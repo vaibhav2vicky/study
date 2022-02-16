@@ -7,7 +7,7 @@ wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add
 
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
-apt update && apt upgrade -y && apt install terminator gobuster feroxbuster joplin python3-pip neofetch lolcat apt-transport-https sublime-text seclists socat gdebi-core kali-wallpapers-2019.4 kali-wallpapers-2020.4 kali-wallpapers-2021.4 kali-wallpapers-2022 -y
+apt update && apt upgrade -y && apt install terminator gobuster feroxbuster joplin python3-pip neofetch lolcat apt-transport-https sublime-text seclists socat kali-wallpapers-2019.4 kali-wallpapers-2020.4 kali-wallpapers-2021.4 kali-wallpapers-2022 -y
 
 gem install evil-winrm
 
@@ -23,7 +23,7 @@ git clone https://github.com/carlospolop/PEASS-ng.git
 
 git clone https://github.com/SecureAuthCorp/impacket.git
 
-sudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb -y
+sudo dpkg -i GitHubDesktop-linux-2.9.3-linux3.deb
 
 cd impacket 
 
