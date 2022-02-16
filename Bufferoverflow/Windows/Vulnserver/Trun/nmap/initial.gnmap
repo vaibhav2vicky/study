@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Tue Feb 15 12:32:17 2022 as: nmap -sC -sV -A -Pn -oA nmap/initial 192.168.74.140
+Host: 192.168.74.140 ()	Status: Up
+Host: 192.168.74.140 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds?///, 9999/open/tcp//vulnserver//Vulnserver/	Ignored State: filtered (996)
+# Nmap done at Tue Feb 15 12:33:54 2022 -- 1 IP address (1 host up) scanned in 97.13 seconds
