@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sat Feb 19 06:06:19 2022 as: nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.101 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.101" start="1645268779" startstr="Sat Feb 19 06:06:19 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1645268780" endtime="1645269393"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.137.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65526">
+<extrareasons reason="no-response" count="65526" proto="tcp" ports="1-20,22-79,81-134,136-444,446-1432,1434-3305,3307-3388,3390-8079,8081-8442,8444-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" version="0.9.41 beta" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server:0.9.41_beta</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output=" - Research Repo&#xa;Requested resource was /ResearchRepo/Login?ReturnUrl=%2f"><elem key="title">&#xd;&#xa;&#x9; - Research Repo&#xd;&#xa;</elem>
+<elem key="redirect_url">/ResearchRepo/Login?ReturnUrl=%2f</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-sql-s" product="Microsoft SQL Server 2019" version="15.00.2000.00; RTM" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2019</cpe></service><script id="ssl-date" output="2022-02-19T11:16:30+00:00; 0s from scanner time."><elem key="date">2022-02-19T11:16:30+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Not valid before: 2021-12-15T15:50:03&#xa;Not valid after:  2051-12-15T15:50:03"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">D6A302E6B8FB89059E74C4039661AEFFCF5E2BA379336CB7554D7C07ECD7422A8BBECB28DC0034DF840632C41CF774F5258BF357CC3038F5966A2DFC497F80361EEA7B5D5976B32480BAF954394AAEDFBA682E55C1BDB42B09BF6DA2A2F48985FCA4347B239C1D76F526F85EFC202D7295504EAD06A4DCC027D4FA11A71DE2F660652EF9DB90CC3CD0060A0817E7CB68B474571A1E0685B5894BE3C7198479DCB3476E605DD9650BE12F815718A25D8BCC314F115DA3B74C381A07A6D3214FD0AB2C062F87DCBD9EEEE762560E0426D85BE6B1BCFFC31FB3B57EEA80EA783A1891C3036D3CCF7E83CCE9EF3C7306D3387C4A1BF5D1D99F350777CB69AD54C521</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-12-15T15:50:03</elem>
+<elem key="notAfter">2051-12-15T15:50:03</elem>
+</table>
+<elem key="md5">ed207069017cf642cd18137fcc31c8b5</elem>
+<elem key="sha1">46604128cb2f28ac08d04e4652deb6bc01774b1e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQHJIPus4aLLtGLO6rT1HzBTANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjExMjE1MTU1MDAzWhgPMjA1MTEyMTUxNTUwMDNaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANajAua4&#xa;+4kFnnTEA5Zhrv/PXiujeTNst1VNfAfs10Iqi77LKNwANN+EBjLEHPd09SWL81fM&#xa;MDj1lmot/El/gDYe6ntdWXazJIC6+VQ5Sq7fumguVcG9tCsJv22iovSJhfykNHsj&#xa;nB129Sb4XvwgLXKVUE6tBqTcwCfU+hGnHeL2YGUu+duQzDzQBgoIF+fLaLR0Vxoe&#xa;BoW1iUvjxxmEedyzR25gXdllC+EvgVcYol2LzDFPEV2jt0w4Ggem0yFP0KssBi+H&#xa;3L2e7udiVg4EJthb5rG8/8Mfs7V+6oDqeDoYkcMDbTzPfoPM6e88cwbTOHxKG/XR&#xa;2Z81B3fLaa1UxSECAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAs967jpneNLdsu/Zv&#xa;KB03rf3TjHZpODUA1AC+YCmN1lOWOZp/fE/jxR0Ml0OpEcdLG6+nGCQwRK51qdQb&#xa;hsHLsle/THlPyJOLRX9KvZUbpgVzVQZiUN89w3D6yLlMrf7znsfqeWluF1iYx6lJ&#xa;M2K4sz09USsz0eCjJV1UsZXNGoCbhHxL8F7Kf2mQ9GJwdqpRRsIm/HHraq3XsC4g&#xa;CHJOJrn6aZb8BVwZYUL0C9l4d0d564jhqhxZMBlUxWX/KWjROwzE+uUTakFx/A8B&#xa;w6zIPZDaQw13ohoFV12P44Sz6SqQbPLLJ78Roz9nodjcjzJMNx+wakV2z/bgPrZK&#xa;zC/eCQ==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: EXAM&#xa;  NetBIOS_Domain_Name: EXAM&#xa;  NetBIOS_Computer_Name: WEB01&#xa;  DNS_Domain_Name: exam.com&#xa;  DNS_Computer_Name: web01.exam.com&#xa;  DNS_Tree_Name: exam.com&#xa;  Product_Version: 10.0.17763"><elem key="Target_Name">EXAM</elem>
+<elem key="NetBIOS_Domain_Name">EXAM</elem>
+<elem key="NetBIOS_Computer_Name">WEB01</elem>
+<elem key="DNS_Domain_Name">exam.com</elem>
+<elem key="DNS_Computer_Name">web01.exam.com</elem>
+<elem key="DNS_Tree_Name">exam.com</elem>
+<elem key="Product_Version">10.0.17763</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" method="table" conf="3"/><script id="ssl-date" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=web01.exam.com&#xa;Not valid before: 2022-02-18T09:19:12&#xa;Not valid after:  2022-08-20T09:19:12"><table key="subject">
+<elem key="commonName">web01.exam.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">web01.exam.com</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">A8C1146E74D4CE8B898C9125D120DBC70C290C13CED0EBECAA2415739E3C63C3B3CC7026E3468A401B43D676D97452D575EA0481D7B66C055B592C92E402A2EAD4CC158DE988BF5CCB0C427FE70DFA41159D6D727F52169DDD940C793E0300C0C3AECCCFD3DFF49F8BAD8DAB94A7AB4EDB109A3D8A041A62618A6C3C4B10D0E6FAF8EA76790AA900082530289A871DED81F5594E863734DC5A3910A81005856D72E0250F8A61BA5D0E07C0036A4F90867F05CD2F1144D255A4480001385325924E38A233AAD994D671B19C7F983BC553A5DFC34CF25357D66BA9880038F054B5A8A2FEB7AAF366E78C06E1F5019E4A55C801CF9045AC742D3702EDD22166C4A5</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-02-18T09:19:12</elem>
+<elem key="notAfter">2022-08-20T09:19:12</elem>
+</table>
+<elem key="md5">2039119e36228546fcd32b94fb460bed</elem>
+<elem key="sha1">21711c1ea9f450ac233fd725f8a133711c0fa11e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC4DCCAcigAwIBAgIQYsKYJRImcbZCC4VuOglkOzANBgkqhkiG9w0BAQsFADAZ&#xa;MRcwFQYDVQQDEw53ZWIwMS5leGFtLmNvbTAeFw0yMjAyMTgwOTE5MTJaFw0yMjA4&#xa;MjAwOTE5MTJaMBkxFzAVBgNVBAMTDndlYjAxLmV4YW0uY29tMIIBIjANBgkqhkiG&#xa;9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqMEUbnTUzouJjJEl0SDbxwwpDBPO0OvsqiQV&#xa;c548Y8OzzHAm40aKQBtD1nbZdFLVdeoEgde2bAVbWSyS5AKi6tTMFY3piL9cywxC&#xa;f+cN+kEVnW1yf1IWnd2UDHk+AwDAw67Mz9Pf9J+LrY2rlKerTtsQmj2KBBpiYYps&#xa;PEsQ0Ob6+Op2eQqpAAglMCiahx3tgfVZToY3NNxaORCoEAWFbXLgJQ+KYbpdDgfA&#xa;A2pPkIZ/Bc0vEUTSVaRIAAE4UyWSTjiiM6rZlNZxsZx/mDvFU6Xfw0zyU1fWa6mI&#xa;ADjwVLWoov63qvNm54wG4fUBnkpVyAHPkEWsdC03Au3SIWbEpQIDAQABoyQwIjAT&#xa;BgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQAD&#xa;ggEBAJP0Xt2J3RgOIhbqhl8if4pD1/YF+gCUhuVI4rdlPODBzxktOyTWc6CssrAm&#xa;KnELjKqikOgFshcQwOvgrKiMfv+ReNcP3lQ2NbZcAwTBtWxS1GWcOrVnTSRiJU8H&#xa;Ayi6lbMWbFX+fziaNWvm2k1nxUSI4e9Y6NC/SbKITNTSB7gmvOJems3S12dWFLgK&#xa;zHTMGcc//k8GZO056+n88GuvIX62TZgL7fu3ZlspwlJKM3PHvKo7yEMpVDwIiRYp&#xa;uBGH+KQqXbicDzgKa/GzOs4hQx6cu3OJrWXvpPf9Qm2uOBDU8ui3yHtHOH+KZj2e&#xa;ACQ0Jk05k9JgDk7TFcT/Rpr+1W0=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-02-19T11:16:21+00:00; 0s from scanner time."><elem key="date">2022-02-19T11:16:21+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: EXAM&#xa;  NetBIOS_Domain_Name: EXAM&#xa;  NetBIOS_Computer_Name: WEB01&#xa;  DNS_Domain_Name: exam.com&#xa;  DNS_Computer_Name: web01.exam.com&#xa;  DNS_Tree_Name: exam.com&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-02-19T11:15:39+00:00"><elem key="Target_Name">EXAM</elem>
+<elem key="NetBIOS_Domain_Name">EXAM</elem>
+<elem key="NetBIOS_Computer_Name">WEB01</elem>
+<elem key="DNS_Domain_Name">exam.com</elem>
+<elem key="DNS_Computer_Name">web01.exam.com</elem>
+<elem key="DNS_Tree_Name">exam.com</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-02-19T11:15:39+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="(Win64) OpenSSL/1.1.1h PHP/7.2.34" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-server-header" output="Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34"><elem>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34</elem>
+</script><script id="http-title" output="Welcome to XAMPP&#xa;Requested resource was http://192.168.137.101:8080/dashboard/"><elem key="title">Welcome to XAMPP</elem>
+<elem key="redirect_url">http://192.168.137.101:8080/dashboard/</elem>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.46" extrainfo="OpenSSL/1.1.1h PHP/7.2.34" hostname="localhost" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.46</cpe></service><script id="http-server-header" output="Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34"><elem>Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/7.2.34</elem>
+</script><script id="http-title" output="Welcome to XAMPP&#xa;Requested resource was http://192.168.137.101:8443/dashboard/"><elem key="title">Welcome to XAMPP</elem>
+<elem key="redirect_url">http://192.168.137.101:8443/dashboard/</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="8FA742FB,8AFE7BAD,455A1598,DE844467,FE0841F,E211AC5E"/>
+<ipidsequence class="Incremental" values="5667,5668,5669,566A,566B,566C"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="ms-sql-info" output="&#xa;  192.168.137.101:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server 2019 RTM&#xa;      number: 15.00.2000.00&#xa;      Product: Microsoft SQL Server 2019&#xa;      Service pack level: RTM&#xa;      Post-SP patches applied: false&#xa;    TCP port: 1433"><table key="192.168.137.101:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2019 RTM</elem>
+<elem key="number">15.00.2000.00</elem>
+<elem key="Product">Microsoft SQL Server 2019</elem>
+<elem key="Service pack level">RTM</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-02-19T11:15:40&#xa;  start_date: N/A"><elem key="date">2022-02-19T11:15:40</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><trace port="445" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="279.45"/>
+<hop ttl="2" ipaddr="192.168.137.101" rtt="279.52"/>
+</trace>
+<times srtt="274521" rttvar="10021" to="314605"/>
+</host>
+<runstats><finished time="1645269393" timestr="Sat Feb 19 06:16:33 2022" summary="Nmap done at Sat Feb 19 06:16:33 2022; 1 IP address (1 host up) scanned in 614.26 seconds" elapsed="614.26" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

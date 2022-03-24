@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Feb 18 16:02:00 2022 as: nmap -sC -sV -A -p- -Pn -oA nmap/initial 192.168.137.111
+Host: 192.168.137.111 ()	Status: Up
+Host: 192.168.137.111 ()	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 80/open/tcp//http//Microsoft IIS httpd 10.0/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds?///, 1978/open/tcp//unisql?///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/, 7680/open/tcp//pando-pub?///	Ignored State: filtered (65527)	Seq Index: 256	IP ID Seq: Incremental
+# Nmap done at Fri Feb 18 16:13:32 2022 -- 1 IP address (1 host up) scanned in 692.66 seconds

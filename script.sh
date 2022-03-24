@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# uncomment while usng in kali 
+# uncomment while using in kali for faster downloads
 # echo "deb http://kali.cs.nctu.edu.tw/kali kali-rolling main non-free contrib" | sudo tee /etc/apt/sources.list
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -

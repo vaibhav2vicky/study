@@ -1,0 +1,5 @@
+rpctools.egg-info/PKG-INFO
+rpctools.egg-info/SOURCES.txt
+rpctools.egg-info/dependency_links.txt
+rpctools.egg-info/top_level.txt
+rpctools.egg-info/zip-safe

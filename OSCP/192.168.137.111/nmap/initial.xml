@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Feb 18 16:02:00 2022 as: nmap -sC -sV -A -p- -Pn -oA nmap/initial 192.168.137.111 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -A -p- -Pn -oA nmap/initial 192.168.137.111" start="1645218120" startstr="Fri Feb 18 16:02:00 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1645218120" endtime="1645218812"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.137.111" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65527">
+<extrareasons reason="no-response" count="65527" proto="tcp" ports="1-20,22-79,81-134,136-138,140-444,446-1977,1979-3388,3390-7679,7681-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Samuel&apos;s Personal Site"><elem key="title">Samuel&apos;s Personal Site</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1978"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unisql" servicefp="SF-Port1978-TCP:V=7.92%I=7%D=2/18%Time=62100B2C%P=x86_64-pc-linux-gnu%r(NULL,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(GenericLines,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(GetRequest,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(HTTPOptions,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(RTSPRequest,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(RPCCheck,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(DNSVersionBindReqTCP,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(DNSStatusRequestTCP,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(Help,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(SSLSessionReq,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(TerminalServerCookie,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(TLSSessionReq,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(Kerberos,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(SMBProgNeg,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(X11Probe,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(FourOhFourRequest,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(LPDString,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(LDAPSearchReq,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(LDAPBindReq,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(SIPOptions,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(LANDesk-RC,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(TerminalServer,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(NCP,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(NotesRPC,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(JavaRMI,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(WMSRequest,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(oracle-tns,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(ms-sql-s,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(afp,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;)%r(giop,1E,&quot;system\x20windows\x206\.2\nluminateOK\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: &#xa;    system windows 6.2&#xa;    luminateOK"><elem key="DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns">&#xa;    system windows 6.2&#xa;    luminateOK</elem>
+</script></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=oscp&#xa;Not valid before: 2021-11-21T08:58:45&#xa;Not valid after:  2022-05-23T08:58:45"><table key="subject">
+<elem key="commonName">oscp</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">oscp</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">9CCC7BDB8537ED490DDC4EA77DC6915678671C748901F98D4F2CF02BC895AE07820EBD309EBBFB81D560CCAF97F1B4388AA014FF3C97B598F013F0AB9FF6EFA27835426182860F5DD65160CBCF5F7227E8F8163E77857CA277FE001E52834D12F52F8F6098FF27665FB5B64193FBFF60C6224C284F4515D0697DE4CAEA54BB8E93FF73C4A36AF0F7F295674D3EB993D2E79806BC80300B2C5AB015FA46C24A81D8D2E5327445FB6081A12AA325CA77C210CADDBE40910F27E633AF5B2ED1DF98224A85CBC5C73392BBACA5125C5CA8CD553B7F0B68F2556F369018E0625788F558E5EA1CEC6DAC6345EF90AFA45C0B1C1DB162AFA4DBDE668CEB7C4C2836309D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-11-21T08:58:45</elem>
+<elem key="notAfter">2022-05-23T08:58:45</elem>
+</table>
+<elem key="md5">e3d3d94770a552594a2f06ea181781ba</elem>
+<elem key="sha1">259d841bf7678895f7e3c958a2e6517ba7895cc6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzDCCAbSgAwIBAgIQEYFDNVrnDaZDzmeWjcIrmzANBgkqhkiG9w0BAQsFADAP&#xa;MQ0wCwYDVQQDEwRvc2NwMB4XDTIxMTEyMTA4NTg0NVoXDTIyMDUyMzA4NTg0NVow&#xa;DzENMAsGA1UEAxMEb3NjcDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB&#xa;AJzMe9uFN+1JDdxOp33GkVZ4Zxx0iQH5jU8s8CvIla4Hgg69MJ67+4HVYMyvl/G0&#xa;OIqgFP88l7WY8BPwq5/276J4NUJhgoYPXdZRYMvPX3In6PgWPneFfKJ3/gAeUoNN&#xa;EvUvj2CY/ydmX7W2QZP7/2DGIkwoT0UV0Gl95MrqVLuOk/9zxKNq8PfylWdNPrmT&#xa;0ueYBryAMAssWrAV+kbCSoHY0uUydEX7YIGhKqMlynfCEMrdvkCRDyfmM69bLtHf&#xa;mCJKhcvFxzOSu6ylElxcqM1VO38LaPJVbzaQGOBiV4j1WOXqHOxtrGNF75CvpFwL&#xa;HB2xYq+k295mjOt8TCg2MJ0CAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw&#xa;CwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQAos+Q6sqCuBdJs6FRpV+Ln&#xa;3SpityDAZzk5uK8cb3xH4IFW3gPQJlePz+rDhEKqyrTpqfAkL/M7rA9nbzop4tdG&#xa;gd6jkDJgRhEJ8dh3gegIyjDCOOeS71f7khXDWUew0Q8UxJcDMGmhmqS4FAoW7y4q&#xa;H0jDTOlNJmzIaB8LwZ23K+ndaoG4QWCfNsKMj/VxTqWFj7MV9/KIVxGuBxE/lTVc&#xa;CFw5qHR9Wa40fEio1uCMqVMOFpwwp1GbKALhvBGRfWQiV1XqbU3guJAMPxoQdiuT&#xa;+hSr8uMc1jug9IiYmksFlkHpce/3nrsBV6CDS1Ji/CGtQiQ1vapMfbvWJRsKneVO&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-02-18T21:13:30+00:00; 0s from scanner time."><elem key="date">2022-02-18T21:13:30+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: OSCP&#xa;  NetBIOS_Domain_Name: OSCP&#xa;  NetBIOS_Computer_Name: OSCP&#xa;  DNS_Domain_Name: oscp&#xa;  DNS_Computer_Name: oscp&#xa;  Product_Version: 10.0.18362&#xa;  System_Time: 2022-02-18T21:12:51+00:00"><elem key="Target_Name">OSCP</elem>
+<elem key="NetBIOS_Domain_Name">OSCP</elem>
+<elem key="NetBIOS_Computer_Name">OSCP</elem>
+<elem key="DNS_Domain_Name">oscp</elem>
+<elem key="DNS_Computer_Name">oscp</elem>
+<elem key="Product_Version">10.0.18362</elem>
+<elem key="System_Time">2022-02-18T21:12:51+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pando-pub" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2" accuracy="85" line="75300">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="85" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="85"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="256" difficulty="Good luck!" values="D4EB3941,C424FF92,B5B0E75D,EA228768,2BF4B393,38FDC105"/>
+<ipidsequence class="Incremental" values="B69E,B69F,B6A0,B6A1,B6A2,B6A3"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="smb2-time" output="&#xa;  date: 2022-02-18T21:12:51&#xa;  start_date: N/A"><elem key="date">2022-02-18T21:12:51</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script></hostscript><trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="294.91"/>
+<hop ttl="2" ipaddr="192.168.137.111" rtt="295.00"/>
+</trace>
+<times srtt="291660" rttvar="3862" to="307108"/>
+</host>
+<runstats><finished time="1645218812" timestr="Fri Feb 18 16:13:32 2022" summary="Nmap done at Fri Feb 18 16:13:32 2022; 1 IP address (1 host up) scanned in 692.66 seconds" elapsed="692.66" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
