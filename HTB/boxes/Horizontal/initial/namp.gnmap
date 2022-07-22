@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Jul 16 13:33:46 2022 as: nmap -sC -sV -A -p- -oA initial/namp 10.10.11.105
+Host: 10.10.11.105 ()	Status: Up
+Host: 10.10.11.105 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//nginx 1.14.0 (Ubuntu)/	Ignored State: closed (65533)	Seq Index: 261	IP ID Seq: All zeros
+# Nmap done at Sat Jul 16 13:34:35 2022 -- 1 IP address (1 host up) scanned in 49.57 seconds
