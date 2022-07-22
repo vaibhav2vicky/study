@@ -1,0 +1,26 @@
+# Nmap 7.92 scan initiated Thu Jul 21 19:18:34 2022 as: nmap -A -sC -sV -p- -Pn -T4 -oA initial/nmap 10.10.10.81
+Nmap scan report for 10.10.10.81
+Host is up (0.10s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: Did not follow redirect to http://forum.bart.htb/
+|_http-server-header: Microsoft-IIS/10.0
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 6.X (86%)
+OS CPE: cpe:/o:freebsd:freebsd:6.2
+Aggressive OS guesses: FreeBSD 6.2-RELEASE (86%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   90.40 ms  10.10.16.1
+2   103.77 ms 10.10.10.81
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jul 21 19:20:48 2022 -- 1 IP address (1 host up) scanned in 133.85 seconds

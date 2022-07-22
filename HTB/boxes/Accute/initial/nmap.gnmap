@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Jul 16 21:59:17 2022 as: nmap -A -sC -sV -Pn -oA initial/nmap 10.10.11.145
+Host: 10.10.11.145 ()	Status: Up
+Host: 10.10.11.145 ()	Ports: 443/open/tcp//ssl|http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/	Ignored State: filtered (999)	Seq Index: 262	IP ID Seq: Incremental
+# Nmap done at Sat Jul 16 22:00:18 2022 -- 1 IP address (1 host up) scanned in 61.66 seconds

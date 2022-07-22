@@ -1,0 +1,12 @@
+127.0.0.1	localhost
+127.0.1.1	kali
+10.10.11.156	late.htb	images.late.htb
+
+10.10.11.145	acute.local	atsserver.acute.local	
+
+10.10.11.167	carpediem.htb	portal.carpediem.htb
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters

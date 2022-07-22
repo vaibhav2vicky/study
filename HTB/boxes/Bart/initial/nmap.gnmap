@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Thu Jul 21 19:18:34 2022 as: nmap -A -sC -sV -p- -Pn -T4 -oA initial/nmap 10.10.10.81
+Host: 10.10.10.81 ()	Status: Up
+Host: 10.10.10.81 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 10.0/	Ignored State: filtered (65534)	Seq Index: 261	IP ID Seq: Incrementing by 2
+# Nmap done at Thu Jul 21 19:20:48 2022 -- 1 IP address (1 host up) scanned in 133.85 seconds

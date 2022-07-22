@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Jul 21 09:41:04 2022 as: nmap -A -sC -sV -p- -Pn -T4 -oA initial/nmap 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -A -sC -sV -p- -Pn -T4 -oA initial/nmap 10.10.10.152" start="1658376664" startstr="Thu Jul 21 09:41:04 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1658376665" endtime="1658377455"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65509">
+<extrareasons reason="reset" count="65509" proto="tcp" ports="1-20,22-79,81-134,136-138,140-444,446-5984,5986-6263,6265-15572,15574-22879,22881-40803,40805-44680,44682-47000,47002-48844,48846-49663,49670-51408,51410-52747,52749-60722,60724-61014,61016-62537,62539-64722,64724-65083,65085-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;02-03-19  12:18AM                 1024 .rnd&#xa;02-25-19  10:15PM       &lt;DIR&gt;          inetpub&#xa;07-16-16  09:18AM       &lt;DIR&gt;          PerfLogs&#xa;02-25-19  10:56PM       &lt;DIR&gt;          Program Files&#xa;02-03-19  12:28AM       &lt;DIR&gt;          Program Files (x86)&#xa;02-03-19  08:08AM       &lt;DIR&gt;          Users&#xa;02-25-19  11:49PM       &lt;DIR&gt;          Windows"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Indy httpd" version="18.1.37.13946" extrainfo="Paessler PRTG bandwidth monitor" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:indy:httpd:18.1.37.13946</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="PRTG/18.1.37.13946"><elem>PRTG/18.1.37.13946</elem>
+</script><script id="http-title" output="Welcome | PRTG Network Monitor (NETMON)&#xa;Requested resource was /index.htm"><elem key="title">Welcome | PRTG Network Monitor (NETMON)</elem>
+<elem key="redirect_url">/index.htm</elem>
+</script><script id="http-trane-info" output="Problem with XML parsing of /evox/about"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="6264"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="15573"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="22880"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="40804"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="44681"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="48845"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="51409"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="52748"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="60723"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="61015"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="62538"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="64723"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+<port protocol="tcp" portid="65084"><state state="filtered" reason="host-unreach" reason_ttl="64" reason_ip="10.10.16.1"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="30452"/>
+<osmatch name="Microsoft Windows Server 2016 build 10586 - 14393" accuracy="96" line="76253">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="96"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2016" accuracy="95" line="76216">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10" accuracy="93" line="69325">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1507" accuracy="93" line="69437">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10:1507</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1507 - 1607" accuracy="93" line="69497">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1511" accuracy="93" line="69552">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="93"><cpe>cpe:/o:microsoft:windows_10:1511</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="93" line="75488">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="93" line="75749">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2 Update 1" accuracy="93" line="76091">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1" accuracy="93" line="77884">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="93"><cpe>cpe:/o:microsoft:windows_7:::ultimate</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_2012</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="93"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.92%E=4%D=7/21%OT=21%CT=1%CU=30452%PV=Y%DS=2%DC=T%G=Y%TM=62D8D4E&#xa;OS:F%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=&#xa;OS:A)OPS(O1=M537NW8ST11%O2=M537NW8ST11%O3=M537NW8NNT11%O4=M537NW8ST11%O5=M5&#xa;OS:37NW8ST11%O6=M537ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=200&#xa;OS:0)ECN(R=Y%DF=Y%T=80%W=2000%O=M537NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S&#xa;OS:+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%&#xa;OS:T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=&#xa;OS:0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%&#xa;OS:S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(&#xa;OS:R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=&#xa;OS:N%T=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="804" lastboot="Thu Jul 21 09:40:51 2022"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="FA9493E6,5A4E120B,6215F858,CCAF9603,73697B0D,D8B8A789"/>
+<ipidsequence class="Incremental" values="50FC,50FD,50FE,50FF,5100,5101"/>
+<tcptssequence class="1000HZ" values="C18C1,C1954,C199C,C1A0D,C1A55,C1AC4"/>
+<hostscript><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2022-07-21T04:24:07&#xa;  start_date: 2022-07-21T04:11:01"><elem key="date">2022-07-21T04:24:07</elem>
+<elem key="start_date">2022-07-21T04:11:01</elem>
+</script></hostscript><trace port="36935" proto="tcp">
+<hop ttl="1" ipaddr="10.10.16.1" rtt="195.19"/>
+<hop ttl="2" ipaddr="10.10.10.152" rtt="82.83"/>
+</trace>
+<times srtt="159292" rttvar="52318" to="368564"/>
+</host>
+<runstats><finished time="1658377455" timestr="Thu Jul 21 09:54:15 2022" summary="Nmap done at Thu Jul 21 09:54:15 2022; 1 IP address (1 host up) scanned in 790.58 seconds" elapsed="790.58" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
