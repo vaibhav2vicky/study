@@ -5,7 +5,7 @@ from pwn import *
 s = ""
 
 # open up remote connection
-r = remote('mercury.picoctf.net', 53437)
+r = remote('mercury.picoctf.net', 20195)
 
 # get to vulnerability
 r.recvuntil("View my")
