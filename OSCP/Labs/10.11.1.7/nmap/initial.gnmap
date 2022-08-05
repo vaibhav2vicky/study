@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Thu Aug  4 12:02:51 2022 as: nmap -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.7
+Host: 10.11.1.7 ()	Status: Up
+Host: 10.11.1.7 ()	Ports: 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (65534)	Seq Index: 250	IP ID Seq: Incremental
+# Nmap done at Thu Aug  4 12:19:32 2022 -- 1 IP address (1 host up) scanned in 1000.36 seconds

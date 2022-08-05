@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug  4 12:02:51 2022 as: nmap -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.7 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.7" start="1659628971" startstr="Thu Aug  4 12:02:51 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1659628972" endtime="1659629971"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.7" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65534" proto="tcp" ports="1-3388,3390-65535"/>
+</extraports>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: PEDRO&#xa;  NetBIOS_Domain_Name: PEDRO&#xa;  NetBIOS_Computer_Name: PEDRO&#xa;  DNS_Domain_Name: pedro&#xa;  DNS_Computer_Name: pedro&#xa;  Product_Version: 10.0.17134&#xa;  System_Time: 2022-08-04T16:19:30+00:00"><elem key="Target_Name">PEDRO</elem>
+<elem key="NetBIOS_Domain_Name">PEDRO</elem>
+<elem key="NetBIOS_Computer_Name">PEDRO</elem>
+<elem key="DNS_Domain_Name">pedro</elem>
+<elem key="DNS_Computer_Name">pedro</elem>
+<elem key="Product_Version">10.0.17134</elem>
+<elem key="System_Time">2022-08-04T16:19:30+00:00</elem>
+</script><script id="ssl-date" output="2022-08-04T16:19:31+00:00; 0s from scanner time."><elem key="date">2022-08-04T16:19:31+00:00</elem>
+<elem key="delta">0.0</elem>
+</script><script id="ssl-cert" output="Subject: commonName=pedro&#xa;Not valid before: 2022-07-18T16:07:06&#xa;Not valid after:  2023-01-17T16:07:06"><table key="subject">
+<elem key="commonName">pedro</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">pedro</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B744D005F04906AAB67B0460C948D18EE44F951CC1C841A00938C72861823A4E0AA84EE971B8CFD3B16689B317DE267510C055FAA2A61C7D8085C004CCCAF2D6C91C224CAFED3D1EEF5181A6941C604F26D6A646416D94DD43E531DC02F18107D9052E58B4FD022A7CF0957D0E6A3C700CFD0EFCC4E00E92DAE30EB2D6C726125E22C662231E758EDF3D40966C953D7042B40862D318B03C8CF0B5D059F2D4D6D22EADEF536055FCB13501D466B798D4D05499F15EB6046BE881F9DF61DA7B40D37830F4DF4052B83FCE25DF7C771D8975B8FE29A6F2E58978D356548B2C3F00DFB6490E2EE12333E5BC88DE67564C2A2A4A1FD160FFB98808A3F0458D8C1F8D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-07-18T16:07:06</elem>
+<elem key="notAfter">2023-01-17T16:07:06</elem>
+</table>
+<elem key="md5">7f57df538f534278e0f2d13e4183e5a2</elem>
+<elem key="sha1">fa9aff82b53e41203547519952ffeb32fcafbbcc</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQLp4lCXEiNa9BVdn2DI01ejANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVwZWRybzAeFw0yMjA3MTgxNjA3MDZaFw0yMzAxMTcxNjA3MDZa&#xa;MBAxDjAMBgNVBAMTBXBlZHJvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAt0TQBfBJBqq2ewRgyUjRjuRPlRzByEGgCTjHKGGCOk4KqE7pcbjP07FmibMX&#xa;3iZ1EMBV+qKmHH2AhcAEzMry1skcIkyv7T0e71GBppQcYE8m1qZGQW2U3UPlMdwC&#xa;8YEH2QUuWLT9Aip88JV9Dmo8cAz9DvzE4A6S2uMOstbHJhJeIsZiIx51jt89QJZs&#xa;lT1wQrQIYtMYsDyM8LXQWfLU1tIure9TYFX8sTUB1Ga3mNTQVJnxXrYEa+iB+d9h&#xa;2ntA03gw9N9AUrg/ziXffHcdiXW4/imm8uWJeNNWVIssPwDftkkOLuEjM+W8iN5n&#xa;VkwqKkof0WD/uYgIo/BFjYwfjQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAJ8LqBLDH0mLcJZDOwBS&#xa;2mWP8a39tMgddC1tblzWHwkkTYl/Xn+aM+kys+Hp+KyZtcmzBVbX5vNfifN8s2Rw&#xa;Wbh19U/QxcHP7snQ+QwAhUJLJZNTFvNIiP2agQOUFbX0Vefb+oYCNFqJQUh27fHA&#xa;P1k2abXebuIPFByAwrNardYPqoFlVkQUtSP4pd9Hr56m/V7zoM60kkuZ+sPQd7fe&#xa;Cz2RDD3iJoZzeKTq7CP7tAOhzY9IoS2c7k7nwK3HK73uwqdCbO0fRpRdWtWtrIFj&#xa;BX7fODlF6ZdvnAPgB7haV0Rfm8VKKh7zQ7BC4agk4w3edD25wf/gggvRFc/kVDxK&#xa;vAk=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="3389"/>
+<osmatch name="AVtech Room Alert 26W environmental monitor" accuracy="87" line="9134">
+<osclass type="specialized" vendor="AVtech" osfamily="embedded" accuracy="87"/>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="250" difficulty="Good luck!" values="1EA682A2,69410EF7,B445E619,F771E668,8A5E65A9,E0AF0768"/>
+<ipidsequence class="Incremental" values="678B,678C,678D,678E,678F,6790"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="155.63"/>
+<hop ttl="2" ipaddr="10.11.1.7" rtt="155.61"/>
+</trace>
+<times srtt="173934" rttvar="36331" to="319258"/>
+</host>
+<runstats><finished time="1659629972" timestr="Thu Aug  4 12:19:32 2022" summary="Nmap done at Thu Aug  4 12:19:32 2022; 1 IP address (1 host up) scanned in 1000.36 seconds" elapsed="1000.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,109 @@
+# Nmap 7.92 scan initiated Thu Aug  4 12:25:39 2022 as: nmap -sC -sV -A -oA nmap/initial -p- 10.11.1.8
+Nmap scan report for 10.11.1.8
+Host is up (0.16s latency).
+Not shown: 65038 filtered tcp ports (no-response), 486 filtered tcp ports (host-prohibited)
+PORT     STATE  SERVICE     VERSION
+21/tcp   open   ftp         vsftpd 2.0.1
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: ERROR
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.119.223
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 2.0.1 - secure, fast, stable
+|_End of status
+22/tcp   open   ssh         OpenSSH 3.9p1 (protocol 1.99)
+|_sshv1: Server supports SSHv1
+| ssh-hostkey: 
+|   1024 89:94:af:2e:5d:c1:da:84:25:11:2c:12:45:c6:70:ac (RSA1)
+|   1024 c1:c5:d1:83:0f:4d:d8:9e:8f:82:4c:be:53:4b:6e:14 (DSA)
+|_  1024 bc:e1:e6:dd:ab:5e:fd:d1:21:2e:11:7c:d5:b2:03:52 (RSA)
+25/tcp   closed smtp
+80/tcp   open   http        Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-robots.txt: 2 disallowed entries 
+|_/internal/  /tmp/ 
+| http-methods: 
+|_  Potentially risky methods: TRACE
+111/tcp  open   rpcbind     2 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1            792/udp   status
+|_  100024  1            795/tcp   status
+139/tcp  open   netbios-ssn Samba smbd 3.X - 4.X (workgroup: MYGROUP)
+443/tcp  open   ssl/http    Apache httpd 2.0.52 ((CentOS))
+|_ssl-date: 2022-08-04T20:37:23+00:00; +4h00m22s from scanner time.
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2009-09-16T14:03:22
+|_Not valid after:  2010-09-16T14:03:22
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+| http-methods: 
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 2 disallowed entries 
+|_/internal/  /tmp/ 
+445/tcp  open   netbios-ssn Samba smbd 3.0.33-0.17.el4 (workgroup: MYGROUP)
+631/tcp  open   ipp         CUPS 1.1
+|_http-server-header: CUPS/1.1
+| http-methods: 
+|_  Potentially risky methods: PUT
+|_http-title: 403 Forbidden
+868/tcp  closed unknown
+3306/tcp open   mysql?
+|_sslv2: ERROR: Script execution failed (use -d to debug)
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-cert: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: ERROR: Script execution failed (use -d to debug)
+|_tls-nextprotoneg: ERROR: Script execution failed (use -d to debug)
+|_tls-alpn: ERROR: Script execution failed (use -d to debug)
+Device type: general purpose|firewall|WAP|proxy server|printer|PBX|media device
+Running (JUST GUESSING): Linux 2.6.X (94%), Cisco embedded (93%), Ruckus embedded (93%), Riverbed embedded (92%), Kyocera embedded (90%), Sony embedded (89%), FreeBSD 6.X (89%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.9 cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:sa520 cpe:/h:ruckus:7363 cpe:/h:riverbed:steelhead_200 cpe:/h:kyocera:cs-2560 cpe:/h:cisco:uc320w cpe:/o:freebsd:freebsd:6.2
+Aggressive OS guesses: Linux 2.6.9 (94%), Cisco SA520 firewall (Linux 2.6) (93%), Linux 2.6.9 - 2.6.27 (93%), Ruckus 7363 WAP (93%), Linux 2.6.18 (92%), Linux 2.6.28 (92%), Linux 2.6.30 (92%), Linux 2.6.9 (CentOS 4.4) (92%), Riverbed Steelhead 200 proxy server (92%), Linux 2.6.11 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Unix
+
+Host script results:
+|_smb2-time: Protocol negotiation failed (SMB2)
+|_clock-skew: mean: 5h20m23s, deviation: 2h18m36s, median: 4h00m21s
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.33-0.17.el4)
+|   Computer name: phoenix
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: phoenix
+|_  System time: 2022-08-04T16:36:55-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+TRACEROUTE (using port 868/tcp)
+HOP RTT       ADDRESS
+1   158.68 ms 192.168.119.1
+2   158.71 ms 10.11.1.8
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug  4 12:37:21 2022 -- 1 IP address (1 host up) scanned in 702.67 seconds

@@ -1,0 +1,29 @@
+# Nmap 7.92 scan initiated Thu Aug  4 13:17:47 2022 as: nmap -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.252
+Nmap scan report for 10.11.1.252
+Host is up (0.16s latency).
+Not shown: 65532 filtered tcp ports (no-response)
+PORT      STATE SERVICE    VERSION
+8000/tcp  open  http       Apache httpd 2.2.3 ((CentOS))
+| http-title: TimeClock Software :: Dev. Dpt. Thinc.local :: Log In
+|_Requested resource was login.php
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.2.3 (CentOS)
+8888/tcp  open  http-proxy Squid http proxy 4.6
+|_http-title: ERROR: The requested URL could not be retrieved
+|_http-server-header: squid/4.6
+22000/tcp open  ssh        OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ab:a7:86:a8:a0:39:c6:0a:81:0b:f9:ae:6f:4b:51:79 (DSA)
+|_  2048 8b:a5:11:b8:ca:75:9e:8c:a7:17:2c:a3:c9:90:1e:87 (RSA)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: FreeBSD 6.2-RELEASE (96%), Kyocera CopyStar CS-2560 printer (96%), OpenBSD 4.0 (95%), Apple AirPort Extreme WAP (95%), OpenBSD 4.3 (95%), DYMO LabelManager Wireless PNP printer (90%), Mitsubishi Q06UDEH CPU PLC module (90%), Linux 2.6.9 (89%), Linux 2.6.22 (Debian 4.0) (88%), Linux 2.6.24 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+
+TRACEROUTE (using port 8888/tcp)
+HOP RTT       ADDRESS
+1   154.14 ms 192.168.119.1
+2   154.19 ms 10.11.1.252
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug  4 13:28:40 2022 -- 1 IP address (1 host up) scanned in 653.21 seconds

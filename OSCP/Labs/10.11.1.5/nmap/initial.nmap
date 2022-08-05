@@ -1,0 +1,49 @@
+# Nmap 7.92 scan initiated Thu Aug  4 12:47:55 2022 as: nmap -sC -sV -A -oA nmap/initial 10.11.1.5
+Nmap scan report for 10.11.1.5
+Host is up (0.15s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+135/tcp  open  msrpc        Microsoft Windows RPC
+139/tcp  open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds Windows XP microsoft-ds
+1025/tcp open  NFS-or-IIS?
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=8/4%OT=135%CT=1%CU=42809%PV=Y%DS=2%DC=T%G=Y%TM=62EBFB3
+OS:A%P=x86_64-pc-linux-gnu)SEQ(SP=7B%GCD=1%ISR=9B%TI=I%II=I%SS=S%TS=0)OPS(O
+OS:1=M54ENW0NNT00NNS%O2=M54ENW0NNT00NNS%O3=M54ENW0NNT00%O4=M54ENW0NNT00NNS%
+OS:O5=M54ENW0NNT00NNS%O6=M54ENNT00NNS)WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W
+OS:5=FAF0%W6=FAF0)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M54ENW0NNS%CC=N%Q=)T1(R=Y%DF=Y
+OS:%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=N%T=80%W=0%S=
+OS:Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=80%IPL=38%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)
+
+Network Distance: 2 hops
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: alice
+|   NetBIOS computer name: ALICE\x00
+|   Domain name: thinc.local
+|   Forest name: thinc.local
+|   FQDN: alice.thinc.local
+|_  System time: 2022-08-04T18:00:22+01:00
+|_clock-skew: mean: -30m00s, deviation: 42m24s, median: -1h00m00s
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: ALICE, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:ba:e4:22 (VMware)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   153.09 ms 192.168.119.1
+2   153.44 ms 10.11.1.5
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug  4 13:00:42 2022 -- 1 IP address (1 host up) scanned in 767.40 seconds
