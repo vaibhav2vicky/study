@@ -1,0 +1,26 @@
+# Nmap 7.92 scan initiated Fri Aug  5 03:31:34 2022 as: nmap -sS -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.10
+Nmap scan report for 10.11.1.10
+Host is up (0.43s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Microsoft IIS httpd 6.0
+|_http-title: Under Construction
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/6.0
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|WAP
+Running (JUST GUESSING): Microsoft Windows 2003|XP|2000 (90%), Apple embedded (86%)
+OS CPE: cpe:/o:microsoft:windows_server_2003 cpe:/o:microsoft:windows_xp::sp3 cpe:/h:apple:airport_extreme cpe:/o:microsoft:windows_2000::sp4
+Aggressive OS guesses: Microsoft Windows Server 2003 (90%), Microsoft Windows Server 2003 SP2 (89%), Microsoft Windows XP SP3 (89%), Apple AirPort Extreme WAP (86%), Microsoft Windows 2000 SP4 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   573.94 ms 192.168.119.1
+2   574.22 ms 10.11.1.10
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug  5 03:35:34 2022 -- 1 IP address (1 host up) scanned in 240.61 seconds

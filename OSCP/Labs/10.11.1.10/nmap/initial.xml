@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Aug  5 03:31:34 2022 as: nmap -sS -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.10 -->
+<nmaprun scanner="nmap" args="nmap -sS -sC -sV -A -oA nmap/initial -p- -Pn 10.11.1.10" start="1659684694" startstr="Fri Aug  5 03:31:34 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1659684694" endtime="1659684934"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.10" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65534" proto="tcp" ports="1-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="6.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:6.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Under Construction"><elem key="title">Under Construction</elem>
+</script><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/6.0"><elem>Microsoft-IIS/6.0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2003" accuracy="90" line="72272">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2003</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 SP2" accuracy="89" line="73392">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="89" line="85216">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="89"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Apple AirPort Extreme WAP" accuracy="86" line="3532">
+<osclass type="WAP" vendor="Apple" osfamily="embedded" accuracy="86"><cpe>cpe:/h:apple:airport_extreme</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="85" line="71602">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="85"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="378B80AD,CD1B987C,C28FBF55,9373B724,9A7696F5,5D68B21"/>
+<ipidsequence class="Incremental" values="1528,1529,152A,152B,152C,152D"/>
+<tcptssequence class="zero timestamp" values="0,0,0,0,0,0"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="573.94"/>
+<hop ttl="2" ipaddr="10.11.1.10" rtt="574.22"/>
+</trace>
+<times srtt="430485" rttvar="204411" to="1248129"/>
+</host>
+<runstats><finished time="1659684934" timestr="Fri Aug  5 03:35:34 2022" summary="Nmap done at Fri Aug  5 03:35:34 2022; 1 IP address (1 host up) scanned in 240.61 seconds" elapsed="240.61" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
