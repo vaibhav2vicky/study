@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Thu Aug 18 06:39:13 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/_quick_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/xml/_quick_tcp_nmap.xml 10.11.1.50
+Nmap scan report for 10.11.1.50
+Host is up, received user-set.
+Scanned at 2022-08-18 06:39:14 EDT for 102s
+All 1000 scanned ports on 10.11.1.50 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 18 06:40:56 2022 -- 1 IP address (1 host up) scanned in 102.24 seconds

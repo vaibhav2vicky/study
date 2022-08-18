@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Content-Length: 46
+X-Powered-By: web2py
+Last-Modified: Wed, 23 Nov 2011 01:06:07 GMT
+Pragma: cache
+Cache-Control: private
+Content-Type: text/plain; charset=utf-8
+Date: Thu, 18 Aug 2022 14:38:22 GMT
+Server: Rocket 1.2.6 Python/2.6.5
+Connection: keep-alive
+
+User-agent: *
+Disallow: /welcome/default/user

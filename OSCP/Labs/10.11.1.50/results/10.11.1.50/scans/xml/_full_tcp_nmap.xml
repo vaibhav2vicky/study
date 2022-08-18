@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 18 06:39:13 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/xml/_full_tcp_nmap.xml 10.11.1.50 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/xml/_full_tcp_nmap.xml 10.11.1.50" start="1660819153" startstr="Thu Aug 18 06:39:13 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660819154"/>
+<taskend task="NSE" time="1660819154"/>
+<taskbegin task="NSE" time="1660819154"/>
+<taskend task="NSE" time="1660819154"/>
+<taskbegin task="NSE" time="1660819154"/>
+<taskend task="NSE" time="1660819154"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660819154"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660819154"/>
+<taskbegin task="Connect Scan" time="1660819154"/>
+<taskprogress task="Connect Scan" time="1660819185" percent="0.46"/>
+<taskprogress task="Connect Scan" time="1660819215" percent="0.92"/>
+<taskprogress task="Connect Scan" time="1660819245" percent="1.37" remaining="6536" etc="1660825780"/>
+<taskprogress task="Connect Scan" time="1660819539" percent="5.84" remaining="6203" etc="1660825742"/>
+<taskprogress task="Connect Scan" time="1660819860" percent="10.73" remaining="5871" etc="1660825731"/>
+<taskprogress task="Connect Scan" time="1660820190" percent="15.75" remaining="5540" etc="1660825730"/>
+<taskprogress task="Connect Scan" time="1660820517" percent="20.74" remaining="5210" etc="1660825727"/>
+<taskprogress task="Connect Scan" time="1660820847" percent="25.76" remaining="4880" etc="1660825727"/>

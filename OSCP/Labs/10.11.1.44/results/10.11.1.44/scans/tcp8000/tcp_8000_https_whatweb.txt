@@ -1,0 +1,122 @@
+WhatWeb report for https://10.11.1.44:8000
+Status    : 200 OK
+Title     : CSC438 - Issue Tracker Project
+IP        : 10.11.1.44
+Country   : RESERVED, ZZ
+
+Summary   : Cookies[session_id_issue_tracker], Email[Tricia@thinc.loca], Google-API[ajax/libs/jqueryui/1.8.16/jquery], HTML5, HTTPServer[Rocket 1.2.6 Python/2.6.5], JQuery, Meta-Author[Tricia Admin &lt;Tricia@thinc.local&gt;], MetaGenerator[Web2py Web Framework], Modernizr[1.7.min], Python[2.6.5], Script[text/javascript], Web2py[web2py], X-Powered-By[web2py], X-UA-Compatible[IE=edge]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : session_id_issue_tracker
+
+[ Email ]
+	Extract email addresses. Find valid email address and
+	syntactically invalid email addresses from mailto: link
+	tags. We match syntactically invalid links containing
+	mailto: to catch anti-spam email addresses, eg. bob at
+	gmail.com. This uses the simplified email regular
+	expression from
+	http://www.regular-expressions.info/email.html for valid
+	email address matching.
+
+	String       : Tricia@thinc.loca
+
+[ Google-API ]
+	This plugin identifies references to Google API in
+	<script>.
+
+	String       : ajax/libs/jqueryui/1.8.16/jquery
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Rocket 1.2.6 Python/2.6.5 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Website     : http://jquery.com/
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name
+	tag - info:
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : Tricia Admin &lt;Tricia@thinc.local&gt;
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its
+	value.
+
+	String       : Web2py Web Framework
+
+[ Modernizr ]
+	Modernizr adds classes to the <html> element which allow
+	you to target specific browser functionality in your
+	stylesheet. You don't actually need to write any Javascript
+	to use it. [JavaScript]
+
+	Version      : 1.7.min
+	Website     : http://www.modernizr.com/
+
+[ Python ]
+	Python is a programming language that lets you work more
+	quickly and integrate your systems more effectively. You
+	can learn to use Python and see almost immediate gains in
+	productivity and lower maintenance costs.
+
+	Version      : 2.6.5
+	Website     : http://www.python.org/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/javascript
+
+[ Web2py ]
+	Web2py - Free open source full-stack framework written in
+	Pytho
+
+	String       : web2py
+	Google Dorks: (1)
+	Website     : http://www.web2py.com/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : web2py (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Powered-By: web2py
+	Set-Cookie:  session_id_issue_tracker=192.168.119.121-24b27b84-e332-496e-8966-5b7fa97be784; Path=/
+	Expires: Thu, 18 Aug 2022 14:38:23 GMT
+	Pragma: no-cache
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Content-Type: text/html; charset=utf-8
+	Date: Thu, 18 Aug 2022 14:38:23 GMT
+	Server: Rocket 1.2.6 Python/2.6.5
+	Content-Length: 7381
+	Connection: close
+
+
