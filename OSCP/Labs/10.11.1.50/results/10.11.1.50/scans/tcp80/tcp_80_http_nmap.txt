@@ -1,57 +1,126 @@
-# Nmap 7.92 scan initiated Thu Aug 18 06:35:51 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp80/xml/tcp_80_http_nmap.xml 10.11.1.50
+# Nmap 7.92 scan initiated Fri Aug 19 09:20:54 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp80/xml/tcp_80_http_nmap.xml 10.11.1.50
 Nmap scan report for 10.11.1.50
 Host is up, received user-set (0.15s latency).
-Scanned at 2022-08-18 06:35:52 EDT for 106s
+Scanned at 2022-08-19 09:20:55 EDT for 425s
 
 Bug in http-security-headers: no string output.
-PORT   STATE SERVICE REASON  VERSION
-80/tcp open  http    syn-ack Microsoft IIS httpd 8.5
-|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
-|_http-favicon: Unknown favicon MD5: B6341DFC213100C61DB4FB8775878CEC
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 8.5
 | http-comments-displayer: 
 | Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.50
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 224
+|     Comment: 
+|         /**
+|          * Format a string containing a count of items.
+|          *
+|          * This function ensures that the string is pluralized correctly. Since Drupal.t() is
+|          * called by this function, make sure not to pass already-localized strings to it.
+|          *
+|          * See the documentation of the server-side format_plural() function for further details.
+|          *
+|          * @param count
+|          *   The item count to display.
+|          * @param singular
+|          *   The string for the singular case. Please make sure it is clear this is
+|          *   singular, to ease translation (e.g. use "1 new comment" instead of "1 new").
+|          *   Do not use @count in the singular string.
+|          * @param plural
+|          *   The string for the plural case. Please make sure it is clear this is plural,
+|          *   to ease translation. Use @count in place of the item count, as in "@count
+|          *   new comments".
+|          * @param args
+|          *   An object of replacements pairs to make after translation. Incidences
+|          *   of any key in this array are replaced with the corresponding value.
+|          *   See Drupal.formatString().
+|          *   Note that you do not need to include @count in this array.
+|          *   This replacement is done automatically for the plural case.
+|          * @param options
+|          *   The options to pass to the Drupal.t() function.
+|          * @return
+|          *   A translated string.
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 9
+|     Comment: 
+|         /**
+|          * Override jQuery.fn.init to guard against XSS attacks.
+|          *
+|          * See http://bugs.jquery.com/ticket/9521
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
+|     Line number: 51
+|     Comment: 
+|          // Remove elements from the set that have already been processed.
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 124
+|     Comment: 
+|         <!-- /#page, /#page-wrapper -->
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 44
+|     Comment: 
+|         <!--//-->
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
+|     Line number: 45
+|     Comment: 
+|          // When the fn parameter is not passed, we interpret it from the id.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 176
+|     Comment: 
+|          // Pass-through.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 4
+|     Comment: 
+|         
+|         // Allow other JavaScript libraries to use $.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 366
+|     Comment: 
+|          // and the test causes an exception. So we need to catch the exception here.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 350
+|     Comment: 
+|         /**
+|          * Build an error message from an Ajax response.
+|          */
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 120
+|     Comment: 
+|         <!-- /#footer -->
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
 |     Line number: 172
 |     Comment: 
 |          // Escaped only.
 |     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 190
-|     Comment: 
-|         /**
-|          * Translate strings to the page language or a given language.
-|          *
-|          * See the documentation of the server-side t() function for further details.
-|          *
-|          * @param str
-|          *   A string containing the English string to translate.
-|          * @param args
-|          *   An object of replacements pairs to make after translation. Incidences
-|          *   of any key in this array are replaced with the corresponding value.
-|          *   See Drupal.formatString().
-|          *
-|          * @param options
-|          *   - 'context' (defaults to the empty context): The context the source string
-|          *     belongs to.
-|          *
-|          * @return
-|          *   The translated string.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 298
-|     Comment: 
-|         /**
-|          * Freeze the current body height (as minimum height). Used to prevent
-|          * unnecessary upwards scrolling when doing DOM manipulations.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 410
+|     Path: http://10.11.1.50:80/
+|     Line number: 37
 |     Comment: 
 |         
-|         //Attach all behaviors.
+|         
+|         <![endif]-->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 393
+|     Comment: 
+|         
+|         // 'js enabled' cookie.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 73
+|     Comment: 
+|          // Execute all of them.
 |     
 |     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
 |     Line number: 14
@@ -83,37 +152,89 @@ PORT   STATE SERVICE REASON  VERSION
 |            */
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 393
+|     Line number: 390
 |     Comment: 
 |         
-|         // 'js enabled' cookie.
+|         // Class indicating that JS is enabled; used for styling purpose.
 |     
 |     Path: http://10.11.1.50:80/
-|     Line number: 46
+|     Line number: 122
 |     Comment: 
-|         
-|         
+|         <!-- /.section, /#footer-wrapper -->
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 151
+|     Line number: 365
+|     Comment: 
+|          // Unfortunately, testing for it with typeof, etc, doesn't seem to catch that
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 272
 |     Comment: 
 |         /**
-|          * Replace placeholders with sanitized values in a string.
+|          * Generate the themed representation of a Drupal object.
 |          *
-|          * @param str
-|          *   A string with placeholders.
-|          * @param args
-|          *   An object of replacements pairs to make. Incidences of any key in this
-|          *   array are replaced with the corresponding value. Based on the first
-|          *   character of the key, the value is escaped and/or themed:
-|          *    - !variable: inserted as is
-|          *    - @variable: escape plain text to HTML (Drupal.checkPlain)
-|          *    - %variable: escape text and theme as a placeholder for user-submitted
-|          *      content (checkPlain + Drupal.theme('placeholder'))
+|          * All requests for themed output must go through this function. It examines
+|          * the request and routes it to the appropriate theme function. If the current
+|          * theme does not provide an override function, the generic theme function is
+|          * called.
 |          *
-|          * @see Drupal.t()
-|          * @ingroup sanitization
+|          * For example, to retrieve the HTML for text that should be emphasized and
+|          * displayed as a placeholder inside a sentence, call
+|          * Drupal.theme('placeholder', text).
+|          *
+|          * @param func
+|          *   The name of the theme function to call.
+|          * @param ...
+|          *   Additional arguments to pass along to the theme function.
+|          * @return
+|          *   Any data the theme function returns. This could be a plain HTML string,
+|          *   but also a complex object.
 |          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 179
+|     Comment: 
+|          // Escaped and placeholder.
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.js?v=1.4.4
+|     Line number: 2
+|     Comment: 
+|         /*!
+|          * jQuery JavaScript Library v1.4.4
+|          * http://jquery.com/
+|          *
+|          * Copyright 2010, John Resig
+|          * Dual licensed under the MIT or GPL Version 2 licenses.
+|          * http://jquery.org/license
+|          *
+|          * Includes Sizzle.js
+|          * http://sizzlejs.com/
+|          * Copyright 2010, The Dojo Foundation
+|          * Released under the MIT, BSD, and GPL Licenses.
+|          *
+|          * Date: Thu Nov 11 19:04:53 2010 -0500
+|          */
+|     
+|     Path: http://10.11.1.50:80/themes/bartik/css/ie.css?nf1x1q
+|     Line number: 27
+|     Comment: 
+|         /* Trigger text indent. */
+|     
+|     Path: http://10.11.1.50:80/themes/bartik/css/ie.css?nf1x1q
+|     Line number: 18
+|     Comment: 
+|         /* LTR */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 410
+|     Comment: 
+|         
+|         //Attach all behaviors.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 379
+|     Comment: 
+|          // Make the responseText more readable by stripping HTML tags and newlines.
 |     
 |     Path: http://10.11.1.50:80/
 |     Line number: 105
@@ -124,6 +245,70 @@ PORT   STATE SERVICE REASON  VERSION
 |     Line number: 383
 |     Comment: 
 |          // We don't need readyState except for status == 0.
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 75
+|     Comment: 
+|         <!-- /#main-menu -->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 420
+|     Comment: 
+|         /**
+|            * Formats text for emphasized display in a placeholder inside a sentence.
+|            *
+|            * @param str
+|            *   The text to format (plain-text).
+|            * @return
+|            *   The formatted text (html).
+|            */
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
+|     Line number: 41
+|     Comment: 
+|          // Generate a numeric ID if the id passed can't be used as a CSS class.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 373
+|     Comment: 
+|          // Again, we don't have a way to know for sure whether accessing
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 364
+|     Comment: 
+|          // In some cases, when statusCode == 0, xmlhttp.statusText may not be defined.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 298
+|     Comment: 
+|         /**
+|          * Freeze the current body height (as minimum height). Used to prevent
+|          * unnecessary upwards scrolling when doing DOM manipulations.
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 340
+|     Comment: 
+|          // Now move 'dummy' end point to end point of original range.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 256
+|     Comment: 
+|          // Determine the index of the plural form.
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.js?v=1.4.4
+|     Line number: 136
+|     Comment: 
+|         /*"}},ajax:function(a){var b=c.extend(true,{},c.ajaxSettings,a),d,e,f,h=b.type.toUpperCase(),l=qb.test(h);b.url=b.url.replace(ub,"");b.context=a&&a.context!=null?a.context:b;if(b.data&&b.processData&&typeof b.data!=="string")b.data=c.param(b.data,b.traditional);if(b.dataType==="jsonp"){if(h==="GET")T.test(b.url)||(b.url+=(ja.test(b.url)?"&":"?")+(b.jsonp||"callback")+"=?");else if(!b.data||
+|         !T.test(b.data))b.data=(b.data?b.data+"&":"")+(b.jsonp||"callback")+"=?";b.dataType="json"}if(b.dataType==="json"&&(b.data&&T.test(b.data)||T.test(b.url))){d=b.jsonpCallback||"jsonp"+mb++;if(b.data)b.data=(b.data+"").replace(T,"="+d+"$1");b.url=b.url.replace(T,"="+d+"$1");b.dataType="script";var k=E[d];E[d]=function(m){if(c.isFunction(k))k(m);else{E[d]=B;try{delete E[d]}catch(p){}}f=m;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);r&&r.removeChild(A)}}if(b.dataType==="script"&&b.cache===null)b.cache=
+|         false;if(b.cache===false&&l){var o=c.now(),x=b.url.replace(rb,"$1_="+o);b.url=x+(x===b.url?(ja.test(b.url)?"&":"?")+"_="+o:"")}if(b.data&&l)b.url+=(ja.test(b.url)?"&":"?")+b.data;b.global&&c.active++===0&&c.event.trigger("ajaxStart");o=(o=sb.exec(b.url))&&(o[1]&&o[1].toLowerCase()!==location.protocol||o[2].toLowerCase()!==location.host);if(b.dataType==="script"&&h==="GET"&&o){var r=t.getElementsByTagName("head")[0]||t.documentElement,A=t.createElement("script");if(b.scriptCharset)A.charset=b.scriptCharset;
+|         A.src=b.url;if(!d){var C=false;A.onload=A.onreadystatechange=function(){if(!C&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){C=true;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);A.onload=A.onreadystatechange=null;r&&A.parentNode&&r.removeChild(A)}}}r.insertBefore(A,r.firstChild);return B}var J=false,w=b.xhr();if(w){b.username?w.open(h,b.url,b.async,b.username,b.password):w.open(h,b.url,b.async);try{if(b.data!=null&&!l||a&&a.contentType)w.setRequestHeader("Content-Type",
+|         b.contentType);if(b.ifModified){c.lastModified[b.url]&&w.setRequestHeader("If-Modified-Since",c.lastModified[b.url]);c.etag[b.url]&&w.setRequestHeader("If-None-Match",c.etag[b.url])}o||w.setRequestHeader("X-Requested-With","XMLHttpRequest");w.setRequestHeader("Accept",b.dataType&&b.accepts[b.dataType]?b.accepts[b.dataType]+", */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 342
+|     Comment: 
+|          // Now we can calculate start and end points.
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
 |     Line number: 81
@@ -170,6 +355,87 @@ PORT   STATE SERVICE REASON  VERSION
 |          */
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 338
+|     Comment: 
+|          // Select all text.
+|     
+|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
+|     Line number: 58
+|     Comment: 
+|         /**
+|            * Filters elements that have been processed once already.
+|            *
+|            * @param id
+|            *   A required string representing the name of the class which should be used
+|            *   when filtering the elements. This only filters elements that have already
+|            *   been processed by the once function. The id should be the same id that
+|            *   was originally passed to the once() function.
+|            * @param fn
+|            *   (Optional) If given, this function will be called for each element that
+|            *   has not yet been processed. The function's return value follows the same
+|            *   logic as $.each(). Returning true will continue to the next matched
+|            *   element in the set, while returning false will entirely break the
+|            *   iteration.
+|            */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 415
+|     Comment: 
+|         /**
+|          * The default themes.
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 330
+|     Comment: 
+|         /**
+|          * Get the text selection in a textarea.
+|          */
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 85
+|     Comment: 
+|         <!-- /.section, /#sidebar-first -->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 374
+|     Comment: 
+|          // xmlhttp.responseText is going to throw an exception. So we'll catch it.
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 70
+|     Comment: 
+|         <!-- /#name-and-slogan -->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 396
+|     Comment: 
+|         /**
+|          * Additions to jQuery.support.
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 151
+|     Comment: 
+|         /**
+|          * Replace placeholders with sanitized values in a string.
+|          *
+|          * @param str
+|          *   A string with placeholders.
+|          * @param args
+|          *   An object of replacements pairs to make. Incidences of any key in this
+|          *   array are replaced with the corresponding value. Based on the first
+|          *   character of the key, the value is escaped and/or themed:
+|          *    - !variable: inserted as is
+|          *    - @variable: escape plain text to HTML (Drupal.checkPlain)
+|          *    - %variable: escape text and theme as a placeholder for user-submitted
+|          *      content (checkPlain + Drupal.theme('placeholder'))
+|          *
+|          * @see Drupal.t()
+|          * @ingroup sanitization
+|          */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
 |     Line number: 30
 |     Comment: 
 |         /**
@@ -213,264 +479,6 @@ PORT   STATE SERVICE REASON  VERSION
 |          *   global Drupal.settings object is used.
 |          */
 |     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 4
-|     Comment: 
-|         
-|         // Allow other JavaScript libraries to use $.
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 120
-|     Comment: 
-|         <!-- /#footer -->
-|     
-|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
-|     Line number: 58
-|     Comment: 
-|         /**
-|            * Filters elements that have been processed once already.
-|            *
-|            * @param id
-|            *   A required string representing the name of the class which should be used
-|            *   when filtering the elements. This only filters elements that have already
-|            *   been processed by the once function. The id should be the same id that
-|            *   was originally passed to the once() function.
-|            * @param fn
-|            *   (Optional) If given, this function will be called for each element that
-|            *   has not yet been processed. The function's return value follows the same
-|            *   logic as $.each(). Returning true will continue to the next matched
-|            *   element in the set, while returning false will entirely break the
-|            *   iteration.
-|            */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 374
-|     Comment: 
-|          // xmlhttp.responseText is going to throw an exception. So we'll catch it.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 373
-|     Comment: 
-|          // Again, we don't have a way to know for sure whether accessing
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 73
-|     Comment: 
-|          // Execute all of them.
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 122
-|     Comment: 
-|         <!-- /.section, /#footer-wrapper -->
-|     
-|     Path: http://10.11.1.50:80/themes/bartik/css/ie.css?nf1x1q
-|     Line number: 27
-|     Comment: 
-|         /* Trigger text indent. */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 340
-|     Comment: 
-|          // Now move 'dummy' end point to end point of original range.
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 75
-|     Comment: 
-|         <!-- /#main-menu -->
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 16
-|     Comment: 
-|          // If the string contains a "#" before a "<", treat it as invalid HTML.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 342
-|     Comment: 
-|          // Now we can calculate start and end points.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 320
-|     Comment: 
-|         /**
-|          * Encodes a Drupal path for use in a URL.
-|          *
-|          * For aesthetic reasons slashes are not escaped.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 176
-|     Comment: 
-|          // Pass-through.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 330
-|     Comment: 
-|         /**
-|          * Get the text selection in a textarea.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 365
-|     Comment: 
-|          // Unfortunately, testing for it with typeof, etc, doesn't seem to catch that
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 338
-|     Comment: 
-|          // Select all text.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 350
-|     Comment: 
-|         /**
-|          * Build an error message from an Ajax response.
-|          */
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 70
-|     Comment: 
-|         <!-- /#name-and-slogan -->
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 256
-|     Comment: 
-|          // Determine the index of the plural form.
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 37
-|     Comment: 
-|         
-|         
-|         <![endif]-->
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 44
-|     Comment: 
-|         <!--//-->
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 179
-|     Comment: 
-|          // Escaped and placeholder.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 379
-|     Comment: 
-|          // Make the responseText more readable by stripping HTML tags and newlines.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 366
-|     Comment: 
-|          // and the test causes an exception. So we need to catch the exception here.
-|     
-|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
-|     Line number: 41
-|     Comment: 
-|          // Generate a numeric ID if the id passed can't be used as a CSS class.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 169
-|     Comment: 
-|          // Transform arguments before inserting them.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 420
-|     Comment: 
-|         /**
-|            * Formats text for emphasized display in a placeholder inside a sentence.
-|            *
-|            * @param str
-|            *   The text to format (plain-text).
-|            * @return
-|            *   The formatted text (html).
-|            */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 415
-|     Comment: 
-|         /**
-|          * The default themes.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 400
-|     Comment: 
-|         /**
-|            * Boolean indicating whether or not position:fixed is supported.
-|            */
-|     
-|     Path: http://10.11.1.50:80/themes/bartik/css/ie.css?nf1x1q
-|     Line number: 18
-|     Comment: 
-|         /* LTR */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 272
-|     Comment: 
-|         /**
-|          * Generate the themed representation of a Drupal object.
-|          *
-|          * All requests for themed output must go through this function. It examines
-|          * the request and routes it to the appropriate theme function. If the current
-|          * theme does not provide an override function, the generic theme function is
-|          * called.
-|          *
-|          * For example, to retrieve the HTML for text that should be emphasized and
-|          * displayed as a placeholder inside a sentence, call
-|          * Drupal.theme('placeholder', text).
-|          *
-|          * @param func
-|          *   The name of the theme function to call.
-|          * @param ...
-|          *   Additional arguments to pass along to the theme function.
-|          * @return
-|          *   Any data the theme function returns. This could be a plain HTML string,
-|          *   but also a complex object.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 396
-|     Comment: 
-|         /**
-|          * Additions to jQuery.support.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 335
-|     Comment: 
-|          // The current selection.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 313
-|     Comment: 
-|         /**
-|          * Unfreeze the body height.
-|          */
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 364
-|     Comment: 
-|          // In some cases, when statusCode == 0, xmlhttp.statusText may not be defined.
-|     
-|     Path: http://10.11.1.50:80/misc/jquery.js?v=1.4.4
-|     Line number: 2
-|     Comment: 
-|         /*!
-|          * jQuery JavaScript Library v1.4.4
-|          * http://jquery.com/
-|          *
-|          * Copyright 2010, John Resig
-|          * Dual licensed under the MIT or GPL Version 2 licenses.
-|          * http://jquery.org/license
-|          *
-|          * Includes Sizzle.js
-|          * http://sizzlejs.com/
-|          * Copyright 2010, The Dojo Foundation
-|          * Released under the MIT, BSD, and GPL Licenses.
-|          *
-|          * Date: Thu Nov 11 19:04:53 2010 -0500
-|          */
-|     
 |     Path: http://10.11.1.50:80/
 |     Line number: 33
 |     Comment: 
@@ -479,60 +487,14 @@ PORT   STATE SERVICE REASON  VERSION
 |         <![endif]-->
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 224
+|     Line number: 169
 |     Comment: 
-|         /**
-|          * Format a string containing a count of items.
-|          *
-|          * This function ensures that the string is pluralized correctly. Since Drupal.t() is
-|          * called by this function, make sure not to pass already-localized strings to it.
-|          *
-|          * See the documentation of the server-side format_plural() function for further details.
-|          *
-|          * @param count
-|          *   The item count to display.
-|          * @param singular
-|          *   The string for the singular case. Please make sure it is clear this is
-|          *   singular, to ease translation (e.g. use "1 new comment" instead of "1 new").
-|          *   Do not use @count in the singular string.
-|          * @param plural
-|          *   The string for the plural case. Please make sure it is clear this is plural,
-|          *   to ease translation. Use @count in place of the item count, as in "@count
-|          *   new comments".
-|          * @param args
-|          *   An object of replacements pairs to make after translation. Incidences
-|          *   of any key in this array are replaced with the corresponding value.
-|          *   See Drupal.formatString().
-|          *   Note that you do not need to include @count in this array.
-|          *   This replacement is done automatically for the plural case.
-|          * @param options
-|          *   The options to pass to the Drupal.t() function.
-|          * @return
-|          *   A translated string.
-|          */
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 124
-|     Comment: 
-|         <!-- /#page, /#page-wrapper -->
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 44
-|     Comment: 
-|         
-|         
-|         //-->
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 102
-|     Comment: 
-|         <!-- /.section, /#content -->
+|          // Transform arguments before inserting them.
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 390
+|     Line number: 16
 |     Comment: 
-|         
-|         // Class indicating that JS is enabled; used for styling purpose.
+|          // If the string contains a "#" before a "<", treat it as invalid HTML.
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
 |     Line number: 133
@@ -543,20 +505,16 @@ PORT   STATE SERVICE REASON  VERSION
 |          * @ingroup sanitization
 |          */
 |     
-|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
-|     Line number: 51
+|     Path: http://10.11.1.50:80/
+|     Line number: 46
 |     Comment: 
-|          // Remove elements from the set that have already been processed.
-|     
-|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 213
-|     Comment: 
-|          // Fetch the localized version of the string.
+|         
+|         
 |     
 |     Path: http://10.11.1.50:80/
-|     Line number: 85
+|     Line number: 78
 |     Comment: 
-|         <!-- /.section, /#sidebar-first -->
+|         <!-- /.section, /#header -->
 |     
 |     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
 |     Line number: 2
@@ -570,52 +528,93 @@ PORT   STATE SERVICE REASON  VERSION
 |          *   http://www.gnu.org/licenses/gpl.html
 |          */
 |     
-|     Path: http://10.11.1.50:80/misc/jquery.once.js?v=1.2
-|     Line number: 45
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 335
 |     Comment: 
-|          // When the fn parameter is not passed, we interpret it from the id.
-|     
-|     Path: http://10.11.1.50:80/
-|     Line number: 78
-|     Comment: 
-|         <!-- /.section, /#header -->
+|          // The current selection.
 |     
 |     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
-|     Line number: 9
+|     Line number: 213
+|     Comment: 
+|          // Fetch the localized version of the string.
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 400
 |     Comment: 
 |         /**
-|          * Override jQuery.fn.init to guard against XSS attacks.
+|            * Boolean indicating whether or not position:fixed is supported.
+|            */
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 190
+|     Comment: 
+|         /**
+|          * Translate strings to the page language or a given language.
 |          *
-|          * See http://bugs.jquery.com/ticket/9521
+|          * See the documentation of the server-side t() function for further details.
+|          *
+|          * @param str
+|          *   A string containing the English string to translate.
+|          * @param args
+|          *   An object of replacements pairs to make after translation. Incidences
+|          *   of any key in this array are replaced with the corresponding value.
+|          *   See Drupal.formatString().
+|          *
+|          * @param options
+|          *   - 'context' (defaults to the empty context): The context the source string
+|          *     belongs to.
+|          *
+|          * @return
+|          *   The translated string.
 |          */
 |     
-|     Path: http://10.11.1.50:80/misc/jquery.js?v=1.4.4
-|     Line number: 136
+|     Path: http://10.11.1.50:80/
+|     Line number: 44
 |     Comment: 
-|         /*"}},ajax:function(a){var b=c.extend(true,{},c.ajaxSettings,a),d,e,f,h=b.type.toUpperCase(),l=qb.test(h);b.url=b.url.replace(ub,"");b.context=a&&a.context!=null?a.context:b;if(b.data&&b.processData&&typeof b.data!=="string")b.data=c.param(b.data,b.traditional);if(b.dataType==="jsonp"){if(h==="GET")T.test(b.url)||(b.url+=(ja.test(b.url)?"&":"?")+(b.jsonp||"callback")+"=?");else if(!b.data||
-|         !T.test(b.data))b.data=(b.data?b.data+"&":"")+(b.jsonp||"callback")+"=?";b.dataType="json"}if(b.dataType==="json"&&(b.data&&T.test(b.data)||T.test(b.url))){d=b.jsonpCallback||"jsonp"+mb++;if(b.data)b.data=(b.data+"").replace(T,"="+d+"$1");b.url=b.url.replace(T,"="+d+"$1");b.dataType="script";var k=E[d];E[d]=function(m){if(c.isFunction(k))k(m);else{E[d]=B;try{delete E[d]}catch(p){}}f=m;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);r&&r.removeChild(A)}}if(b.dataType==="script"&&b.cache===null)b.cache=
-|         false;if(b.cache===false&&l){var o=c.now(),x=b.url.replace(rb,"$1_="+o);b.url=x+(x===b.url?(ja.test(b.url)?"&":"?")+"_="+o:"")}if(b.data&&l)b.url+=(ja.test(b.url)?"&":"?")+b.data;b.global&&c.active++===0&&c.event.trigger("ajaxStart");o=(o=sb.exec(b.url))&&(o[1]&&o[1].toLowerCase()!==location.protocol||o[2].toLowerCase()!==location.host);if(b.dataType==="script"&&h==="GET"&&o){var r=t.getElementsByTagName("head")[0]||t.documentElement,A=t.createElement("script");if(b.scriptCharset)A.charset=b.scriptCharset;
-|         A.src=b.url;if(!d){var C=false;A.onload=A.onreadystatechange=function(){if(!C&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){C=true;c.handleSuccess(b,w,e,f);c.handleComplete(b,w,e,f);A.onload=A.onreadystatechange=null;r&&A.parentNode&&r.removeChild(A)}}}r.insertBefore(A,r.firstChild);return B}var J=false,w=b.xhr();if(w){b.username?w.open(h,b.url,b.async,b.username,b.password):w.open(h,b.url,b.async);try{if(b.data!=null&&!l||a&&a.contentType)w.setRequestHeader("Content-Type",
-|_        b.contentType);if(b.ifModified){c.lastModified[b.url]&&w.setRequestHeader("If-Modified-Since",c.lastModified[b.url]);c.etag[b.url]&&w.setRequestHeader("If-None-Match",c.etag[b.url])}o||w.setRequestHeader("X-Requested-With","XMLHttpRequest");w.setRequestHeader("Accept",b.dataType&&b.accepts[b.dataType]?b.accepts[b.dataType]+", */
-| http-useragent-tester: 
-|   Status for browser useragent: 200
-|   Allowed User Agents: 
-|     libwww
-|     lwp-trivial
-|     libcurl-agent/1.0
-|     PHP/
-|     Python-urllib/2.5
-|     GT::WWW
-|     Snoopy
-|     MFC_Tear_Sample
-|     HTTP::Lite
-|_    PHPCrawl
-|_http-mobileversion-checker: No mobile version detected.
-| http-vhosts: 
-|_128 names had status 200
-|_http-referer-checker: Couldn't find any cross-domain scripts.
-|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
-|_http-dombased-xss: Couldn't find any DOM based XSS.
+|         
+|         
+|         //-->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 320
+|     Comment: 
+|         /**
+|          * Encodes a Drupal path for use in a URL.
+|          *
+|          * For aesthetic reasons slashes are not escaped.
+|          */
+|     
+|     Path: http://10.11.1.50:80/
+|     Line number: 102
+|     Comment: 
+|         <!-- /.section, /#content -->
+|     
+|     Path: http://10.11.1.50:80/misc/drupal.js?nf1x1q
+|     Line number: 313
+|     Comment: 
+|         /**
+|          * Unfreeze the body height.
+|_         */
+| http-enum: 
+|   /robots.txt: Robots file
+|   /changelog.txt: Version saved
+|   /UPGRADE.txt: Drupal file
+|   /INSTALL.txt: Drupal file
+|   /INSTALL.mysql.txt: Drupal file
+|   /INSTALL.pgsql.txt: Drupal file
+|   /CHANGELOG.txt: Drupal v1
+|   /: Drupal version 7 
+|_  /README.txt: Interesting, a readme.
+|_http-server-header: Microsoft-IIS/8.5
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.11.1.50
+|   Found the following error pages: 
+|   
+|   Error Code: 403
+|_  	http://10.11.1.50:80/misc/
+|_http-chrono: Request times for /; avg: 1070.34ms; min: 452.46ms; max: 3531.71ms
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
 | http-sitemap-generator: 
 |   Directory structure:
 |     /
@@ -631,9 +630,29 @@ PORT   STATE SERVICE REASON  VERSION
 |     Dir: /themes/bartik/css/
 |   Total files found (by extension):
 |_    Other: 1; css: 2; ico: 1; js: 3; png: 2
-|_http-server-header: Microsoft-IIS/8.5
-|_http-fetch: Please enter the complete path of the directory to save data in.
-|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-vhosts: 
+|_128 names had status 200
 | http-robots.txt: 36 disallowed entries 
 | /includes/ /misc/ /modules/ /profiles/ /scripts/ 
 | /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
@@ -643,11 +662,14 @@ PORT   STATE SERVICE REASON  VERSION
 | /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
 | /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
 |_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
-| http-methods: 
-|   Supported Methods: OPTIONS TRACE GET HEAD POST
-|_  Potentially risky methods: TRACE
-|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-date: Fri, 19 Aug 2022 13:21:02 GMT; 0s from local time.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-generator: Drupal 7 (http://drupal.org)
 |_http-feed: Couldn't find any feeds.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-php-version: Logo query returned unknown hash 61d24590f0040227b5ad7c2f9ce9cca7
+|_Credits query returned unknown hash 61d24590f0040227b5ad7c2f9ce9cca7
 | http-headers: 
 |   Content-Length: 5667
 |   Content-Type: text/html
@@ -655,30 +677,25 @@ PORT   STATE SERVICE REASON  VERSION
 |   Accept-Ranges: bytes
 |   ETag: "0252c3c640d01:0"
 |   Server: Microsoft-IIS/8.5
-|   Date: Thu, 18 Aug 2022 10:36:02 GMT
+|   Date: Fri, 19 Aug 2022 13:21:07 GMT
 |   Connection: close
 |   
 |_  (Request type: HEAD)
-|_http-generator: Drupal 7 (http://drupal.org)
-|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
-|_http-title: Welcome to Bethany&#039;s Page | Bethany&#039;s Page
-|_http-date: Thu, 18 Aug 2022 10:36:03 GMT; +1s from local time.
-| http-errors: 
-| Spidering limited to: maxpagecount=40; withinhost=10.11.1.50
-|   Found the following error pages: 
-|   
-|   Error Code: 403
-|_  	http://10.11.1.50:80/misc/
-|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
-|_http-malware-host: Host appears to be clean
+|_http-favicon: Unknown favicon MD5: B6341DFC213100C61DB4FB8775878CEC
 |_http-devframework: Drupal detected. Found common traces on /
-| http-php-version: Logo query returned unknown hash 61d24590f0040227b5ad7c2f9ce9cca7
-|_Credits query returned unknown hash 61d24590f0040227b5ad7c2f9ce9cca7
-|_http-chrono: Request times for /; avg: 1391.42ms; min: 458.76ms; max: 4923.11ms
 |_http-config-backup: ERROR: Script execution failed (use -d to debug)
-|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-title: Welcome to Bethany&#039;s Page | Bethany&#039;s Page
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-malware-host: Host appears to be clean
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Read data files from: /usr/bin/../share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Aug 18 06:37:38 2022 -- 1 IP address (1 host up) scanned in 107.37 seconds
+# Nmap done at Fri Aug 19 09:28:00 2022 -- 1 IP address (1 host up) scanned in 425.64 seconds

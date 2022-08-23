@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Aug 21 01:00:02 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 5353 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/udp5353/udp_5353_multicastdns_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/udp5353/xml/udp_5353_multicastdns_nmap.xml 10.11.1.72 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 5353 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/udp5353/udp_5353_multicastdns_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/udp5353/xml/udp_5353_multicastdns_nmap.xml 10.11.1.72" start="1661058002" startstr="Sun Aug 21 01:00:02 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="5353"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661058002"/>
+<taskend task="NSE" time="1661058002"/>
+<taskbegin task="NSE" time="1661058002"/>
+<taskend task="NSE" time="1661058002"/>
+<taskbegin task="NSE" time="1661058002"/>
+<taskend task="NSE" time="1661058002"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661058002"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661058003"/>
+<taskbegin task="UDP Scan" time="1661058003"/>
+<taskend task="UDP Scan" time="1661058003" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661058003"/>
+<taskend task="Service scan" time="1661058008" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<host starttime="1661058003" endtime="1661058008"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.72" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="5353"><state state="open" reason="udp-response" reason_ttl="254"/><service name="mdns" product="DNS-based service discovery" method="probed" conf="10"/><script id="dns-service-discovery" output="&#xa;  9/tcp workstation&#xa;    Address=10.11.1.72 fe80::250:56ff:feba:54f2&#xa;  22/tcp udisks-ssh&#xa;    Address=10.11.1.72 fe80::250:56ff:feba:54f2&#xa;"/></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.11.1.72&quot;; use dns-brute.domain script argument."/></hostscript><times srtt="151436" rttvar="151436" to="757180"/>
+</host>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<taskbegin task="NSE" time="1661058008"/>
+<taskend task="NSE" time="1661058008"/>
+<runstats><finished time="1661058008" timestr="Sun Aug 21 01:00:08 2022" summary="Nmap done at Sun Aug 21 01:00:08 2022; 1 IP address (1 host up) scanned in 6.41 seconds" elapsed="6.41" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

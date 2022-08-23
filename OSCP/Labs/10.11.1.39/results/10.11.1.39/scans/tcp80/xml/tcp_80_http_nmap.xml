@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 18 13:17:29 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/xml/tcp_80_http_nmap.xml 10.11.1.39 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/xml/tcp_80_http_nmap.xml 10.11.1.39" start="1660843049" startstr="Thu Aug 18 13:17:29 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660843049"/>
+<taskend task="NSE" time="1660843049"/>
+<taskbegin task="NSE" time="1660843049"/>
+<taskend task="NSE" time="1660843049"/>
+<taskbegin task="NSE" time="1660843049"/>
+<taskend task="NSE" time="1660843049"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660843050"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660843050"/>
+<taskbegin task="SYN Stealth Scan" time="1660843050"/>
+<taskend task="SYN Stealth Scan" time="1660843050" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1660843050"/>
+<taskend task="Service scan" time="1660843056" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1660843056"/>
+<taskprogress task="NSE" time="1660843087" percent="99.67" remaining="1" etc="1660843087"/>
+<taskprogress task="NSE" time="1660843117" percent="99.67" remaining="1" etc="1660843117"/>
+<taskprogress task="NSE" time="1660843147" percent="99.67" remaining="1" etc="1660843147"/>
+<taskprogress task="NSE" time="1660843177" percent="99.67" remaining="1" etc="1660843177"/>
+<taskprogress task="NSE" time="1660843207" percent="99.67" remaining="1" etc="1660843207"/>
+<taskprogress task="NSE" time="1660843237" percent="99.67" remaining="1" etc="1660843238"/>
+<taskprogress task="NSE" time="1660843267" percent="99.67" remaining="1" etc="1660843268"/>
+<taskprogress task="NSE" time="1660843297" percent="99.67" remaining="1" etc="1660843298"/>
+<taskprogress task="NSE" time="1660843327" percent="99.67" remaining="1" etc="1660843328"/>
+<taskprogress task="NSE" time="1660843357" percent="99.67" remaining="1" etc="1660843358"/>
+<taskend task="NSE" time="1660843380"/>
+<taskbegin task="NSE" time="1660843380"/>
+<taskend task="NSE" time="1660843381"/>
+<taskbegin task="NSE" time="1660843381"/>
+<taskend task="NSE" time="1660843381"/>
+<host starttime="1660843050" endtime="1660843381"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.39" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.6.3" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.6.3</cpe></service><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-vhosts" output="&#xa;128 names had status 403"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 403&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">403</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.39&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/bootstrap.min.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * Bootstrap v3.1.1 (http://getbootstrap.com)&#xa;         * Copyright 2011-2014 Twitter, Inc.&#xa;         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)&#xa;         */&#xa;    &#xa;    Path: http://10.11.1.39:80/&#xa;    Line number: 32&#xa;    Comment: &#xa;        /* W3C */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 15&#xa;    Comment: &#xa;        /* END Light */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* Open Sans @font-face kit */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 43&#xa;    Comment: &#xa;        /* BEGIN Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 17&#xa;    Comment: &#xa;        /* BEGIN Light Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 119&#xa;    Comment: &#xa;        /* END Extrabold */&#xa;    &#xa;    Path: http://10.11.1.39:80/&#xa;    Line number: 10&#xa;    Comment: &#xa;        &lt;!-&#45;&#x9;&#x9; &#xa;        &#xa;        body {&#xa;          font-family: &quot;Open Sans&quot;, Helvetica, sans-serif;&#xa;          font-weight: 100;&#xa;          color: #ccc;&#xa;          background: rgba(10, 24, 55, 1);&#xa;          font-size: 16px;&#xa;        }&#xa;        &#xa;        h2, h3, h4 {&#xa;          font-weight: 200;&#xa;        }&#xa;        &#xa;        h2 {&#xa;          font-size: 28px;&#xa;        }&#xa;        &#xa;        .jumbotron {&#xa;          margin-bottom: 0;&#xa;          color: #333;&#xa;          background: rgb(212,212,221); /* Old browsers */&#xa;          background: radial-gradient(ellipse at center top, rgba(255,255,255,1) 0%,rgba(174,174,183,1) 100%); /* W3C */&#xa;        }&#xa;        &#xa;        .jumbotron h1 {&#xa;          font-size: 128px;&#xa;          font-weight: 700;&#xa;          color: white;&#xa;          text-shadow: 0px 2px 0px #abc,&#xa;                       0px 4px 10px rgba(0,0,0,0.15),&#xa;                       0px 5px 2px rgba(0,0,0,0.1),&#xa;                       0px 6px 30px rgba(0,0,0,0.1);&#xa;        }&#xa;        &#xa;        .jumbotron p {&#xa;          font-size: 28px;&#xa;          font-weight: 100;&#xa;        }&#xa;        &#xa;        .main {&#xa;           background: white;&#xa;           color: #234;&#xa;           border-top: 1px solid rgba(0,0,0,0.12);&#xa;           padding-top: 30px;&#xa;           padding-bottom: 40px;&#xa;        }&#xa;        &#xa;        .footer {&#xa;           border-top: 1px solid rgba(255,255,255,0.2);&#xa;           padding-top: 30px;&#xa;        }&#xa;        &#xa;            -&#45;&gt;&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 2&#xa;    Comment: &#xa;        /* https://github.com/FontFaceKit/open-sans */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 132&#xa;    Comment: &#xa;        /* END Extrabold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/&#xa;    Line number: 6&#xa;    Comment: &#xa;        &lt;!-&#45; Bootstrap -&#45;&gt;&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 108&#xa;    Comment: &#xa;        /* BEGIN Extrabold */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 93&#xa;    Comment: &#xa;        /* END Bold */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 56&#xa;    Comment: &#xa;        /* BEGIN Semibold */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 106&#xa;    Comment: &#xa;        /* END Bold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 95&#xa;    Comment: &#xa;        /* BEGIN Bold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 121&#xa;    Comment: &#xa;        /* BEGIN Extrabold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 67&#xa;    Comment: &#xa;        /* END Semibold */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 54&#xa;    Comment: &#xa;        /* END Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 69&#xa;    Comment: &#xa;        /* BEGIN Semibold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 82&#xa;    Comment: &#xa;        /* BEGIN Bold */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 4&#xa;    Comment: &#xa;        /* BEGIN Light */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 80&#xa;    Comment: &#xa;        /* END Semibold Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 41&#xa;    Comment: &#xa;        /* END Regular */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 28&#xa;    Comment: &#xa;        /* END Light Italic */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/open-sans.css&#xa;    Line number: 30&#xa;    Comment: &#xa;        /* BEGIN Regular */&#xa;    &#xa;    Path: http://10.11.1.39:80/noindex/css/bootstrap.min.css&#xa;    Line number: 7&#xa;    Comment: &#xa;        /*! normalize.css v3.0.0 | MIT License | git.io/normalize */&#xa;    &#xa;    Path: http://10.11.1.39:80/&#xa;    Line number: 31&#xa;    Comment: &#xa;        /* Old browsers */&#xa;"/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-title" output="Apache HTTP Server Test Page powered by CentOS"><elem key="title">Apache HTTP Server Test Page powered by CentOS</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://10.11.1.39:80/: &#xa;    (1) email: &#xa;      + webmaster@example.com"><table key="(1) http://10.11.1.39:80/">
+<table key="(1) email">
+<elem>+ webmaster@example.com</elem>
+</table>
+</table>
+</script><script id="http-server-header" output="nginx/1.6.3"><elem>nginx/1.6.3</elem>
+</script><script id="http-chrono" output="Request times for /; avg: 416.66ms; min: 327.94ms; max: 484.16ms"/><script id="http-enum" output="&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;"/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /images/&#xa;      gif: 1; png: 1&#xa;    /noindex/css/&#xa;      css: 2&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /noindex/css/&#xa;  Total files found (by extension):&#xa;    css: 2; gif: 1; png: 1&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-date" output="Thu, 18 Aug 2022 17:17:40 GMT; +3s from local time."><elem key="date">2022-08-18T17:17:40+00:00</elem>
+<elem key="delta">3.0</elem>
+</script><script id="http-malware-host" output="Host appears to be clean"/><script id="http-security-headers" output=""></script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-headers" output="&#xa;  Server: nginx/1.6.3&#xa;  Date: Thu, 18 Aug 2022 17:17:46 GMT&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Content-Length: 4897&#xa;  Connection: close&#xa;  Last-Modified: Thu, 16 Oct 2014 13:20:58 GMT&#xa;  ETag: &quot;1321-5058a1e728280&quot;&#xa;  Accept-Ranges: bytes&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=10.11.1.39&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://10.11.1.39:80/&#xa;"/></port>
+</ports>
+<times srtt="141449" rttvar="141449" to="707245"/>
+</host>
+<taskbegin task="NSE" time="1660843381"/>
+<taskend task="NSE" time="1660843381"/>
+<taskbegin task="NSE" time="1660843381"/>
+<taskend task="NSE" time="1660843381"/>
+<taskbegin task="NSE" time="1660843381"/>
+<taskend task="NSE" time="1660843381"/>
+<runstats><finished time="1660843381" timestr="Thu Aug 18 13:23:01 2022" summary="Nmap done at Thu Aug 18 13:23:01 2022; 1 IP address (1 host up) scanned in 332.18 seconds" elapsed="332.18" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

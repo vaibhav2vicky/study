@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 22 09:32:51 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.220 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.220" start="1661175171" startstr="Mon Aug 22 09:32:51 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661175172"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661175172"/>
+<taskbegin task="SYN Stealth Scan" time="1661175172"/>
+<taskend task="SYN Stealth Scan" time="1661175172" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661175173"/>
+<taskend task="Service scan" time="1661175179" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661175179"/>
+<taskprogress task="NSE" time="1661175210" percent="92.86" remaining="3" etc="1661175212"/>
+<taskprogress task="NSE" time="1661175240" percent="97.14" remaining="2" etc="1661175242"/>
+<taskprogress task="NSE" time="1661175270" percent="97.14" remaining="3" etc="1661175273"/>
+<taskprogress task="NSE" time="1661175300" percent="97.14" remaining="4" etc="1661175304"/>
+<taskprogress task="NSE" time="1661175330" percent="97.14" remaining="5" etc="1661175334"/>
+<taskprogress task="NSE" time="1661175360" percent="97.14" remaining="6" etc="1661175365"/>
+<taskprogress task="NSE" time="1661175390" percent="97.14" remaining="7" etc="1661175396"/>
+<taskprogress task="NSE" time="1661175420" percent="97.14" remaining="8" etc="1661175427"/>
+<taskprogress task="NSE" time="1661175450" percent="97.14" remaining="8" etc="1661175458"/>
+<taskprogress task="NSE" time="1661175480" percent="97.14" remaining="9" etc="1661175489"/>
+<taskprogress task="NSE" time="1661175510" percent="97.14" remaining="10" etc="1661175520"/>
+<taskend task="NSE" time="1661175536"/>
+<taskbegin task="NSE" time="1661175536"/>
+<taskend task="NSE" time="1661175545"/>
+<taskbegin task="NSE" time="1661175545"/>
+<taskend task="NSE" time="1661175545"/>
+<host starttime="1661175172" endtime="1661175545"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.220" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2008 R2 Standard 7601 Service Pack 1 microsoft-ds" extrainfo="workgroup: THINC" hostname="MASTER" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.0.2&#xa;    2.1"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.0.2</elem>
+<elem>2.1</elem>
+</table>
+</script><script id="smb2-capabilities" output="&#xa;  2.0.2: &#xa;    Distributed File System&#xa;  2.1: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.0.2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.1">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2008 R2 Standard 7601 Service Pack 1 (Windows Server 2008 R2 Standard 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_server_2008::sp1&#xa;  Computer name: master&#xa;  NetBIOS computer name: MASTER\x00&#xa;  Domain name: thinc.local&#xa;  Forest name: thinc.local&#xa;  FQDN: master.thinc.local&#xa;  System time: 2013-12-27T23:37:45-08:00&#xa;"><elem key="os">Windows Server 2008 R2 Standard 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows Server 2008 R2 Standard 6.1</elem>
+<elem key="server">MASTER\x00</elem>
+<elem key="date">2013-12-27T23:37:45-08:00</elem>
+<elem key="fqdn">master.thinc.local</elem>
+<elem key="domain_dns">thinc.local</elem>
+<elem key="forest_dns">thinc.local</elem>
+<elem key="workgroup">THINC\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_server_2008::sp1</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_ACCESS_DENIED">false</script><script id="smb2-time" output="&#xa;  date: 2013-12-28T07:37:38&#xa;  start_date: 2014-02-18T05:47:52"><elem key="date">2013-12-28T07:37:38</elem>
+<elem key="start_date">2014-02-18T05:47:52</elem>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Call to Browser Service failed with status = 2184"/><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.1: &#xa;    Message signing enabled and required"><table key="2.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)&#xa;  account_used: &lt;blank&gt;&#xa;  \\10.11.1.220\ADMIN$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.11.1.220\C$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.11.1.220\IPC$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: READ&#xa;  \\10.11.1.220\NETLOGON: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)</elem>
+<elem key="account_used">&lt;blank&gt;</elem>
+<table key="\\10.11.1.220\ADMIN$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.11.1.220\C$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.11.1.220\IPC$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">READ</elem>
+</table>
+<table key="\\10.11.1.220\NETLOGON">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+</script></hostscript><times srtt="145039" rttvar="145039" to="725195"/>
+</host>
+<taskbegin task="NSE" time="1661175545"/>
+<taskend task="NSE" time="1661175545"/>
+<taskbegin task="NSE" time="1661175545"/>
+<taskend task="NSE" time="1661175545"/>
+<taskbegin task="NSE" time="1661175545"/>
+<taskend task="NSE" time="1661175545"/>
+<runstats><finished time="1661175545" timestr="Mon Aug 22 09:39:05 2022" summary="Nmap done at Mon Aug 22 09:39:05 2022; 1 IP address (1 host up) scanned in 374.46 seconds" elapsed="374.46" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

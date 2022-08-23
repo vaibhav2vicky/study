@@ -1,0 +1,79 @@
+# Nmap 7.92 scan initiated Thu Aug 18 13:17:29 2022 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp22/tcp_22_ssh_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp22/xml/tcp_22_ssh_nmap.xml 10.11.1.39
+Nmap scan report for 10.11.1.39
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-18 13:17:30 EDT for 5s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 6.6.1 (protocol 2.0)
+| ssh2-enum-algos: 
+|   kex_algorithms: (8)
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (3)
+|       ssh-rsa
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (16)
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       arcfour256
+|       arcfour128
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|       chacha20-poly1305@openssh.com
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       aes192-cbc
+|       aes256-cbc
+|       arcfour
+|       rijndael-cbc@lysator.liu.se
+|   mac_algorithms: (19)
+|       hmac-md5-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-ripemd160-etm@openssh.com
+|       hmac-sha1-96-etm@openssh.com
+|       hmac-md5-96-etm@openssh.com
+|       hmac-md5
+|       hmac-sha1
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+| ssh-hostkey: 
+|   2048 5e:c1:7e:d2:f9:20:f9:11:ea:4b:02:68:07:3f:54:f2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgrAeio5MX8ee/JR6rhcr8MTqM5SZga8iPjfwjFHc492aKCgXqFxE8Kprutz0NQDvXt0096pft0tiGPJBxZ6WiJvLxIzTSDe261Ly4ZUywtf3Akt/oCtOKwWV76B2gPoGG0jSpnhVgEcBW028QXk8+qDrQI5XLKyczKOdbnD/D76rOfPkJwMGTXPQmB4SSGqflnAF7Gem3Ay1dS7H+LVGgmfLHtNV9zlyx5dSRWihX6hnofYylHeSi7rLVWs5qDLeBqDID32joNqrhKzUUe8idgmU5lNCrGUcAGb+aUF7q5V0eWDD0mRXLay6OIHbXmvY/ylHyqs1jpQWhpXt9ZKTz
+|   256 36:ef:27:31:a2:fd:4a:e3:d2:4e:12:58:1f:7a:03:58 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJaLYCLt5BQwdt158R4quRiBubM4IKNB2d3kHn6jSZwpB0o/j9kQmwg5L5ek6dDc0qd9lOjzWKKSec8n4ULzWU0=
+|   256 2c:70:9c:c9:4c:50:61:d2:51:43:d5:67:d1:d0:39:de (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK/4iJuHgKovQDwFWS6ZxgjJYnNu0qqorL0dmHw2ZMJ0
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|     gssapi-keyex
+|     gssapi-with-mic
+|_    password
+|_banner: SSH-2.0-OpenSSH_6.6.1
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 18 13:17:35 2022 -- 1 IP address (1 host up) scanned in 5.80 seconds

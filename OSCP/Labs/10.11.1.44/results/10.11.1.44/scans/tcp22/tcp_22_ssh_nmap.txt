@@ -1,10 +1,10 @@
-# Nmap 7.92 scan initiated Thu Aug 18 06:50:40 2022 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/tcp22/tcp_22_ssh_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/tcp22/xml/tcp_22_ssh_nmap.xml 10.11.1.44
+# Nmap 7.92 scan initiated Thu Aug 18 11:46:18 2022 as: nmap -vv --reason -Pn -T4 -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/tcp22/tcp_22_ssh_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.44/results/10.11.1.44/scans/tcp22/xml/tcp_22_ssh_nmap.xml 10.11.1.44
 Nmap scan report for 10.11.1.44
-Host is up, received user-set (0.15s latency).
-Scanned at 2022-08-18 06:50:54 EDT for 19s
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-18 11:46:19 EDT for 19s
 
-PORT   STATE SERVICE REASON  VERSION
-22/tcp open  ssh     syn-ack OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 5.3p1 Debian 3ubuntu7 (Ubuntu Linux; protocol 2.0)
 | ssh-hostkey: 
 |   1024 65:63:69:c9:8b:96:b1:fb:be:d5:5c:f8:1e:7b:de:8f (DSA)
 | ssh-dss AAAAB3NzaC1kc3MAAACBAPgRl+JiiKTtPRghjaMR4nHJ2qK9+bfBhVJw5fhPu3gsLxPe+dOi9gfpUrM4pVo00RZki0n/9Hn6pVXnJqpnXPtgGhGsnQYkPR6QdiBWWeGGZ3tsDuj1uOX6DrSEy4eVuaAGV9h24BTzgFcZ8o690pDWcKGB8krHHgi0SWnj3xQ1AAAAFQDzMDuRv4XwObvME88LK1VQ28xagQAAAIEAmNnhKZCSEnOhyW5+h5UiB7pBDbfM7WMW/ferRuq57no4GxEbDBUlDp3IovMAOKPt/ZSajiyueew1o4IXq+3qVf1sjtUDOvtptv7aGUpK9ZCeY/J0XEL/526J7DO2bl/aVimy4xGFKdIPFdqwilJdgIAbvxjuBrlTkIMnKzxYpFIAAACABExZb99rpjo3h+6ypzywL+QZL01tVb8I5wuTtRfGTL3619TvOPHXZ74DR8qE2KOgx9WapTKUcFgGwDQZ2fh+EZd2/xx/j0n/gCrfdtHAKWlUvYYJg3nAR2XeYj/5c+c9WUTloY+4EO8Lwb5Uibr9vNxm05/wiJMauAMS/Q4EYAM=
@@ -53,4 +53,4 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Read data files from: /usr/bin/../share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Thu Aug 18 06:51:13 2022 -- 1 IP address (1 host up) scanned in 32.61 seconds
+# Nmap done at Thu Aug 18 11:46:38 2022 -- 1 IP address (1 host up) scanned in 19.74 seconds

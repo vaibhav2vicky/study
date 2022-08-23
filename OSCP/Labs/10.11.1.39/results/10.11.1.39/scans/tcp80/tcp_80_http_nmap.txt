@@ -1,0 +1,289 @@
+# Nmap 7.92 scan initiated Thu Aug 18 13:17:29 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/tcp_80_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/xml/tcp_80_http_nmap.xml 10.11.1.39
+Nmap scan report for 10.11.1.39
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-18 13:17:30 EDT for 331s
+
+Bug in http-security-headers: no string output.
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 nginx 1.6.3
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-vhosts: 
+|_128 names had status 403
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-feed: Couldn't find any feeds.
+| http-useragent-tester: 
+|   Status for browser useragent: 403
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.39
+|     
+|     Path: http://10.11.1.39:80/noindex/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v3.1.1 (http://getbootstrap.com)
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://10.11.1.39:80/
+|     Line number: 32
+|     Comment: 
+|         /* W3C */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 15
+|     Comment: 
+|         /* END Light */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 1
+|     Comment: 
+|         /* Open Sans @font-face kit */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 43
+|     Comment: 
+|         /* BEGIN Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 17
+|     Comment: 
+|         /* BEGIN Light Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 119
+|     Comment: 
+|         /* END Extrabold */
+|     
+|     Path: http://10.11.1.39:80/
+|     Line number: 10
+|     Comment: 
+|         <!--		 
+|         
+|         body {
+|           font-family: "Open Sans", Helvetica, sans-serif;
+|           font-weight: 100;
+|           color: #ccc;
+|           background: rgba(10, 24, 55, 1);
+|           font-size: 16px;
+|         }
+|         
+|         h2, h3, h4 {
+|           font-weight: 200;
+|         }
+|         
+|         h2 {
+|           font-size: 28px;
+|         }
+|         
+|         .jumbotron {
+|           margin-bottom: 0;
+|           color: #333;
+|           background: rgb(212,212,221); /* Old browsers */
+|           background: radial-gradient(ellipse at center top, rgba(255,255,255,1) 0%,rgba(174,174,183,1) 100%); /* W3C */
+|         }
+|         
+|         .jumbotron h1 {
+|           font-size: 128px;
+|           font-weight: 700;
+|           color: white;
+|           text-shadow: 0px 2px 0px #abc,
+|                        0px 4px 10px rgba(0,0,0,0.15),
+|                        0px 5px 2px rgba(0,0,0,0.1),
+|                        0px 6px 30px rgba(0,0,0,0.1);
+|         }
+|         
+|         .jumbotron p {
+|           font-size: 28px;
+|           font-weight: 100;
+|         }
+|         
+|         .main {
+|            background: white;
+|            color: #234;
+|            border-top: 1px solid rgba(0,0,0,0.12);
+|            padding-top: 30px;
+|            padding-bottom: 40px;
+|         }
+|         
+|         .footer {
+|            border-top: 1px solid rgba(255,255,255,0.2);
+|            padding-top: 30px;
+|         }
+|         
+|             -->
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 2
+|     Comment: 
+|         /* https://github.com/FontFaceKit/open-sans */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 132
+|     Comment: 
+|         /* END Extrabold Italic */
+|     
+|     Path: http://10.11.1.39:80/
+|     Line number: 6
+|     Comment: 
+|         <!-- Bootstrap -->
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 108
+|     Comment: 
+|         /* BEGIN Extrabold */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 93
+|     Comment: 
+|         /* END Bold */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 56
+|     Comment: 
+|         /* BEGIN Semibold */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 106
+|     Comment: 
+|         /* END Bold Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 95
+|     Comment: 
+|         /* BEGIN Bold Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 121
+|     Comment: 
+|         /* BEGIN Extrabold Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 67
+|     Comment: 
+|         /* END Semibold */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 54
+|     Comment: 
+|         /* END Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 69
+|     Comment: 
+|         /* BEGIN Semibold Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 82
+|     Comment: 
+|         /* BEGIN Bold */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 4
+|     Comment: 
+|         /* BEGIN Light */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 80
+|     Comment: 
+|         /* END Semibold Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 41
+|     Comment: 
+|         /* END Regular */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 28
+|     Comment: 
+|         /* END Light Italic */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/open-sans.css
+|     Line number: 30
+|     Comment: 
+|         /* BEGIN Regular */
+|     
+|     Path: http://10.11.1.39:80/noindex/css/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+|     
+|     Path: http://10.11.1.39:80/
+|     Line number: 31
+|     Comment: 
+|_        /* Old browsers */
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+| http-grep: 
+|   (1) http://10.11.1.39:80/: 
+|     (1) email: 
+|_      + webmaster@example.com
+|_http-server-header: nginx/1.6.3
+|_http-chrono: Request times for /; avg: 416.66ms; min: 327.94ms; max: 484.16ms
+| http-enum: 
+|_  /icons/: Potentially interesting folder w/ directory listing
+| http-sitemap-generator: 
+|   Directory structure:
+|     /images/
+|       gif: 1; png: 1
+|     /noindex/css/
+|       css: 2
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /noindex/css/
+|   Total files found (by extension):
+|_    css: 2; gif: 1; png: 1
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-mobileversion-checker: No mobile version detected.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-date: Thu, 18 Aug 2022 17:17:40 GMT; +3s from local time.
+|_http-malware-host: Host appears to be clean
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-headers: 
+|   Server: nginx/1.6.3
+|   Date: Thu, 18 Aug 2022 17:17:46 GMT
+|   Content-Type: text/html; charset=UTF-8
+|   Content-Length: 4897
+|   Connection: close
+|   Last-Modified: Thu, 16 Oct 2014 13:20:58 GMT
+|   ETag: "1321-5058a1e728280"
+|   Accept-Ranges: bytes
+|   
+|_  (Request type: GET)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.11.1.39
+|   Found the following error pages: 
+|   
+|   Error Code: 403
+|_  	http://10.11.1.39:80/
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 18 13:23:01 2022 -- 1 IP address (1 host up) scanned in 332.18 seconds

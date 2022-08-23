@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Aug 21 00:56:02 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.141/results/10.11.1.141/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.141/results/10.11.1.141/scans/xml/_full_tcp_nmap.xml 10.11.1.141 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.141/results/10.11.1.141/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.141/results/10.11.1.141/scans/xml/_full_tcp_nmap.xml 10.11.1.141" start="1661057762" startstr="Sun Aug 21 00:56:02 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661057762"/>
+<taskend task="NSE" time="1661057762"/>
+<taskbegin task="NSE" time="1661057762"/>
+<taskend task="NSE" time="1661057762"/>
+<taskbegin task="NSE" time="1661057762"/>
+<taskend task="NSE" time="1661057762"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661057762"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661057762"/>
+<taskbegin task="SYN Stealth Scan" time="1661057762"/>
+<taskprogress task="SYN Stealth Scan" time="1661057793" percent="28.14" remaining="80" etc="1661057872"/>
+<taskprogress task="SYN Stealth Scan" time="1661057862" percent="51.35" remaining="95" etc="1661057957"/>
+<taskprogress task="SYN Stealth Scan" time="1661057892" percent="53.65" remaining="113" etc="1661058004"/>
+<taskprogress task="SYN Stealth Scan" time="1661057925" percent="56.19" remaining="128" etc="1661058052"/>
+<taskprogress task="SYN Stealth Scan" time="1661057979" percent="60.29" remaining="143" etc="1661058122"/>
+<taskprogress task="SYN Stealth Scan" time="1661058123" percent="71.02" remaining="148" etc="1661058270"/>
+<taskprogress task="SYN Stealth Scan" time="1661058243" percent="79.86" remaining="122" etc="1661058364"/>
+<taskprogress task="SYN Stealth Scan" time="1661058345" percent="86.63" remaining="91" etc="1661058435"/>
+<taskprogress task="SYN Stealth Scan" time="1661058429" percent="92.21" remaining="57" etc="1661058485"/>
+<taskend task="SYN Stealth Scan" time="1661058569" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1661058569"/>
+<taskend task="Service scan" time="1661058575" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1661058584"/>
+<taskend task="Traceroute" time="1661058584"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1661058584"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1661058585"/>
+<taskbegin task="NSE" time="1661058585"/>
+<taskend task="NSE" time="1661058615"/>
+<taskbegin task="NSE" time="1661058615"/>
+<taskend task="NSE" time="1661058615"/>
+<taskbegin task="NSE" time="1661058615"/>
+<taskend task="NSE" time="1661058615"/>
+<host starttime="1661057762" endtime="1661058615"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="reset" count="65532" proto="tcp" ports="1-21,23-110,112-9999,10001-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="4.0" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.0</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 fe:cd:bb:f6:36:d4:59:62:92:b4:10:e4:75:04:43:54 (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAKxjlfl5sbHGnWodoHks96E692GTN8lhN3mP9xUTryrcqeewA0u39IS/lj8/qO5c5/Z51Hu0MW/i0ue6UB2TVnQxGlCbfgZrnT0Skb++tovXJUCDSsu+tyYr2ns3aEOwZy7/ve5frDoW+fddowjnanmbuWKhI6PU/pDGkr6WbmQtAAAAFQCrYsMHZ5ktp0hpx7grXlNYvyr0AwAAAIEAhWOTFpLixkIir4mFzKmZIHKsXtkOGMVehYwyNola389WsFiJsl17/Kt0KQPDTE++F91MxNPGeBCux2xZHOWDN35rHLcWhLTAjI6t1M+eOW/mjMGyt+1EeNMvgrz4yyDPlq00y7WeJ15ZUycXt5zaGkVrbrQjBORdx00mpN4ClIUAAACAZQbZU1sXrfqlYuhQWAIGi4NF+X6XbteLnXlAm6ZkYq+8K58OORI/VxwywXZ49O1rSZ/3M1y26c98a6s1AD0V4x+jlXkLLgh8gvJUBktyKNuSJO8Z7bfjRryHBP8ftr56UZcKBOFVXbgQH/ggn7EunpLgAHBnlf0Sl6mP6K3OQRo=&#xa;  1024 9a:99:25:75:ac:04:e5:f9:f7:21:c6:f5:88:4f:12:6a (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAqDXO4rkXP9Yk3DBXRTuBb8XPe6E5VZPJ/VkOAj5F55yoXXpdoKr5ylpkeXXdlpkNp6gr5FodvDxKnHMA0GZxnwqYnjp4EdlXX0oNoGdvzSZvGKpVjxkOsaXvXj5dIUFiUo+/wFDc/WM9Ep+jntTTN+ptgNJevzrotmv+mzDolVU="><table>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAKxjlfl5sbHGnWodoHks96E692GTN8lhN3mP9xUTryrcqeewA0u39IS/lj8/qO5c5/Z51Hu0MW/i0ue6UB2TVnQxGlCbfgZrnT0Skb++tovXJUCDSsu+tyYr2ns3aEOwZy7/ve5frDoW+fddowjnanmbuWKhI6PU/pDGkr6WbmQtAAAAFQCrYsMHZ5ktp0hpx7grXlNYvyr0AwAAAIEAhWOTFpLixkIir4mFzKmZIHKsXtkOGMVehYwyNola389WsFiJsl17/Kt0KQPDTE++F91MxNPGeBCux2xZHOWDN35rHLcWhLTAjI6t1M+eOW/mjMGyt+1EeNMvgrz4yyDPlq00y7WeJ15ZUycXt5zaGkVrbrQjBORdx00mpN4ClIUAAACAZQbZU1sXrfqlYuhQWAIGi4NF+X6XbteLnXlAm6ZkYq+8K58OORI/VxwywXZ49O1rSZ/3M1y26c98a6s1AD0V4x+jlXkLLgh8gvJUBktyKNuSJO8Z7bfjRryHBP8ftr56UZcKBOFVXbgQH/ggn7EunpLgAHBnlf0Sl6mP6K3OQRo=</elem>
+<elem key="fingerprint">fecdbbf636d4596292b410e475044354</elem>
+</table>
+<table>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAqDXO4rkXP9Yk3DBXRTuBb8XPe6E5VZPJ/VkOAj5F55yoXXpdoKr5ylpkeXXdlpkNp6gr5FodvDxKnHMA0GZxnwqYnjp4EdlXX0oNoGdvzSZvGKpVjxkOsaXvXj5dIUFiUo+/wFDc/WM9Ep+jntTTN+ptgNJevzrotmv+mzDolVU=</elem>
+<elem key="fingerprint">9a992575ac04e5f9f721c6f5884f126a</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2            111/tcp   rpcbind&#xa;  100000  2            111/udp   rpcbind&#xa;"><table key="100000">
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+</table>
+</table>
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+</table>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<osmatch name="Linux 2.6.9" accuracy="94" line="58701">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:2.6.9</cpe></osclass>
+</osmatch>
+<osmatch name="Cisco SA520 firewall (Linux 2.6)" accuracy="93" line="47302">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="firewall" vendor="Cisco" osfamily="embedded" accuracy="93"><cpe>cpe:/h:cisco:sa520</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18" accuracy="93" line="49662">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.9 - 2.6.27" accuracy="93" line="59202">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.28" accuracy="92" line="53509">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.28</cpe></osclass>
+</osmatch>
+<osmatch name="Riverbed Steelhead 200 proxy server" accuracy="92" line="95424">
+<osclass type="proxy server" vendor="Riverbed" osfamily="embedded" accuracy="92"><cpe>cpe:/h:riverbed:steelhead_200</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.11" accuracy="90" line="47437">
+<osclass type="firewall" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.11</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.30" accuracy="90" line="53729">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.30</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="90" line="56050">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.9 (CentOS 4.4)" accuracy="90" line="58919">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.9</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/21%OT=22%CT=1%CU=%PV=Y%DS=2%DC=T%G=N%TM=6301BE37%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=C3%GCD=1%ISR=CA%TI=Z%II=I%TS=A)&#xa;SEQ(SP=C3%GCD=1%ISR=CA%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW2%O2=M54EST11NW2%O3=M54ENNT11NW2%O4=M54EST11NW2%O5=M54EST11NW2%O6=M54EST11)&#xa;WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)&#xa;ECN(R=Y%DF=Y%TG=40%W=16D0%O=M54ENNSNW2%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=N)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="207092" lastboot="Thu Aug 18 15:38:43 2022"/>
+<distance value="2"/>
+<tcpsequence index="195" difficulty="Good luck!" values="632CB259,635CCF84,63C30D14,6377965D,6383D4D1,6339B76D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="C576CC3,C576D9A,C576E27,C576E58,C576E59,C576F56"/>
+<trace port="1720" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="151.41"/>
+<hop ttl="2" ipaddr="10.11.1.141" rtt="366.46"/>
+</trace>
+<times srtt="306298" rttvar="94185" to="683038"/>
+</host>
+<taskbegin task="NSE" time="1661058616"/>
+<taskend task="NSE" time="1661058616"/>
+<taskbegin task="NSE" time="1661058616"/>
+<taskend task="NSE" time="1661058616"/>
+<taskbegin task="NSE" time="1661058616"/>
+<taskend task="NSE" time="1661058616"/>
+<runstats><finished time="1661058615" timestr="Sun Aug 21 01:10:15 2022" summary="Nmap done at Sun Aug 21 01:10:15 2022; 1 IP address (1 host up) scanned in 854.14 seconds" elapsed="854.14" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

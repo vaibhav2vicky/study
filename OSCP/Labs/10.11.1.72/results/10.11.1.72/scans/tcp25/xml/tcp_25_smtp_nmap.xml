@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Aug 21 00:58:08 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/tcp25/tcp_25_smtp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/tcp25/xml/tcp_25_smtp_nmap.xml 10.11.1.72 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/tcp25/tcp_25_smtp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.72/results/10.11.1.72/scans/tcp25/xml/tcp_25_smtp_nmap.xml 10.11.1.72" start="1661057888" startstr="Sun Aug 21 00:58:08 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="25"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661057888"/>
+<taskend task="NSE" time="1661057888"/>
+<taskbegin task="NSE" time="1661057888"/>
+<taskend task="NSE" time="1661057888"/>
+<taskbegin task="NSE" time="1661057888"/>
+<taskend task="NSE" time="1661057888"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661057888"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661057889"/>
+<taskbegin task="SYN Stealth Scan" time="1661057889"/>
+<taskend task="SYN Stealth Scan" time="1661057889" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661057889"/>
+<taskend task="Service scan" time="1661057894" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661057894"/>
+<taskend task="NSE" time="1661057906"/>
+<taskbegin task="NSE" time="1661057906"/>
+<taskend task="NSE" time="1661057922"/>
+<taskbegin task="NSE" time="1661057922"/>
+<taskend task="NSE" time="1661057922"/>
+<host starttime="1661057889" endtime="1661057922"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.72" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="JAMES smtpd" version="2.3.2" hostname="beta" method="probed" conf="10"/><script id="banner" output="220 beta SMTP Server (JAMES SMTP Server 2.3.2) ready Sun, 21 Au&#xa;g 2022 00:58:24 -0400 (EDT)"/><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="smtp-commands" output="beta Hello nmap.scanme.org (192.168.119.121 [192.168.119.121])"/></port>
+</ports>
+<times srtt="151731" rttvar="151731" to="758655"/>
+</host>
+<taskbegin task="NSE" time="1661057922"/>
+<taskend task="NSE" time="1661057922"/>
+<taskbegin task="NSE" time="1661057922"/>
+<taskend task="NSE" time="1661057922"/>
+<taskbegin task="NSE" time="1661057922"/>
+<taskend task="NSE" time="1661057922"/>
+<runstats><finished time="1661057922" timestr="Sun Aug 21 00:58:42 2022" summary="Nmap done at Sun Aug 21 00:58:42 2022; 1 IP address (1 host up) scanned in 34.00 seconds" elapsed="34.00" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,39 @@
+WhatWeb report for http://10.11.1.50:9505
+Status    : 200 OK
+Title     : /
+IP        : 10.11.1.50
+Country   : RESERVED, ZZ
+
+Summary   : Cookies[HFS_SID], JQuery[1.4.4], Script[text/javascript]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The
+	values are not returned to save on space.
+
+	String       : HFS_SID
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 1.4.4
+	Website     : http://jquery.com/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : text/javascript
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Content-Length: 1973
+	Accept-Ranges: bytes
+	Set-Cookie: HFS_SID=0.387302676215768; path=/;
+	Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+	Content-Encoding: gzip
+
+

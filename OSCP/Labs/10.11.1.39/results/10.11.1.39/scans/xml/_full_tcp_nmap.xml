@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 18 13:17:01 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/xml/_full_tcp_nmap.xml 10.11.1.39 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/xml/_full_tcp_nmap.xml 10.11.1.39" start="1660843021" startstr="Thu Aug 18 13:17:01 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660843021"/>
+<taskend task="NSE" time="1660843021"/>
+<taskbegin task="NSE" time="1660843021"/>
+<taskend task="NSE" time="1660843021"/>
+<taskbegin task="NSE" time="1660843021"/>
+<taskend task="NSE" time="1660843021"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660843021"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660843022"/>
+<taskbegin task="SYN Stealth Scan" time="1660843022"/>
+<taskprogress task="SYN Stealth Scan" time="1660843053" percent="7.04" remaining="410" etc="1660843462"/>
+<taskprogress task="SYN Stealth Scan" time="1660843083" percent="15.16" remaining="342" etc="1660843424"/>
+<taskprogress task="SYN Stealth Scan" time="1660843113" percent="30.50" remaining="208" etc="1660843320"/>
+<taskprogress task="SYN Stealth Scan" time="1660843143" percent="46.94" remaining="137" etc="1660843280"/>
+<taskprogress task="SYN Stealth Scan" time="1660843173" percent="65.24" remaining="81" etc="1660843253"/>
+<taskend task="SYN Stealth Scan" time="1660843222" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1660843222"/>
+<taskend task="Service scan" time="1660843229" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1660843235"/>
+<taskend task="Traceroute" time="1660843235"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1660843235"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1660843235"/>
+<taskbegin task="NSE" time="1660843235"/>
+<taskend task="NSE" time="1660843239"/>
+<taskbegin task="NSE" time="1660843239"/>
+<taskend task="NSE" time="1660843240"/>
+<taskbegin task="NSE" time="1660843240"/>
+<taskend task="NSE" time="1660843240"/>
+<host starttime="1660843022" endtime="1660843240"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.39" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-response" count="65350" proto="tcp" ports="1-21,23-79,81-189,191-1008,1010-1217,1219-1746,1748-2141,2143-2485,2487-2597,2599-2648,2650-2693,2695-2981,2983-3305,3307-3449,3451-3824,3826-4372,4374-4488,4490-4531,4533-4790,4792-4840,4842-5079,5081-5250,5252-5256,5258-6110,6112-6153,6155-6381,6383-6489,6491-7236,7238-7543,7545-7662,7664-8107,8109-8461,8463-8607,8609-9322,9324-9346,9348-9524,9526-9610,9612-9944,9946-10708,10710-11176,11178-11480,11482-12148,12150-12404,12406-12476,12478-12510,12512-12969,12971-13111,13113-13469,13471-13656,13658-13874,13876-14862,14864-15010,15012-15049,15051-15525,15527-15531,15533-15635,15637-16549,16551-16811,16813-17101,17103-17257,17259-18290,18292-18587,18589-18776,18778-19231,19233-19896,19898-22666,22668-22776,22778-22926,22928-23961,23963-24340,24342-24613,24615-25859,25861-26033,26035-26196,26198-27203,27205-27207,27209-27503,27505-27542,27544-27881,27883-27993,27995-28339,28341-28483,28485-28830,28832-29244,29246-29290,29292-30225,30227-30433,30435-30991,30993-31220,31222-31275,31277-32016,32018-32123,32125-32138,32140-32142,32144-32590,32592-32855,32857-33038,33040-35145,35147-35183,35185-35187,35189-35587,35589-35630,35632-36437,36439-37173,37175-37315,37317-37761,37763-37965,37967-38635,38637-39098,39100-39644,39646-39890,39892-41511,41513-41603,41605-42416,42418-42717,42719-42801,42803-43267,43269-43328,43330-43633,43635-43698,43700-43843,43845-44498,44500-44532,44534-44685,44687-45209,45211-45545,45547-45866,45868-46493,46495-46710,46712-47561,47563-47631,47633-47712,47714-49067,49069-49516,49518-49879,49881-50313,50315-50852,50854-51548,51550-51623,51625-52126,52128-52259,52261-52746,52748-52826,52828-52962,52964-53036,53038-53119,53121-53292,53294-53326,53328-53685,53687-54062,54064-54111,54113-54377,54379-54661,54663-54930,54932-55288,55290-55317,55319-55423,55425-55633,55635-55820,55822-55887,55889-56226,56228-56348,56350-56456,56458-56594,56596-57339,57342-57500,57502-57563,57565-57731,57733-57741,57743-57943,57945-58127,58129-58611,58613-58786,58788-59428,59430-59481,59483-60371,60373-60688,60690-61554,61556-61816,61818-62050,62052-62145,62147-63512,63514-63946,63948-64620,64622-65535"/>
+<extrareasons reason="host-prohibited" count="182" proto="tcp" ports="190,1009,1218,1747,2142,2486,2598,2649,2694,2982,3450,3825,4373,4489,4532,4791,4841,5080,5251,5257,6111,6154,6382,6490,7237,7544,7663,8108,8462,8608,9323,9347,9525,9611,9945,10709,11177,11481,12149,12405,12477,12511,12970,13112,13470,13657,13875,14863,15011,15050,15526,15532,15636,16550,16812,17102,17258,18291,18588,18777,19232,19897,22667,22777,22927,23962,24341,24614,25860,26034,26197,27204,27208,27504,27543,27882,27994,28340,28484,28831,29245,29291,30226,30434,30992,31221,31276,32017,32124,32139,32143,32591,32856,33039,35146,35184,35188,35588,35631,36438,37174,37316,37762,37966,38636,39099,39645,39891,41512,41604,42417,42718,42802,43268,43329,43634,43699,43844,44499,44533,44686,45210,45546,45867,46494,46711,47562,47632,47713,49068,49517,49880,50314,50853,51549,51624,52127,52260,52747,52827,52963,53037,53120,53293,53327,53686,54063,54112,54378,54662,54931,55289,55318,55424,55634,55821,55888,56227,56349,56457,56595,57340-57341,57501,57564,57732,57742,57944,58128,58612,58787,59429,59482,60372,60689,61555,61817,62051,62146,63513,63947,64621"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="6.6.1" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.6.1</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 5e:c1:7e:d2:f9:20:f9:11:ea:4b:02:68:07:3f:54:f2 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgrAeio5MX8ee/JR6rhcr8MTqM5SZga8iPjfwjFHc492aKCgXqFxE8Kprutz0NQDvXt0096pft0tiGPJBxZ6WiJvLxIzTSDe261Ly4ZUywtf3Akt/oCtOKwWV76B2gPoGG0jSpnhVgEcBW028QXk8+qDrQI5XLKyczKOdbnD/D76rOfPkJwMGTXPQmB4SSGqflnAF7Gem3Ay1dS7H+LVGgmfLHtNV9zlyx5dSRWihX6hnofYylHeSi7rLVWs5qDLeBqDID32joNqrhKzUUe8idgmU5lNCrGUcAGb+aUF7q5V0eWDD0mRXLay6OIHbXmvY/ylHyqs1jpQWhpXt9ZKTz&#xa;  256 36:ef:27:31:a2:fd:4a:e3:d2:4e:12:58:1f:7a:03:58 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJaLYCLt5BQwdt158R4quRiBubM4IKNB2d3kHn6jSZwpB0o/j9kQmwg5L5ek6dDc0qd9lOjzWKKSec8n4ULzWU0=&#xa;  256 2c:70:9c:c9:4c:50:61:d2:51:43:d5:67:d1:d0:39:de (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK/4iJuHgKovQDwFWS6ZxgjJYnNu0qqorL0dmHw2ZMJ0"><table>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">5ec17ed2f920f911ea4b0268073f54f2</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCgrAeio5MX8ee/JR6rhcr8MTqM5SZga8iPjfwjFHc492aKCgXqFxE8Kprutz0NQDvXt0096pft0tiGPJBxZ6WiJvLxIzTSDe261Ly4ZUywtf3Akt/oCtOKwWV76B2gPoGG0jSpnhVgEcBW028QXk8+qDrQI5XLKyczKOdbnD/D76rOfPkJwMGTXPQmB4SSGqflnAF7Gem3Ay1dS7H+LVGgmfLHtNV9zlyx5dSRWihX6hnofYylHeSi7rLVWs5qDLeBqDID32joNqrhKzUUe8idgmU5lNCrGUcAGb+aUF7q5V0eWDD0mRXLay6OIHbXmvY/ylHyqs1jpQWhpXt9ZKTz</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">36ef2731a2fd4ae3d24e12581f7a0358</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJaLYCLt5BQwdt158R4quRiBubM4IKNB2d3kHn6jSZwpB0o/j9kQmwg5L5ek6dDc0qd9lOjzWKKSec8n4ULzWU0=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">2c709cc94c5061d25143d567d1d039de</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIK/4iJuHgKovQDwFWS6ZxgjJYnNu0qqorL0dmHw2ZMJ0</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.6.3" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.6.3</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="Apache HTTP Server Test Page powered by CentOS"><elem key="title">Apache HTTP Server Test Page powered by CentOS</elem>
+</script><script id="http-server-header" output="nginx/1.6.3"><elem>nginx/1.6.3</elem>
+</script></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MariaDB" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 3.10 - 3.12" accuracy="90" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="90" line="67443">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="90" line="67936">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10" accuracy="86" line="63251">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3.10</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="86" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.0" accuracy="86" line="67026">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="86"><cpe>cpe:/o:linux:linux_kernel:4.0</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/18%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62FE74E8%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=102%GCD=1%ISR=10A%TI=Z%TS=A)&#xa;OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="79241" lastboot="Wed Aug 17 15:19:59 2022"/>
+<distance value="2"/>
+<tcpsequence index="258" difficulty="Good luck!" values="18ED8860,AECA7968,C768346A,F8368C1,DC736CDC,191EDEEE"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="4B8FFF1,4B90055,4B900B7,4B9011B,4B9017E,4B901E2"/>
+<trace port="22" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="142.51"/>
+<hop ttl="2" ipaddr="10.11.1.39" rtt="142.65"/>
+</trace>
+<times srtt="141752" rttvar="1044" to="145928"/>
+</host>
+<taskbegin task="NSE" time="1660843240"/>
+<taskend task="NSE" time="1660843240"/>
+<taskbegin task="NSE" time="1660843240"/>
+<taskend task="NSE" time="1660843240"/>
+<taskbegin task="NSE" time="1660843240"/>
+<taskend task="NSE" time="1660843240"/>
+<runstats><finished time="1660843240" timestr="Thu Aug 18 13:20:40 2022" summary="Nmap done at Thu Aug 18 13:20:40 2022; 1 IP address (1 host up) scanned in 219.89 seconds" elapsed="219.89" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

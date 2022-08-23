@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 22 09:32:51 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 10.11.1.220 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 3389 &quot;-&#45;script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.220/results/10.11.1.220/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 10.11.1.220" start="1661175171" startstr="Mon Aug 22 09:32:51 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3389"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="NSE" time="1661175172"/>
+<taskend task="NSE" time="1661175172"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661175172"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661175173"/>
+<taskbegin task="SYN Stealth Scan" time="1661175173"/>
+<taskend task="SYN Stealth Scan" time="1661175173" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661175173"/>
+<taskend task="Service scan" time="1661175270" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661175270"/>
+<taskend task="NSE" time="1661175290"/>
+<taskbegin task="NSE" time="1661175290"/>
+<taskend task="NSE" time="1661175294"/>
+<taskbegin task="NSE" time="1661175294"/>
+<taskend task="NSE" time="1661175296"/>
+<host starttime="1661175173" endtime="1661175296"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.220" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="2013-12-28T07:37:27+00:00; -8y237d05h57m26s from scanner time."><elem key="delta">-272959046.0</elem>
+<elem key="date">2013-12-28T07:37:27+00:00</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: RFC2409/Oakley Group 2&#xa;            Modulus Length: 1024&#xa;            Generator Length: 1024&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-4">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: RFC2409/Oakley Group 2&#xa;      Modulus Length: 1024&#xa;      Generator Length: 1024&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: THINC&#xa;  NetBIOS_Domain_Name: THINC&#xa;  NetBIOS_Computer_Name: MASTER&#xa;  DNS_Domain_Name: thinc.local&#xa;  DNS_Computer_Name: master.thinc.local&#xa;  DNS_Tree_Name: thinc.local&#xa;  Product_Version: 6.1.7601&#xa;  System_Time: 2013-12-28T07:37:05+00:00"><elem key="Target_Name">THINC</elem>
+<elem key="NetBIOS_Domain_Name">THINC</elem>
+<elem key="NetBIOS_Computer_Name">MASTER</elem>
+<elem key="DNS_Domain_Name">thinc.local</elem>
+<elem key="DNS_Computer_Name">master.thinc.local</elem>
+<elem key="DNS_Tree_Name">thinc.local</elem>
+<elem key="Product_Version">6.1.7601</elem>
+<elem key="System_Time">2013-12-28T07:37:05+00:00</elem>
+</script><script id="rdp-enum-encryption" output="&#xa;  Security layer&#xa;    CredSSP (NLA): SUCCESS&#xa;    CredSSP with Early User Auth: SUCCESS&#xa;    Native RDP: SUCCESS&#xa;    RDSTLS: SUCCESS&#xa;    SSL: SUCCESS&#xa;  RDP Encryption level: Client Compatible&#xa;    40-bit RC4: SUCCESS&#xa;    56-bit RC4: SUCCESS&#xa;    128-bit RC4: SUCCESS&#xa;    FIPS 140-1: SUCCESS&#xa;  RDP Protocol Version:  RDP 5.x, 6.x, 7.x, or 8.x server&#xa;"/><script id="ssl-cert" output="Subject: commonName=master.thinc.local&#xa;Issuer: commonName=master.thinc.local&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2013-12-27T07:37:00&#xa;Not valid after:  2014-06-28T07:37:00&#xa;MD5:   633a 2c9a b1c0 2966 1514 ac91 5ff4 049b&#xa;SHA-1: cdba 1be7 19e2 1d9e 5373 aa34 dc21 ae9d da62 3d42&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6DCCAdCgAwIBAgIQZiHxdDQ/dINDks6n9TxW8TANBgkqhkiG9w0BAQUFADAd&#xa;MRswGQYDVQQDExJtYXN0ZXIudGhpbmMubG9jYWwwHhcNMTMxMjI3MDczNzAwWhcN&#xa;MTQwNjI4MDczNzAwWjAdMRswGQYDVQQDExJtYXN0ZXIudGhpbmMubG9jYWwwggEi&#xa;MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCw6MebELlPXSBX92bO8s84myc5&#xa;1BqiWjki6ea2OLrWiyoJc2vmD4iZYPUHseRQ//dY7I92kepKjInuFFO1TUsrH0h4&#xa;GV4FutxZnYFlDwrLTV5SINLuBcC9gVgn9a9I6a5f4oNntQ1ovLH9l/dveV33YIq7&#xa;eirMHxfqU/XiF8zSK10eI02CoVQxJ28+zd0LciJccyqsW2wvS/KwUTmQ2+KRSYLX&#xa;WsQofuJxwAjaI+XNEmIDQCZWVfsathXBeZPElHwU+ULurcUJ8OMKgllrk6AIAETD&#xa;XuO2MJJDRnjX6OPyDxXOpFHSMlp9kVHmm8XDXUg8/UQEdq5hDPCG77/gmaUzAgMB&#xa;AAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG&#xa;9w0BAQUFAAOCAQEAcY9UU6XUNfgjVBIoIM5cmOmRWffUSthb8TS1NvG7aNtK0O8g&#xa;QoFOAMg7jMk0Fv5oAv4NVmArJWp9ih6VRHITudUa7eZErWo3Dk8FCjvrmCJ4lCsg&#xa;BKSie04KBYGq1TLt5T13Oiy1k5Z0jBa7mU8hRAkjIJydvhUPgUSFPVqpGtelR0kh&#xa;C/dw4mahbbcqw6/OGes4+XGwhDTdFrjnPJomW/c6NYFP+AWsUWj1ce8I1qlH1lyn&#xa;LCfB9nsna/6BeN+CANyJIqSN8o49MsdcRoSzcL7vpKSv6Y3FWj6dNda3F7K7x9SD&#xa;8epv4m89/afUqLJYzrKsQQvFcOHTx5UAhC2mSg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">master.thinc.local</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">master.thinc.local</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B0E8C79B10B94F5D2057F766CEF2CF389B2739D41AA25A3922E9E6B638BAD68B2A09736BE60F889960F507B1E450FFF758EC8F7691EA4A8C89EE1453B54D4B2B1F4878195E05BADC599D81650F0ACB4D5E5220D2EE05C0BD815827F5AF48E9AE5FE28367B50D68BCB1FD97F76F795DF7608ABB7A2ACC1F17EA53F5E217CCD22B5D1E234D82A15431276F3ECDDD0B72225C732AAC5B6C2F4BF2B0513990DBE2914982D75AC4287EE271C008DA23E5CD12620340265655FB1AB615C17993C4947C14F942EEADC509F0E30A82596B93A0080044C35EE3B63092434678D7E8E3F20F15CEA451D2325A7D9151E69BC5C35D483CFD440476AE610CF086EFBFE099A533</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2013-12-27T07:37:00</elem>
+<elem key="notAfter">2014-06-28T07:37:00</elem>
+</table>
+<elem key="md5">633a2c9ab1c029661514ac915ff4049b</elem>
+<elem key="sha1">cdba1be719e21d9e5373aa34dc21ae9dda623d42</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6DCCAdCgAwIBAgIQZiHxdDQ/dINDks6n9TxW8TANBgkqhkiG9w0BAQUFADAd&#xa;MRswGQYDVQQDExJtYXN0ZXIudGhpbmMubG9jYWwwHhcNMTMxMjI3MDczNzAwWhcN&#xa;MTQwNjI4MDczNzAwWjAdMRswGQYDVQQDExJtYXN0ZXIudGhpbmMubG9jYWwwggEi&#xa;MA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCw6MebELlPXSBX92bO8s84myc5&#xa;1BqiWjki6ea2OLrWiyoJc2vmD4iZYPUHseRQ//dY7I92kepKjInuFFO1TUsrH0h4&#xa;GV4FutxZnYFlDwrLTV5SINLuBcC9gVgn9a9I6a5f4oNntQ1ovLH9l/dveV33YIq7&#xa;eirMHxfqU/XiF8zSK10eI02CoVQxJ28+zd0LciJccyqsW2wvS/KwUTmQ2+KRSYLX&#xa;WsQofuJxwAjaI+XNEmIDQCZWVfsathXBeZPElHwU+ULurcUJ8OMKgllrk6AIAETD&#xa;XuO2MJJDRnjX6OPyDxXOpFHSMlp9kVHmm8XDXUg8/UQEdq5hDPCG77/gmaUzAgMB&#xa;AAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG&#xa;9w0BAQUFAAOCAQEAcY9UU6XUNfgjVBIoIM5cmOmRWffUSthb8TS1NvG7aNtK0O8g&#xa;QoFOAMg7jMk0Fv5oAv4NVmArJWp9ih6VRHITudUa7eZErWo3Dk8FCjvrmCJ4lCsg&#xa;BKSie04KBYGq1TLt5T13Oiy1k5Z0jBa7mU8hRAkjIJydvhUPgUSFPVqpGtelR0kh&#xa;C/dw4mahbbcqw6/OGes4+XGwhDTdFrjnPJomW/c6NYFP+AWsUWj1ce8I1qlH1lyn&#xa;LCfB9nsna/6BeN+CANyJIqSN8o49MsdcRoSzcL7vpKSv6Y3FWj6dNda3F7K7x9SD&#xa;8epv4m89/afUqLJYzrKsQQvFcOHTx5UAhC2mSg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<times srtt="145026" rttvar="145026" to="725130"/>
+</host>
+<taskbegin task="NSE" time="1661175296"/>
+<taskend task="NSE" time="1661175296"/>
+<taskbegin task="NSE" time="1661175296"/>
+<taskend task="NSE" time="1661175296"/>
+<taskbegin task="NSE" time="1661175296"/>
+<taskend task="NSE" time="1661175296"/>
+<runstats><finished time="1661175296" timestr="Mon Aug 22 09:34:56 2022" summary="Nmap done at Mon Aug 22 09:34:56 2022; 1 IP address (1 host up) scanned in 124.51 seconds" elapsed="124.51" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

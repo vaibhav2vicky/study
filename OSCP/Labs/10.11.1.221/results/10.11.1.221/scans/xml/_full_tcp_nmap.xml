@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 22 22:45:56 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.221/results/10.11.1.221/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.221/results/10.11.1.221/scans/xml/_full_tcp_nmap.xml 10.11.1.221 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.221/results/10.11.1.221/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.221/results/10.11.1.221/scans/xml/_full_tcp_nmap.xml 10.11.1.221" start="1661222756" startstr="Mon Aug 22 22:45:56 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661222756"/>
+<taskend task="NSE" time="1661222756"/>
+<taskbegin task="NSE" time="1661222756"/>
+<taskend task="NSE" time="1661222756"/>
+<taskbegin task="NSE" time="1661222756"/>
+<taskend task="NSE" time="1661222756"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661222756"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661222756"/>
+<taskbegin task="SYN Stealth Scan" time="1661222756"/>
+<taskprogress task="SYN Stealth Scan" time="1661222787" percent="6.35" remaining="458" etc="1661223244"/>
+<taskprogress task="SYN Stealth Scan" time="1661222817" percent="20.01" remaining="244" etc="1661223061"/>
+<taskprogress task="SYN Stealth Scan" time="1661222847" percent="44.55" remaining="114" etc="1661222960"/>
+<taskprogress task="SYN Stealth Scan" time="1661222877" percent="74.63" remaining="42" etc="1661222918"/>
+<taskend task="SYN Stealth Scan" time="1661222899" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1661222899"/>
+<taskend task="Service scan" time="1661222964" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1661222968"/>
+<taskend task="Traceroute" time="1661222968"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1661222968"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1661222970"/>
+<taskbegin task="NSE" time="1661222970"/>
+<taskend task="NSE" time="1661222974"/>
+<taskbegin task="NSE" time="1661222974"/>
+<taskend task="NSE" time="1661222976"/>
+<taskbegin task="NSE" time="1661222976"/>
+<taskend task="NSE" time="1661222976"/>
+<host starttime="1661222756" endtime="1661222976"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.221" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-response" count="65530" proto="tcp" ports="1-20,22-134,136-3388,3390-5984,5986-49665,49667-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="FileZilla ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:filezilla-project:filezilla_server</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-syst" output="&#xa;  SYST: UNIX emulated by FileZilla"><elem key="SYST">UNIX emulated by FileZilla</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: DEFENDER&#xa;  NetBIOS_Domain_Name: DEFENDER&#xa;  NetBIOS_Computer_Name: DEFENDER&#xa;  DNS_Domain_Name: defender&#xa;  DNS_Computer_Name: defender&#xa;  Product_Version: 10.0.14393&#xa;  System_Time: 2022-08-23T02:49:35+00:00"><elem key="Target_Name">DEFENDER</elem>
+<elem key="NetBIOS_Domain_Name">DEFENDER</elem>
+<elem key="NetBIOS_Computer_Name">DEFENDER</elem>
+<elem key="DNS_Domain_Name">defender</elem>
+<elem key="DNS_Computer_Name">defender</elem>
+<elem key="Product_Version">10.0.14393</elem>
+<elem key="System_Time">2022-08-23T02:49:35+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=defender&#xa;Issuer: commonName=defender&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-07-17T21:03:24&#xa;Not valid after:  2023-01-16T21:03:24&#xa;MD5:   90c1 2066 3db3 9586 36d5 ee70 dda0 1f29&#xa;SHA-1: de97 73a1 8768 b248 3bbe 6935 9f34 a008 1bf5 10ae&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQVnG3ZKN7MqVKwKAxzukFljANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhkZWZlbmRlcjAeFw0yMjA3MTcyMTAzMjRaFw0yMzAxMTYyMTAz&#xa;MjRaMBMxETAPBgNVBAMTCGRlZmVuZGVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAw2fgqjsWUexMPatIq34joCf1K+rHOcPuGjq7ko3yVAXFOPxlBo49&#xa;CgsSJj+ParwhGBsuOi+xaGTosu9yIN32uwCZX+j9gc7BHkUcMEvnW/OqZ5rFIQvf&#xa;BJDYjISMpptaqLFmvu0oD549wS4vGhdxRC/7yhE+6i/l3/1x9GiiNeRmcQTdB6/O&#xa;c/0Dvfxqj5SuNfyDYLg04NBQbrgh+K6E3OPsSdkujB3VPwuxsM+TiyhXlPlIxrai&#xa;femnH/wSqhkQLW/cmMe8ObNDiyNlAp4YHzgzNiIUxOs7ofgqyqMZx8Blmhy8/5FT&#xa;XqpvSulohWsVyV7/hECF+Gaf3+w8nkumMQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBADDRmw/8vsHP&#xa;4qG5MIjoekvpl5F40ma+Ndj0PXn5kEHLE1k1OT+I6WCsM0qKHOv2wSNjP4FAoa3w&#xa;+9Gx6qWuHruYPAfVa4qB1h6PAlRu123XlzC6XjwL8sbeBZX30zwiMbk1EaTXXngb&#xa;CUo0TmAbOiyfDso/pP9/FCbyZgoSd5O/AZmKIx1tWN5ykS3fggopab4yAz5DTwGP&#xa;sVDY1p8+vmn9HStS3NwAy4QnTEeOj/HkgvyNfs1/Mc4wHdDQ1DZCdZhdZEXQBymN&#xa;8g8+8nLeR+bHIsXL3dE1xZG4o3NcmfPxWYqnhC7hQ3tMY1hWuxr1OQLdoyJd/kja&#xa;lJpGzJUUycY=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">defender</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">defender</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C367E0AA3B1651EC4C3DAB48AB7E23A027F52BEAC739C3EE1A3ABB928DF25405C538FC65068E3D0A0B12263F8F6ABC21181B2E3A2FB16864E8B2EF7220DDF6BB00995FE8FD81CEC11E451C304BE75BF3AA679AC5210BDF0490D88C848CA69B5AA8B166BEED280F9E3DC12E2F1A1771442FFBCA113EEA2FE5DFFD71F468A235E4667104DD07AFCE73FD03BDFC6A8F94AE35FC8360B834E0D0506EB821F8AE84DCE3EC49D92E8C1DD53F0BB1B0CF938B285794F948C6B6A27DE9A71FFC12AA19102D6FDC98C7BC39B3438B2365029E181F3833362214C4EB3BA1F82ACAA319C7C0659A1CBCFF91535EAA6F4AE968856B15C95EFF844085F8669FDFEC3C9E4BA631</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-07-17T21:03:24</elem>
+<elem key="notAfter">2023-01-16T21:03:24</elem>
+</table>
+<elem key="md5">90c120663db3958636d5ee70dda01f29</elem>
+<elem key="sha1">de9773a18768b2483bbe69359f34a0081bf510ae</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQVnG3ZKN7MqVKwKAxzukFljANBgkqhkiG9w0BAQsFADAT&#xa;MREwDwYDVQQDEwhkZWZlbmRlcjAeFw0yMjA3MTcyMTAzMjRaFw0yMzAxMTYyMTAz&#xa;MjRaMBMxETAPBgNVBAMTCGRlZmVuZGVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAw2fgqjsWUexMPatIq34joCf1K+rHOcPuGjq7ko3yVAXFOPxlBo49&#xa;CgsSJj+ParwhGBsuOi+xaGTosu9yIN32uwCZX+j9gc7BHkUcMEvnW/OqZ5rFIQvf&#xa;BJDYjISMpptaqLFmvu0oD549wS4vGhdxRC/7yhE+6i/l3/1x9GiiNeRmcQTdB6/O&#xa;c/0Dvfxqj5SuNfyDYLg04NBQbrgh+K6E3OPsSdkujB3VPwuxsM+TiyhXlPlIxrai&#xa;femnH/wSqhkQLW/cmMe8ObNDiyNlAp4YHzgzNiIUxOs7ofgqyqMZx8Blmhy8/5FT&#xa;XqpvSulohWsVyV7/hECF+Gaf3+w8nkumMQIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBADDRmw/8vsHP&#xa;4qG5MIjoekvpl5F40ma+Ndj0PXn5kEHLE1k1OT+I6WCsM0qKHOv2wSNjP4FAoa3w&#xa;+9Gx6qWuHruYPAfVa4qB1h6PAlRu123XlzC6XjwL8sbeBZX30zwiMbk1EaTXXngb&#xa;CUo0TmAbOiyfDso/pP9/FCbyZgoSd5O/AZmKIx1tWN5ykS3fggopab4yAz5DTwGP&#xa;sVDY1p8+vmn9HStS3NwAy4QnTEeOj/HkgvyNfs1/Mc4wHdDQ1DZCdZhdZEXQBymN&#xa;8g8+8nLeR+bHIsXL3dE1xZG4o3NcmfPxWYqnhC7hQ3tMY1hWuxr1OQLdoyJd/kja&#xa;lJpGzJUUycY=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-08-23T02:49:38+00:00; +3s from scanner time."><elem key="delta">3.0</elem>
+<elem key="date">2022-08-23T02:49:38+00:00</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="Microsoft Windows Server 2016" accuracy="91" line="76198">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="85" line="75542">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="85" line="75675">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="85" line="75713">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="85" line="74588">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1607" accuracy="85" line="69697">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="85"><cpe>cpe:/o:microsoft:windows_10:1607</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/22%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=63044040%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=106%TI=I%II=I%SS=S%TS=A)&#xa;OPS(O1=M54ENW8ST11%O2=M54ENW8ST11%O3=M54ENW8NNT11%O4=M54ENW8ST11%O5=M54ENW8ST11%O6=M54EST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54ENW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="66688" lastboot="Mon Aug 22 04:18:08 2022"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="6D62FD31,C097CDFF,7A5D9975,ADB602A0,B721188E,B86F5F30"/>
+<ipidsequence class="Incremental" values="686,687,688,689,68A,68B"/>
+<tcptssequence class="1000HZ" values="3F97018,3F9707C,3F970E0,3F97144,3F971A9,3F9720D"/>
+<hostscript><script id="clock-skew" output="mean: 3s, deviation: 0s, median: 2s"><elem key="mean">3</elem>
+<elem key="median">2</elem>
+<elem key="count">2</elem>
+<elem key="stddev">0</elem>
+</script></hostscript><trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="153.28"/>
+<hop ttl="2" ipaddr="10.11.1.221" rtt="153.96"/>
+</trace>
+<times srtt="153732" rttvar="275" to="154832"/>
+</host>
+<taskbegin task="NSE" time="1661222976"/>
+<taskend task="NSE" time="1661222976"/>
+<taskbegin task="NSE" time="1661222976"/>
+<taskend task="NSE" time="1661222976"/>
+<taskbegin task="NSE" time="1661222976"/>
+<taskend task="NSE" time="1661222976"/>
+<runstats><finished time="1661222976" timestr="Mon Aug 22 22:49:36 2022" summary="Nmap done at Mon Aug 22 22:49:36 2022; 1 IP address (1 host up) scanned in 220.31 seconds" elapsed="220.31" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

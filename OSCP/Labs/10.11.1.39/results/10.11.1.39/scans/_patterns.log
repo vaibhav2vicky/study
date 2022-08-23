@@ -1,0 +1,14 @@
+Matched Pattern: unauthorized
+
+Matched Pattern: powered by CentOS</title>
+
+Matched Pattern: powered by <a href="http://centos.org">CentOS</a>.</p>
+
+Matched Pattern: Powered by Apache ]"></a> <a href="http://www.centos.org/"><img src="images/poweredby.png" alt="[ Powered by CentOS Linux ]" height="31" width="88"></a></p>
+
+Matched Pattern: unauthorized
+
+Matched Pattern: unauthorized
+
+Identified HTTP Server: nginx/1.6.3
+

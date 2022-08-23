@@ -1,0 +1,18 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	IPC$            IPC       IPC Service (break server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	MYGROUP              TOPHAT
+	SECURITY             MAILMAN
+	SVCORP               SVCLIENT08
+	THINC.LOCAL          SUFFERANCE
+	WORKGROUP            BREAK
+

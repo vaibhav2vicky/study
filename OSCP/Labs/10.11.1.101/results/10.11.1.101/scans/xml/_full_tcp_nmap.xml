@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Aug 19 09:21:27 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/xml/_full_tcp_nmap.xml 10.11.1.101 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/xml/_full_tcp_nmap.xml 10.11.1.101" start="1660915287" startstr="Fri Aug 19 09:21:27 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660915287"/>
+<taskend task="NSE" time="1660915287"/>
+<taskbegin task="NSE" time="1660915287"/>
+<taskend task="NSE" time="1660915287"/>
+<taskbegin task="NSE" time="1660915287"/>
+<taskend task="NSE" time="1660915287"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660915287"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660915287"/>
+<taskbegin task="SYN Stealth Scan" time="1660915287"/>
+<taskprogress task="SYN Stealth Scan" time="1660915318" percent="10.21" remaining="273" etc="1660915591"/>
+<taskprogress task="SYN Stealth Scan" time="1660915348" percent="24.66" remaining="187" etc="1660915534"/>
+<taskprogress task="SYN Stealth Scan" time="1660915378" percent="38.44" remaining="146" etc="1660915524"/>
+<taskprogress task="SYN Stealth Scan" time="1660915408" percent="51.92" remaining="113" etc="1660915520"/>
+<taskprogress task="SYN Stealth Scan" time="1660915438" percent="67.43" remaining="73" etc="1660915511"/>
+<taskprogress task="SYN Stealth Scan" time="1660915483" percent="77.28" remaining="58" etc="1660915541"/>
+<taskprogress task="SYN Stealth Scan" time="1660915516" percent="84.49" remaining="43" etc="1660915558"/>
+<taskend task="SYN Stealth Scan" time="1660915591" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1660915591"/>
+<taskend task="Service scan" time="1660915602" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1660915619"/>
+<taskend task="Traceroute" time="1660915619"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1660915619"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1660915620"/>
+<taskbegin task="NSE" time="1660915620"/>
+<taskend task="NSE" time="1660915624"/>
+<taskbegin task="NSE" time="1660915624"/>
+<taskend task="NSE" time="1660915625"/>
+<taskbegin task="NSE" time="1660915625"/>
+<taskend task="NSE" time="1660915625"/>
+<host starttime="1660915287" endtime="1660915625"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="reset" count="65529" proto="tcp" ports="1-20,23-24,26-79,81-138,140-444,446-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.8" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 62:54:16:aa:0b:73:77:61:1b:a4:45:c0:f8:2e:5b:ed (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7RQYuEvP3VkLtkJSpEG2zMSNwK2e45WnSaO+1MD8iwxYwJiD0iNR/O9AE9JD5s6j7o2Udn0juM7OWFU9FimUU1jE5qyX7Z55i76f/UU6F4ePvqyOtvHs5lez0F1vVm7TyUpny5uTiUSoB+blCjg+LlKTeBOWXLBDpBEQw0lNJJ2SWhvBmDQ9e8Nt0RkS3GlIWaqWQceMh4bMZW8oa5dz0nZjinQF8nBGv8L8fZdQ8A5e66Y8jcNrzXVV7Tkzb1bcybmi2fJ1WPnWl7rb7/B2z0Lp8dIryKx7lEa3MJr2PPAnErpX9s3FFqVlDKBecqtEyucrpRcUz4jo53oIJaI5d&#xa;  256 f4:42:23:27:6e:90:fe:bc:f4:d9:32:6f:8f:6b:74:34 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBENMAwx7lTSadwadhHkhoFLqwA7a4Q5Y5LrYiINwagsEJ4DWsorPYNNNQRSiNWfDKm4oTUX9RbKmpLzqG1ISrJY=&#xa;  256 c6:6a:fa:44:6e:31:37:da:e3:9e:dc:29:f4:48:6b:b8 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHN+UUlB0wnxEXrhhh91CD6zbfxTFqECfd/NQcvI8N26"><table>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">625416aa0b7377611ba445c0f82e5bed</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC7RQYuEvP3VkLtkJSpEG2zMSNwK2e45WnSaO+1MD8iwxYwJiD0iNR/O9AE9JD5s6j7o2Udn0juM7OWFU9FimUU1jE5qyX7Z55i76f/UU6F4ePvqyOtvHs5lez0F1vVm7TyUpny5uTiUSoB+blCjg+LlKTeBOWXLBDpBEQw0lNJJ2SWhvBmDQ9e8Nt0RkS3GlIWaqWQceMh4bMZW8oa5dz0nZjinQF8nBGv8L8fZdQ8A5e66Y8jcNrzXVV7Tkzb1bcybmi2fJ1WPnWl7rb7/B2z0Lp8dIryKx7lEa3MJr2PPAnErpX9s3FFqVlDKBecqtEyucrpRcUz4jo53oIJaI5d</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">f44223276e90febcf4d9326f8f6b7434</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBENMAwx7lTSadwadhHkhoFLqwA7a4Q5Y5LrYiINwagsEJ4DWsorPYNNNQRSiNWfDKm4oTUX9RbKmpLzqG1ISrJY=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">c66afa446e3137dae39edc29f4486bb8</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIHN+UUlB0wnxEXrhhh91CD6zbfxTFqECfd/NQcvI8N26</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="smtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/passwords/"/><script id="http-title" output="TryHarder oscp.thinc.local"><elem key="title">TryHarder oscp.thinc.local</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" hostname="BREAK" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="BREAK" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="36894"/>
+<osmatch name="Linux 3.11 - 4.1" accuracy="95" line="63628">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="95" line="67787">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="93" line="64337">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="92" line="63783">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.16" accuracy="92" line="63380">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 3.12" accuracy="91" line="63342">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="91" line="55638">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 3.8" accuracy="91" line="65245">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8" accuracy="91" line="66180">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.8</cpe></osclass>
+</osmatch>
+<osmatch name="Kyocera CopyStar CS-2560 printer" accuracy="91" line="42259">
+<osclass type="printer" vendor="Kyocera" osfamily="embedded" accuracy="91"><cpe>cpe:/h:kyocera:cs-2560</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.92%E=4%D=8/19%OT=21%CT=1%CU=36894%PV=Y%DS=2%DC=T%G=Y%TM=62FF8FA&#xa;OS:9%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%TS=8)SEQ(SP=107%GC&#xa;OS:D=1%ISR=10A%TI=Z%II=I%TS=8)OPS(O1=M54EST11NW6%O2=M54EST11NW6%O3=M54ENNT1&#xa;OS:1NW6%O4=M54EST11NW6%O5=M54EST11NW6%O6=M54EST11)WIN(W1=7120%W2=7120%W3=71&#xa;OS:20%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54ENNSNW6%CC=Y%Q=&#xa;OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)T5(R=Y%DF=Y&#xa;OS:%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF=N%T=40%IPL=16&#xa;OS:4%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="197463" lastboot="Wed Aug 17 02:36:02 2022"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="A546E563,95A5B268,3EE8381,23F9A2BA,4D0B82C0,C0B71815"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="2EE3738,2EE3751,2EE376A,2EE3783,2EE379C,2EE37B5"/>
+<hostscript><script id="clock-skew" output="mean: 1h20m02s, deviation: 2h18m34s, median: 2s"><elem key="median">2</elem>
+<elem key="count">3</elem>
+<elem key="mean">4802</elem>
+<elem key="stddev">8314</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="nbstat" output="NetBIOS name: BREAK, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  BREAK&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  BREAK&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  BREAK&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb2-time" output="&#xa;  date: 2022-08-19T13:27:03&#xa;  start_date: N/A"><elem key="date">2022-08-19T13:27:03</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 25721/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 28161/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 19178/udp): CLEAN (Failed to receive data)&#xa;  Check 4 (port 41869/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: break&#xa;  NetBIOS computer name: BREAK\x00&#xa;  Domain name: \x00&#xa;  FQDN: break&#xa;  System time: 2022-08-19T09:27:03-04:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">BREAK\x00</elem>
+<elem key="date">2022-08-19T09:27:03-04:00</elem>
+<elem key="fqdn">break</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script></hostscript><trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="146.05"/>
+<hop ttl="2" ipaddr="10.11.1.101" rtt="146.48"/>
+</trace>
+<times srtt="146518" rttvar="174" to="147214"/>
+</host>
+<taskbegin task="NSE" time="1660915625"/>
+<taskend task="NSE" time="1660915625"/>
+<taskbegin task="NSE" time="1660915625"/>
+<taskend task="NSE" time="1660915625"/>
+<taskbegin task="NSE" time="1660915625"/>
+<taskend task="NSE" time="1660915625"/>
+<runstats><finished time="1660915625" timestr="Fri Aug 19 09:27:05 2022" summary="Nmap done at Fri Aug 19 09:27:05 2022; 1 IP address (1 host up) scanned in 338.83 seconds" elapsed="338.83" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Aug 19 09:22:14 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.101 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp445/tcp_445_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.101/results/10.11.1.101/scans/tcp445/xml/tcp_445_smb_nmap.xml 10.11.1.101" start="1660915334" startstr="Fri Aug 19 09:22:14 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660915335"/>
+<taskend task="NSE" time="1660915335"/>
+<taskbegin task="NSE" time="1660915335"/>
+<taskend task="NSE" time="1660915335"/>
+<taskbegin task="NSE" time="1660915335"/>
+<taskend task="NSE" time="1660915335"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660915335"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660915347"/>
+<taskbegin task="SYN Stealth Scan" time="1660915347"/>
+<taskend task="SYN Stealth Scan" time="1660915347" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1660915347"/>
+<taskend task="Service scan" time="1660915354" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1660915354"/>
+<taskprogress task="NSE" time="1660915385" percent="98.57" remaining="1" etc="1660915385"/>
+<taskprogress task="NSE" time="1660915415" percent="98.57" remaining="1" etc="1660915416"/>
+<taskprogress task="NSE" time="1660915445" percent="98.57" remaining="2" etc="1660915446"/>
+<taskprogress task="NSE" time="1660915475" percent="98.57" remaining="2" etc="1660915477"/>
+<taskprogress task="NSE" time="1660915505" percent="98.57" remaining="3" etc="1660915507"/>
+<taskprogress task="NSE" time="1660915535" percent="98.57" remaining="3" etc="1660915538"/>
+<taskprogress task="NSE" time="1660915565" percent="98.57" remaining="4" etc="1660915568"/>
+<taskprogress task="NSE" time="1660915595" percent="98.57" remaining="4" etc="1660915598"/>
+<taskprogress task="NSE" time="1660915625" percent="98.57" remaining="4" etc="1660915629"/>
+<taskprogress task="NSE" time="1660915655" percent="98.57" remaining="5" etc="1660915659"/>
+<taskend task="NSE" time="1660915655"/>
+<taskbegin task="NSE" time="1660915655"/>
+<taskend task="NSE" time="1660915680"/>
+<taskbegin task="NSE" time="1660915680"/>
+<taskend task="NSE" time="1660915680"/>
+<host starttime="1660915347" endtime="1660915680"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.101" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="BREAK" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.11.1.101\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (break server (Samba, Ubuntu))&#xa;    Users: 7&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\10.11.1.101\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE"><elem key="account_used">guest</elem>
+<table key="\\10.11.1.101\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (break server (Samba, Ubuntu))</elem>
+<elem key="Users">7</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.11.1.101\print$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+</script><script id="smb-mbenum" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-ls" output="Volume \\10.11.1.101\print$&#xa;  maxfiles limit reached (10)&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2016-03-22T20:04:01  .&#xa;&lt;DIR&gt;  2016-03-22T20:04:04  ..&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  W32PPC&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  IA64&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  x64&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  W32X86&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  W32ALPHA&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  W32MIPS&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  WIN40&#xa;&lt;DIR&gt;  2016-03-03T18:13:29  COLOR&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="files">
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-22T20:04:01</elem>
+<elem key="filename">.</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-22T20:04:04</elem>
+<elem key="filename">..</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">W32PPC</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">IA64</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">x64</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">W32X86</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">W32ALPHA</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">W32MIPS</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">WIN40</elem>
+</table>
+<table>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2016-03-03T18:13:29</elem>
+<elem key="filename">COLOR</elem>
+</table>
+</table>
+<table key="info">
+<elem>maxfiles limit reached (10)</elem>
+</table>
+<elem key="volume">\\10.11.1.101\print$</elem>
+</table>
+</table>
+<table key="total">
+<elem key="files">10</elem>
+<elem key="bytes">0</elem>
+</table>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: break&#xa;  NetBIOS computer name: BREAK\x00&#xa;  Domain name: \x00&#xa;  FQDN: break&#xa;  System time: 2022-08-19T09:22:38-04:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">BREAK\x00</elem>
+<elem key="date">2022-08-19T09:22:38-04:00</elem>
+<elem key="fqdn">break</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-enum-domains" output="&#xa;  BREAK&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-print-text" output="false">false</script><script id="smb2-capabilities" output="&#xa;  2.0.2: &#xa;    Distributed File System&#xa;  2.1: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.0: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.0.2: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.1.1: &#xa;    Distributed File System&#xa;    Multi-credit operations"><table key="2.0.2">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.1">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.0.2">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.1.1">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="nbstat" output="NetBIOS name: BREAK, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  BREAK&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  BREAK&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  BREAK&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2022-08-19T13:22:37&#xa;  start_date: N/A"><elem key="date">2022-08-19T13:22:37</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.0.2&#xa;    2.1&#xa;    3.0&#xa;    3.0.2&#xa;    3.1.1"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.0.2</elem>
+<elem>2.1</elem>
+<elem>3.0</elem>
+<elem>3.0.2</elem>
+<elem>3.1.1</elem>
+</table>
+</script></hostscript><times srtt="147542" rttvar="147542" to="737710"/>
+</host>
+<taskbegin task="NSE" time="1660915680"/>
+<taskend task="NSE" time="1660915680"/>
+<taskbegin task="NSE" time="1660915680"/>
+<taskend task="NSE" time="1660915680"/>
+<taskbegin task="NSE" time="1660915680"/>
+<taskend task="NSE" time="1660915680"/>
+<runstats><finished time="1660915680" timestr="Fri Aug 19 09:28:00 2022" summary="Nmap done at Fri Aug 19 09:28:00 2022; 1 IP address (1 host up) scanned in 346.15 seconds" elapsed="346.15" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

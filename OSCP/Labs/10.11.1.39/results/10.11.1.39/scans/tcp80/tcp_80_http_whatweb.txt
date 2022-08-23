@@ -1,0 +1,59 @@
+WhatWeb report for http://10.11.1.39:80
+Status    : 403 Forbidden
+Title     : Apache HTTP Server Test Page powered by CentOS
+IP        : 10.11.1.39
+Country   : RESERVED, ZZ
+
+Summary   : Bootstrap, Email[webmaster@example.com], HTTPServer[nginx/1.6.3], nginx[1.6.3], PoweredBy[Apache,CentOS]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ Email ]
+	Extract email addresses. Find valid email address and
+	syntactically invalid email addresses from mailto: link
+	tags. We match syntactically invalid links containing
+	mailto: to catch anti-spam email addresses, eg. bob at
+	gmail.com. This uses the simplified email regular
+	expression from
+	http://www.regular-expressions.info/email.html for valid
+	email address matching.
+
+	String       : webmaster@example.com
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : nginx/1.6.3 (from server string)
+
+[ PoweredBy ]
+	This plugin identifies instances of 'Powered by x' text and
+	attempts to extract the value for x.
+
+	String       : Apache,CentOS
+
+[ nginx ]
+	Nginx (Engine-X) is a free, open-source, high-performance
+	HTTP server and reverse proxy, as well as an IMAP/POP3
+	proxy server.
+
+	Version      : 1.6.3
+	Website     : http://nginx.net/
+
+HTTP Headers:
+	HTTP/1.1 403 Forbidden
+	Server: nginx/1.6.3
+	Date: Thu, 18 Aug 2022 17:17:34 GMT
+	Content-Type: text/html; charset=UTF-8
+	Content-Length: 4897
+	Connection: close
+	Last-Modified: Thu, 16 Oct 2014 13:20:58 GMT
+	ETag: "1321-5058a1e728280"
+	Accept-Ranges: bytes
+
+

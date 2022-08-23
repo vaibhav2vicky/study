@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Aug 19 09:16:20 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.79/results/10.11.1.79/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.79/results/10.11.1.79/scans/xml/_full_tcp_nmap.xml 10.11.1.79 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.79/results/10.11.1.79/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.79/results/10.11.1.79/scans/xml/_full_tcp_nmap.xml 10.11.1.79" start="1660914980" startstr="Fri Aug 19 09:16:20 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660914981"/>
+<taskend task="NSE" time="1660914981"/>
+<taskbegin task="NSE" time="1660914981"/>
+<taskend task="NSE" time="1660914981"/>
+<taskbegin task="NSE" time="1660914981"/>
+<taskend task="NSE" time="1660914981"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660914981"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660914981"/>
+<taskbegin task="SYN Stealth Scan" time="1660914981"/>
+<taskprogress task="SYN Stealth Scan" time="1660915012" percent="10.62" remaining="261" etc="1660915273"/>
+<taskprogress task="SYN Stealth Scan" time="1660915042" percent="27.61" remaining="160" etc="1660915202"/>
+<taskprogress task="SYN Stealth Scan" time="1660915072" percent="42.45" remaining="124" etc="1660915195"/>
+<taskprogress task="SYN Stealth Scan" time="1660915102" percent="57.55" remaining="90" etc="1660915191"/>
+<taskprogress task="SYN Stealth Scan" time="1660915132" percent="68.20" remaining="71" etc="1660915202"/>
+<taskend task="SYN Stealth Scan" time="1660915179" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1660915179"/>
+<taskend task="Service scan" time="1660915368" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1660915374"/>
+<taskend task="Traceroute" time="1660915374"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1660915374"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1660915374"/>
+<taskbegin task="NSE" time="1660915374"/>
+<taskend task="NSE" time="1660915376"/>
+<taskbegin task="NSE" time="1660915376"/>
+<taskend task="NSE" time="1660915377"/>
+<taskbegin task="NSE" time="1660915377"/>
+<taskend task="NSE" time="1660915377"/>
+<host starttime="1660914981" endtime="1660915377"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.79" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-2232,2234-3388,3390-65535"/>
+</extraports>
+<port protocol="tcp" portid="2233"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="infocrypt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2022-08-19T13:23:01+00:00; +4s from scanner time."><elem key="delta">4.0</elem>
+<elem key="date">2022-08-19T13:23:01+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=Maria&#xa;Issuer: commonName=Maria&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-07-17T02:00:10&#xa;Not valid after:  2023-01-16T02:00:10&#xa;MD5:   8c57 63a0 b940 33b1 5b48 867e 0173 a0f7&#xa;SHA-1: bf35 a53a d5a9 f481 26f8 3bde beda 8bde 3ff7 fc8e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQTzt3SbjrpY9OSsJI6Z3tWTANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVNYXJpYTAeFw0yMjA3MTcwMjAwMTBaFw0yMzAxMTYwMjAwMTBa&#xa;MBAxDjAMBgNVBAMTBU1hcmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAuY292GOfA3FaZ+FTxtqBWc4vNgUdKDO1ljKXpc/kGysxjNJtTLUCpymd71Zy&#xa;uHfkGXK5v2x92NYZLchcz+zfRdLCRppIyVTMoo3StWJsJsK5Gvw5npJnXqGNUEpm&#xa;vTkk8FLcmjWhtDXpmF+WTaRSYcihgLpsdDeQ5QywabzXzH/fpikgtZOnwcA5Rzuw&#xa;fK1fMinEfllmQtsZFa3voxtYIzpUFkbwp504R0eBMK9mTLZzGyAK7uPQtBnDzFfH&#xa;mKbvIwyi+sn/p9Bg8et7YXV1rLtgcFHGhOdzzSR9LYQL49SyeVHrhuuhYhrV4Mli&#xa;o3ZaOiCMAGkjpomZ72ERaRmK/QIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAGhZ77JbTvw2Emp/SY3m&#xa;19NOMG0Bx8bSWEhyjpity4saGPeGF3xtvgo23BxI4atSR2Ot16t5bd6GEe3Y9yFj&#xa;l8Au9QakRpoVC4WCGgaMG52rpdvDFZoP4bs5Uzs1jGfMX5HXiVEiGXAaivaI4FNl&#xa;XYUtnS80QhfkSzC+vXgRfaepZTS39duDEYiTgfsCej/NY06biB7dSclBZbCAHirE&#xa;EWOBEkMwhGoFXVSks1A37oEGTSlETBhLK16g0he18Hy6XneC6s3dIwNiZ6wDOq1C&#xa;luULRiqHBCedtpx0M2O7g/GgHA8j2dPZN1ONdYnqUgqSfSS9Q7PNxaPErOjO43/B&#xa;5qo=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">Maria</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Maria</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B98DBDD8639F03715A67E153C6DA8159CE2F36051D2833B5963297A5CFE41B2B318CD26D4CB502A7299DEF5672B877E41972B9BF6C7DD8D6192DC85CCFECDF45D2C2469A48C954CCA28DD2B5626C26C2B91AFC399E92675EA18D504A66BD3924F052DC9A35A1B435E9985F964DA45261C8A180BA6C743790E50CB069BCD7CC7FDFA62920B593A7C1C039473BB07CAD5F3229C47E596642DB1915ADEFA31B58233A541646F0A79D3847478130AF664CB6731B200AEEE3D0B419C3CC57C798A6EF230CA2FAC9FFA7D060F1EB7B617575ACBB607051C684E773CD247D2D840BE3D4B27951EB86EBA1621AD5E0C962A3765A3A208C006923A68999EF611169198AFD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-07-17T02:00:10</elem>
+<elem key="notAfter">2023-01-16T02:00:10</elem>
+</table>
+<elem key="md5">8c5763a0b94033b15b48867e0173a0f7</elem>
+<elem key="sha1">bf35a53ad5a9f48126f83bdebeda8bde3ff7fc8e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQTzt3SbjrpY9OSsJI6Z3tWTANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVNYXJpYTAeFw0yMjA3MTcwMjAwMTBaFw0yMzAxMTYwMjAwMTBa&#xa;MBAxDjAMBgNVBAMTBU1hcmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAuY292GOfA3FaZ+FTxtqBWc4vNgUdKDO1ljKXpc/kGysxjNJtTLUCpymd71Zy&#xa;uHfkGXK5v2x92NYZLchcz+zfRdLCRppIyVTMoo3StWJsJsK5Gvw5npJnXqGNUEpm&#xa;vTkk8FLcmjWhtDXpmF+WTaRSYcihgLpsdDeQ5QywabzXzH/fpikgtZOnwcA5Rzuw&#xa;fK1fMinEfllmQtsZFa3voxtYIzpUFkbwp504R0eBMK9mTLZzGyAK7uPQtBnDzFfH&#xa;mKbvIwyi+sn/p9Bg8et7YXV1rLtgcFHGhOdzzSR9LYQL49SyeVHrhuuhYhrV4Mli&#xa;o3ZaOiCMAGkjpomZ72ERaRmK/QIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAGhZ77JbTvw2Emp/SY3m&#xa;19NOMG0Bx8bSWEhyjpity4saGPeGF3xtvgo23BxI4atSR2Ot16t5bd6GEe3Y9yFj&#xa;l8Au9QakRpoVC4WCGgaMG52rpdvDFZoP4bs5Uzs1jGfMX5HXiVEiGXAaivaI4FNl&#xa;XYUtnS80QhfkSzC+vXgRfaepZTS39duDEYiTgfsCej/NY06biB7dSclBZbCAHirE&#xa;EWOBEkMwhGoFXVSks1A37oEGTSlETBhLK16g0he18Hy6XneC6s3dIwNiZ6wDOq1C&#xa;luULRiqHBCedtpx0M2O7g/GgHA8j2dPZN1ONdYnqUgqSfSS9Q7PNxaPErOjO43/B&#xa;5qo=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: MARIA&#xa;  NetBIOS_Domain_Name: MARIA&#xa;  NetBIOS_Computer_Name: MARIA&#xa;  DNS_Domain_Name: Maria&#xa;  DNS_Computer_Name: Maria&#xa;  Product_Version: 10.0.17763&#xa;  System_Time: 2022-08-19T13:22:59+00:00"><elem key="Target_Name">MARIA</elem>
+<elem key="NetBIOS_Domain_Name">MARIA</elem>
+<elem key="NetBIOS_Computer_Name">MARIA</elem>
+<elem key="DNS_Domain_Name">Maria</elem>
+<elem key="DNS_Computer_Name">Maria</elem>
+<elem key="Product_Version">10.0.17763</elem>
+<elem key="System_Time">2022-08-19T13:22:59+00:00</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="2233"/>
+<osmatch name="Brother MFC-7820N printer" accuracy="86" line="11727">
+<osclass type="printer" vendor="Brother" osfamily="embedded" accuracy="86"><cpe>cpe:/h:brother:mfc-7820n</cpe></osclass>
+</osmatch>
+<osmatch name="Digi Connect ME serial-to-Ethernet bridge" accuracy="86" line="22894">
+<osclass type="bridge" vendor="Digi" osfamily="embedded" accuracy="86"><cpe>cpe:/h:digi:connect_me</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista Home Premium SP1" accuracy="86" line="79898">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="86"><cpe>cpe:/o:microsoft:windows_vista::sp1:home_premium</cpe></osclass>
+</osmatch>
+<osmatch name="Sony Ericsson U8i Vivaz mobile phone" accuracy="86" line="99093">
+<osclass type="phone" vendor="Sony Ericsson" osfamily="embedded" accuracy="86"><cpe>cpe:/h:sonyericsson:u8i_vivaz</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/19%OT=2233%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62FF8EB1%P=x86_64-pc-linux-gnu)&#xa;SEQ(II=I)&#xa;ECN(R=N)&#xa;T1(R=N)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<hostscript><script id="clock-skew" output="mean: 3s, deviation: 0s, median: 3s"><elem key="stddev">0</elem>
+<elem key="median">3</elem>
+<elem key="mean">3</elem>
+<elem key="count">2</elem>
+</script></hostscript><trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="146.47"/>
+<hop ttl="2" ipaddr="10.11.1.79" rtt="146.66"/>
+</trace>
+<times srtt="146520" rttvar="273" to="147612"/>
+</host>
+<taskbegin task="NSE" time="1660915377"/>
+<taskend task="NSE" time="1660915377"/>
+<taskbegin task="NSE" time="1660915377"/>
+<taskend task="NSE" time="1660915377"/>
+<taskbegin task="NSE" time="1660915377"/>
+<taskend task="NSE" time="1660915377"/>
+<runstats><finished time="1660915377" timestr="Fri Aug 19 09:22:57 2022" summary="Nmap done at Fri Aug 19 09:22:57 2022; 1 IP address (1 host up) scanned in 397.25 seconds" elapsed="397.25" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

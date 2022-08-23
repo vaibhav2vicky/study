@@ -1,0 +1,88 @@
+# Nmap 7.92 scan initiated Fri Aug 19 09:23:13 2022 as: nmap -vv --reason -Pn -T4 -sV -p 9505 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp9505/tcp_9505_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/tcp9505/xml/tcp_9505_http_nmap.xml 10.11.1.50
+Nmap scan report for 10.11.1.50
+Host is up, received user-set (0.15s latency).
+Scanned at 2022-08-19 09:23:13 EDT for 2375s
+
+PORT     STATE SERVICE REASON          VERSION
+9505/tcp open  http    syn-ack ttl 127 HttpFileServer httpd
+|_http-chrono: ERROR: Script execution failed (use -d to debug)
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  BID:49303  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://www.tenable.com/plugins/nessus/55976
+|       https://seclists.org/fulldisclosure/2011/Aug/175
+|       https://www.securityfocus.com/bid/49303
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-errors: Couldn't find any error pages.
+|_http-malware-host: Host appears to be clean
+|_http-comments-displayer: Couldn't find any comments.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-feed: Couldn't find any feeds.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+| http-vhosts: 
+|_128 names had status 200
+|_http-litespeed-sourcecode-download: Page: /index.php was not found. Try with an existing file.
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+| http-headers: 
+|   Content-Type: text/html
+|   Content-Length: 4936
+|   Accept-Ranges: bytes
+|   Set-Cookie: HFS_SID=0.293828858761117; path=/; 
+|   Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+|   
+|_  (Request type: HEAD)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-php-version: Logo query returned unknown hash 81738d2ae17d63aa4914f43f45576bb5
+|_Credits query returned unknown hash e49794a380ef17ba7695b1791742d375
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-title: /
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 19 10:02:48 2022 -- 1 IP address (1 host up) scanned in 2375.03 seconds

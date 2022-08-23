@@ -1,0 +1,26 @@
+[*] Service scan wkhtmltoimage (tcp/80/http/wkhtmltoimage) ran a command which returned a non-zero exit code (1).
+[-] Command: wkhtmltoimage --format png http://10.11.1.39:80/ /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/tcp80/tcp_80_http_screenshot.png
+[-] Error Output:
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+Loading page (1/2)
+[>                                                           ] 0%[==============================>                             ] 50%Error: Failed to load http://10.11.1.39/, with network status code 201 and http status code 403 - Error transferring http://10.11.1.39/ - server replied: Forbidden
+[==============================>                             ] 50%Error: Failed to load http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.woff, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.woff - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.woff, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.woff - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.woff, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.woff - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.woff, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.woff - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.woff, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.woff - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.ttf, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.ttf - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.ttf, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.ttf - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.ttf, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.ttf - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.ttf, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.ttf - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.ttf, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.ttf - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.svg#OpenSansLight, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Light/OpenSans-Light.svg#OpenSansLight - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.svg#OpenSansRegular, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Regular/OpenSans-Regular.svg#OpenSansRegular - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.svg#OpenSansSemibold, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Semibold/OpenSans-Semibold.svg#OpenSansSemibold - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.svg#OpenSansBold, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/Bold/OpenSans-Bold.svg#OpenSansBold - server replied: Not Found
+Error: Failed to load http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold, with network status code 203 and http status code 404 - Error transferring http://10.11.1.39/noindex/css/fonts/ExtraBold/OpenSans-ExtraBold.svg#OpenSansExtrabold - server replied: Not Found
+[============================================================] 100%Rendering (2/2)
+[>                                                           ] 0%[===============>                                            ] 25%[============================================================] 100%Done
+Exit with code 1 due to network error: ContentNotFoundError
+
+

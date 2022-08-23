@@ -1,1 +1,65 @@
-# Nmap 7.92 scan initiated Thu Aug 18 06:39:13 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/xml/_full_tcp_nmap.xml 10.11.1.50
+# Nmap 7.92 scan initiated Fri Aug 19 09:20:13 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.50/results/10.11.1.50/scans/xml/_full_tcp_nmap.xml 10.11.1.50
+adjust_timeouts2: packet supposedly had rtt of -83318 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -83318 microseconds.  Ignoring time.
+Nmap scan report for 10.11.1.50
+Host is up, received user-set (0.15s latency).
+Scanned at 2022-08-19 09:20:16 EDT for 176s
+Not shown: 65532 filtered tcp ports (no-response)
+PORT     STATE SERVICE REASON          VERSION
+80/tcp   open  http    syn-ack ttl 127 Microsoft IIS httpd 8.5
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-favicon: Unknown favicon MD5: B6341DFC213100C61DB4FB8775878CEC
+| http-robots.txt: 36 disallowed entries 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php 
+| /admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ 
+| /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
+| /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
+|_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
+|_http-title: Welcome to Bethany&#039;s Page | Bethany&#039;s Page
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp  open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+9505/tcp open  http    syn-ack ttl 127 HttpFileServer httpd
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+|_http-title: /
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|phone
+Running (JUST GUESSING): Microsoft Windows 7|8|Phone|2008|8.1|Vista (90%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Embedded Standard 7 (90%), Microsoft Windows 8.1 Update 1 (90%), Microsoft Windows Phone 7.5 or 8.0 (90%), Microsoft Windows 7 or Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 (90%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 R2 or Windows 8.1 (90%), Microsoft Windows Server 2008 R2 SP1 (90%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows 7 (90%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=8/19%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62FF8EC0%P=x86_64-pc-linux-gnu)
+SEQ(SP=10A%GCD=1%ISR=10B%TS=7)
+OPS(O1=M54ENW8ST11%O2=M54ENW8ST11%O3=M54ENW8NNT11%O4=M54ENW8ST11%O5=M54ENW8ST11%O6=M54EST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M54ENW8NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Uptime guess: 2.170 days (since Wed Aug 17 05:18:50 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=266 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   147.98 ms 192.168.119.1
+2   149.07 ms 10.11.1.50
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 19 09:23:12 2022 -- 1 IP address (1 host up) scanned in 179.25 seconds

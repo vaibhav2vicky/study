@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 22 22:48:40 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/xml/_full_tcp_nmap.xml 10.11.1.222 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.222/results/10.11.1.222/scans/xml/_full_tcp_nmap.xml 10.11.1.222" start="1661222920" startstr="Mon Aug 22 22:48:40 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661222920"/>
+<taskend task="NSE" time="1661222920"/>
+<taskbegin task="NSE" time="1661222920"/>
+<taskend task="NSE" time="1661222920"/>
+<taskbegin task="NSE" time="1661222920"/>
+<taskend task="NSE" time="1661222920"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661222920"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661222920"/>
+<taskbegin task="SYN Stealth Scan" time="1661222920"/>
+<taskprogress task="SYN Stealth Scan" time="1661222951" percent="4.78" remaining="618" etc="1661223568"/>
+<taskprogress task="SYN Stealth Scan" time="1661223050" percent="18.25" remaining="583" etc="1661223633"/>
+<taskprogress task="SYN Stealth Scan" time="1661223095" percent="24.27" remaining="547" etc="1661223641"/>
+<taskprogress task="SYN Stealth Scan" time="1661223143" percent="30.57" remaining="507" etc="1661223649"/>
+<taskprogress task="SYN Stealth Scan" time="1661223185" percent="36.22" remaining="467" etc="1661223652"/>
+<taskprogress task="SYN Stealth Scan" time="1661223233" percent="42.14" remaining="430" etc="1661223663"/>
+<taskprogress task="SYN Stealth Scan" time="1661223329" percent="51.06" remaining="393" etc="1661223721"/>
+<taskprogress task="SYN Stealth Scan" time="1661223392" percent="57.29" remaining="352" etc="1661223744"/>
+<taskprogress task="SYN Stealth Scan" time="1661223461" percent="63.64" remaining="310" etc="1661223770"/>
+<taskprogress task="SYN Stealth Scan" time="1661223524" percent="69.48" remaining="266" etc="1661223789"/>
+<taskprogress task="SYN Stealth Scan" time="1661223587" percent="75.17" remaining="221" etc="1661223807"/>
+<taskprogress task="SYN Stealth Scan" time="1661223647" percent="80.63" remaining="175" etc="1661223822"/>
+<taskprogress task="SYN Stealth Scan" time="1661223704" percent="85.81" remaining="130" etc="1661223834"/>
+<taskprogress task="SYN Stealth Scan" time="1661223764" percent="90.92" remaining="85" etc="1661223848"/>
+<taskprogress task="SYN Stealth Scan" time="1661223815" percent="96.07" remaining="37" etc="1661223852"/>
+<taskend task="SYN Stealth Scan" time="1661223862" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1661223862"/>
+<taskprogress task="Service scan" time="1661223930" percent="50.00" remaining="68" etc="1661223998"/>
+<taskend task="Service scan" time="1661224099" extrainfo="20 services on 1 host"/>
+<taskbegin task="Traceroute" time="1661224115"/>
+<taskend task="Traceroute" time="1661224115"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1661224115"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1661224115"/>
+<taskbegin task="NSE" time="1661224116"/>
+<taskend task="NSE" time="1661224131"/>
+<taskbegin task="NSE" time="1661224131"/>
+<taskend task="NSE" time="1661224132"/>
+<taskbegin task="NSE" time="1661224132"/>
+<taskend task="NSE" time="1661224132"/>
+<host starttime="1661222920" endtime="1661224132"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.222" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65515">
+<extrareasons reason="reset" count="65515" proto="tcp" ports="1-134,136-138,140-444,446-1520,1522-2029,2031-2232,2234-3388,3390-5984,5986-8008,8010-8079,8081-47000,47002-49663,49671-49683,49685-49702,49704-65535"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1521"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="oracle-tns" product="Oracle TNS listener" version="1.2.0.0.0" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:oracle:database_server:1.2.0.0.0</cpe></service></port>
+<port protocol="tcp" portid="2030"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="oracle-mts" product="Oracle MTS Recovery Service" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2233"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="infocrypt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=chris&#xa;Issuer: commonName=chris&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2022-07-31T01:46:21&#xa;Not valid after:  2023-01-30T01:46:21&#xa;MD5:   2079 22cd 2ef7 c7c2 ea80 4326 919e 8676&#xa;SHA-1: 462e 8827 89f3 d49f 8a1c 2f2f aa28 113c e622 4f94&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQPyWJqVkVAIBMA4MAbKqfQDANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVjaHJpczAeFw0yMjA3MzEwMTQ2MjFaFw0yMzAxMzAwMTQ2MjFa&#xa;MBAxDjAMBgNVBAMTBWNocmlzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAplUqDvbwcBaH3QgCC20NiJPWXG1WD7t85yUbp5oDfsbwDIVa5VSAWWGLCX3/&#xa;dFEt8QCKC4iT5rClqK3q2oXNz0SRTn5uLWOih1fToJHITGJ6B1b1Lv6T0Tgu970Z&#xa;ulvQi1qK7EJrqzksAFfSklAb6t3a6VK8pzpoKmknd1pNk01tKrtMyt6Pu2n/KIA/&#xa;XU1qb14B4hzVcbiKPLeDBrMMag0OfTQt/OCEaMoRbWR/EEx4lJihRyytX2lO80Jz&#xa;OjxHjhkYhk34I7DmCW0MQV9QNOnN6geB1jajBo8aJ/79ubj0k14rWDGycgn+bz/s&#xa;bfVZSeFmf1AWTdf2fxBMH5zuEQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAE4wS+Z7OOOYwBKTqxwi&#xa;w5R1r6LQEbwAqDMNXMFp6YHkGSHG/9YSu/RmEgXVlzeZDYAo4618MQRQ4Ygfa3ka&#xa;F/5DGtwKXObGNIR6BEo2kg7P9ZNXY6x8geX1q3u7qnulJqxP3LqTSUx/SIABXm+6&#xa;jRfCNALa0X+KlETF/YfIEehgV0HV3qTGw4AtbLHzYDs3JzIm//wWnjTIPNw+OaaD&#xa;nOMQw71LFe4XaPydhCFOaAIEHyszHDVRkWBSze7OrC4AP18vlrgqAZSKmdQkg8cA&#xa;qRkPSMIJKdG4QBMxTLWb0lXXCOlgG/wy45ckfO8615fOLJpeRGZFIVhK+iX0QwiC&#xa;81U=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">chris</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">chris</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">A6552A0EF6F0701687DD08020B6D0D8893D65C6D560FBB7CE7251BA79A037EC6F00C855AE5548059618B097DFF74512DF1008A0B8893E6B0A5A8ADEADA85CDCF44914E7E6E2D63A28757D3A091C84C627A0756F52EFE93D1382EF7BD19BA5BD08B5A8AEC426BAB392C0057D292501BEADDDAE952BCA73A682A6927775A4D934D6D2ABB4CCADE8FBB69FF28803F5D4D6A6F5E01E21CD571B88A3CB78306B30C6A0D0E7D342DFCE08468CA116D647F104C789498A1472CAD5F694EF342733A3C478E1918864DF823B0E6096D0C415F5034E9CDEA0781D636A3068F1A27FEFDB9B8F4935E2B5831B27209FE6F3FEC6DF55949E1667F50164DD7F67F104C1F9CEE11</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-07-31T01:46:21</elem>
+<elem key="notAfter">2023-01-30T01:46:21</elem>
+</table>
+<elem key="md5">207922cd2ef7c7c2ea804326919e8676</elem>
+<elem key="sha1">462e882789f3d49f8a1c2f2faa28113ce6224f94</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICzjCCAbagAwIBAgIQPyWJqVkVAIBMA4MAbKqfQDANBgkqhkiG9w0BAQsFADAQ&#xa;MQ4wDAYDVQQDEwVjaHJpczAeFw0yMjA3MzEwMTQ2MjFaFw0yMzAxMzAwMTQ2MjFa&#xa;MBAxDjAMBgNVBAMTBWNocmlzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC&#xa;AQEAplUqDvbwcBaH3QgCC20NiJPWXG1WD7t85yUbp5oDfsbwDIVa5VSAWWGLCX3/&#xa;dFEt8QCKC4iT5rClqK3q2oXNz0SRTn5uLWOih1fToJHITGJ6B1b1Lv6T0Tgu970Z&#xa;ulvQi1qK7EJrqzksAFfSklAb6t3a6VK8pzpoKmknd1pNk01tKrtMyt6Pu2n/KIA/&#xa;XU1qb14B4hzVcbiKPLeDBrMMag0OfTQt/OCEaMoRbWR/EEx4lJihRyytX2lO80Jz&#xa;OjxHjhkYhk34I7DmCW0MQV9QNOnN6geB1jajBo8aJ/79ubj0k14rWDGycgn+bz/s&#xa;bfVZSeFmf1AWTdf2fxBMH5zuEQIDAQABoyQwIjATBgNVHSUEDDAKBggrBgEFBQcD&#xa;ATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAE4wS+Z7OOOYwBKTqxwi&#xa;w5R1r6LQEbwAqDMNXMFp6YHkGSHG/9YSu/RmEgXVlzeZDYAo4618MQRQ4Ygfa3ka&#xa;F/5DGtwKXObGNIR6BEo2kg7P9ZNXY6x8geX1q3u7qnulJqxP3LqTSUx/SIABXm+6&#xa;jRfCNALa0X+KlETF/YfIEehgV0HV3qTGw4AtbLHzYDs3JzIm//wWnjTIPNw+OaaD&#xa;nOMQw71LFe4XaPydhCFOaAIEHyszHDVRkWBSze7OrC4AP18vlrgqAZSKmdQkg8cA&#xa;qRkPSMIJKdG4QBMxTLWb0lXXCOlgG/wy45ckfO8615fOLJpeRGZFIVhK+iX0QwiC&#xa;81U=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-08-23T03:08:51+00:00; 0s from scanner time."><elem key="date">2022-08-23T03:08:51+00:00</elem>
+<elem key="delta">0.0</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-methods" output="&#xa;  Supported methods: GET HEAD POST OPTIONS&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache Tomcat" version="9.0.19" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:9.0.19</cpe></service><script id="http-favicon" output="Apache Tomcat"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-title" output="Apache Tomcat/9.0.19"><elem key="title">Apache Tomcat/9.0.19</elem>
+</script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49670"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49684"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49703"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="oracle" product="Oracle Database" method="probed" conf="10"><cpe>cpe:/a:oracle:database_server</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="36249"/>
+<osmatch name="Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2" accuracy="88" line="75300">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="88" line="75542">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="88" line="75675">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="88" line="76073">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2016" accuracy="88" line="76198">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="88" line="76408">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="88"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista Home Premium SP1" accuracy="87" line="79898">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="87"><cpe>cpe:/o:microsoft:windows_vista::sp1:home_premium</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="85" line="84874">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="85"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional" accuracy="85" line="76976">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="85"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 SP1" accuracy="85" line="75136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="85"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.92%E=4%D=8/22%OT=135%CT=1%CU=36249%PV=Y%DS=2%DC=T%G=Y%TM=630444&#xa;OS:C4%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=107%TI=I%II=I%SS=S%TS=U)SE&#xa;OS:Q(SP=104%GCD=1%ISR=107%TS=U)SEQ(TI=I%TS=U)SEQ(TS=U)OPS(O1=M54ENW8NNS%O2=&#xa;OS:M54ENW8NNS%O3=M54ENW8%O4=M54ENW8NNS%O5=M54ENW8NNS%O6=M54ENNS)WIN(W1=FFFF&#xa;OS:%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M54E&#xa;OS:NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R&#xa;OS:=N)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T7(R=N)U1(R=Y%DF&#xa;OS:=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80&#xa;OS:%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<ipidsequence class="Busy server or unknown class" values="A72B,A764,A920"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled but not required"><table key="3.1.1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="clock-skew" output="mean: 0s, deviation: 0s, median: 0s"><elem key="count">2</elem>
+<elem key="stddev">0</elem>
+<elem key="median">0</elem>
+<elem key="mean">0</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2022-08-23T03:08:44&#xa;  start_date: N/A"><elem key="date">2022-08-23T03:08:44</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 14184/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 3196/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 24254/udp): CLEAN (Timeout)&#xa;  Check 4 (port 58649/udp): CLEAN (Failed to receive data)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/></hostscript><trace port="995" proto="tcp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="152.09"/>
+<hop ttl="2" ipaddr="10.11.1.222" rtt="150.83"/>
+</trace>
+<times srtt="151782" rttvar="859" to="155218"/>
+</host>
+<taskbegin task="NSE" time="1661224132"/>
+<taskend task="NSE" time="1661224132"/>
+<taskbegin task="NSE" time="1661224132"/>
+<taskend task="NSE" time="1661224132"/>
+<taskbegin task="NSE" time="1661224132"/>
+<taskend task="NSE" time="1661224132"/>
+<runstats><finished time="1661224132" timestr="Mon Aug 22 23:08:52 2022" summary="Nmap done at Mon Aug 22 23:08:52 2022; 1 IP address (1 host up) scanned in 1212.56 seconds" elapsed="1212.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,58 @@
+# Nmap 7.92 scan initiated Thu Aug 18 13:17:01 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.39/results/10.11.1.39/scans/xml/_full_tcp_nmap.xml 10.11.1.39
+adjust_timeouts2: packet supposedly had rtt of -114873 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -114873 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -112069 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -112069 microseconds.  Ignoring time.
+Nmap scan report for 10.11.1.39
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-18 13:17:02 EDT for 218s
+Not shown: 65350 filtered tcp ports (no-response), 182 filtered tcp ports (host-prohibited)
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 5e:c1:7e:d2:f9:20:f9:11:ea:4b:02:68:07:3f:54:f2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgrAeio5MX8ee/JR6rhcr8MTqM5SZga8iPjfwjFHc492aKCgXqFxE8Kprutz0NQDvXt0096pft0tiGPJBxZ6WiJvLxIzTSDe261Ly4ZUywtf3Akt/oCtOKwWV76B2gPoGG0jSpnhVgEcBW028QXk8+qDrQI5XLKyczKOdbnD/D76rOfPkJwMGTXPQmB4SSGqflnAF7Gem3Ay1dS7H+LVGgmfLHtNV9zlyx5dSRWihX6hnofYylHeSi7rLVWs5qDLeBqDID32joNqrhKzUUe8idgmU5lNCrGUcAGb+aUF7q5V0eWDD0mRXLay6OIHbXmvY/ylHyqs1jpQWhpXt9ZKTz
+|   256 36:ef:27:31:a2:fd:4a:e3:d2:4e:12:58:1f:7a:03:58 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJaLYCLt5BQwdt158R4quRiBubM4IKNB2d3kHn6jSZwpB0o/j9kQmwg5L5ek6dDc0qd9lOjzWKKSec8n4ULzWU0=
+|   256 2c:70:9c:c9:4c:50:61:d2:51:43:d5:67:d1:d0:39:de (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK/4iJuHgKovQDwFWS6ZxgjJYnNu0qqorL0dmHw2ZMJ0
+80/tcp   open  http    syn-ack ttl 63 nginx 1.6.3
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-title: Apache HTTP Server Test Page powered by CentOS
+|_http-server-header: nginx/1.6.3
+3306/tcp open  mysql   syn-ack ttl 63 MariaDB (unauthorized)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X|4.X (90%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4.4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 3.12 (90%), Linux 4.4 (90%), Linux 4.9 (90%), Linux 3.10 (86%), Linux 3.10 - 3.16 (86%), Linux 4.0 (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=8/18%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=62FE74E8%P=x86_64-pc-linux-gnu)
+SEQ(SP=102%GCD=1%ISR=10A%TI=Z%TS=A)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.917 days (since Wed Aug 17 15:19:59 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT       ADDRESS
+1   142.51 ms 192.168.119.1
+2   142.65 ms 10.11.1.39
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 18 13:20:40 2022 -- 1 IP address (1 host up) scanned in 219.89 seconds
