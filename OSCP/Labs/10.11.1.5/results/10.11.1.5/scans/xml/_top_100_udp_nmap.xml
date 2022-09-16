@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 25 01:54:22 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/_top_100_udp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/xml/_top_100_udp_nmap.xml 10.11.1.5 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -A -&#45;top-ports 100 -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/_top_100_udp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/xml/_top_100_udp_nmap.xml 10.11.1.5" start="1661406862" startstr="Thu Aug 25 01:54:22 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="100" services="7,9,17,19,49,53,67-69,80,88,111,120,123,135-139,158,161-162,177,427,443,445,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025-1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661406862"/>
+<taskend task="NSE" time="1661406862"/>
+<taskbegin task="NSE" time="1661406862"/>
+<taskend task="NSE" time="1661406862"/>
+<taskbegin task="NSE" time="1661406862"/>
+<taskend task="NSE" time="1661406862"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661406862"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661406863"/>
+<taskbegin task="UDP Scan" time="1661406863"/>
+<taskend task="UDP Scan" time="1661406864" extrainfo="100 total ports"/>
+<taskbegin task="Service scan" time="1661406864"/>
+<taskprogress task="Service scan" time="1661406962" percent="50.00" remaining="98" etc="1661407060"/>
+<taskend task="Service scan" time="1661406962" extrainfo="8 services on 1 host"/>
+<taskbegin task="Traceroute" time="1661406965"/>
+<taskend task="Traceroute" time="1661406965"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1661406965"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1661406965"/>
+<taskbegin task="NSE" time="1661406965"/>
+<taskprogress task="NSE" time="1661406996" percent="99.36" remaining="1" etc="1661406996"/>
+<taskprogress task="NSE" time="1661407026" percent="99.73" remaining="1" etc="1661407026"/>
+<taskend task="NSE" time="1661407035"/>
+<taskbegin task="NSE" time="1661407035"/>
+<taskend task="NSE" time="1661407036"/>
+<taskbegin task="NSE" time="1661407036"/>
+<taskend task="NSE" time="1661407036"/>
+<host starttime="1661406863" endtime="1661407036"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="92">
+<extrareasons reason="port-unreach" count="92" proto="udp" ports="7,9,17,19,49,53,67-69,80,88,111,120,123,136,139,158,161-162,177,427,443,497,500,514-515,518,520,593,623,626,631,996-999,1022-1023,1025,1030,1433-1434,1645-1646,1701,1718-1719,1812-1813,1900,2000,2048-2049,2222-2223,3283,3456,3703,4444,4500,5000,5060,5353,5632,9200,10000,17185,20031,30718,31337,32768-32769,32771,32815,33281,49152-49154,49156,49181-49182,49185-49186,49188,49190-49194,49200-49201,65024"/>
+</extraports>
+<port protocol="udp" portid="135"><state state="open" reason="udp-response" reason_ttl="127"/><service name="msrpc" method="probed" conf="10"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="127"/><service name="netbios-ns" product="Microsoft Windows netbios-ns" extrainfo="workgroup: THINC" hostname="ALICE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="nbns-interfaces" output="&#xa;  hostname: ALICE&#xa;  interfaces: &#xa;    10.11.1.5"><elem key="hostname">ALICE</elem>
+<table key="interfaces">
+<elem>10.11.1.5</elem>
+</table>
+</script></port>
+<port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="1026"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="win-rpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="1027"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+<port protocol="udp" portid="1028"><state state="open" reason="udp-response" reason_ttl="127"/><service name="msrpc" method="probed" conf="10"/></port>
+<port protocol="udp" portid="1029"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="solid-mux" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="7"/>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/25%OT=%CT=%CU=7%PV=Y%DS=2%DC=T%G=N%TM=63070F3C%P=x86_64-pc-linux-gnu)&#xa;SEQ(II=I)&#xa;T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=80%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=S%T=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<hostscript><script id="nbstat" output="NetBIOS name: ALICE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:ba:a2:dd (VMware)&#xa;Names:&#xa;  ALICE&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  ALICE&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  THINC&lt;00&gt;            Flags: &lt;group&gt;&lt;active&gt;&#xa;  ALICE&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  THINC&lt;1e&gt;            Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 ba a2 dd 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><trace port="32769" proto="udp">
+<hop ttl="1" ipaddr="192.168.119.1" rtt="141.94"/>
+<hop ttl="2" ipaddr="10.11.1.5" rtt="142.00"/>
+</trace>
+<times srtt="143058" rttvar="978" to="146970"/>
+</host>
+<taskbegin task="NSE" time="1661407036"/>
+<taskend task="NSE" time="1661407036"/>
+<taskbegin task="NSE" time="1661407036"/>
+<taskend task="NSE" time="1661407036"/>
+<taskbegin task="NSE" time="1661407036"/>
+<taskend task="NSE" time="1661407036"/>
+<runstats><finished time="1661407036" timestr="Thu Aug 25 01:57:16 2022" summary="Nmap done at Thu Aug 25 01:57:16 2022; 1 IP address (1 host up) scanned in 174.29 seconds" elapsed="174.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

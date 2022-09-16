@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Wed Aug 24 03:57:59 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/vulnhub/Kioptrix-lvl1/results/192.168.244.135/scans/udp111/udp_111_nfs_nmap.txt -oX /home/kali/study/vulnhub/Kioptrix-lvl1/results/192.168.244.135/scans/udp111/xml/udp_111_nfs_nmap.xml 192.168.244.135 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/vulnhub/Kioptrix-lvl1/results/192.168.244.135/scans/udp111/udp_111_nfs_nmap.txt -oX /home/kali/study/vulnhub/Kioptrix-lvl1/results/192.168.244.135/scans/udp111/xml/udp_111_nfs_nmap.xml 192.168.244.135" start="1661327879" startstr="Wed Aug 24 03:57:59 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661327879"/>
+<taskend task="NSE" time="1661327879"/>
+<taskbegin task="NSE" time="1661327879"/>
+<taskend task="NSE" time="1661327879"/>
+<taskbegin task="NSE" time="1661327879"/>
+<taskend task="NSE" time="1661327879"/>
+<taskbegin task="ARP Ping Scan" time="1661327879"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.244.135" addrtype="ipv4"/>
+<address addr="00:0C:29:57:90:96" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="ARP Ping Scan" time="1661327879" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661327880"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661327880"/>
+<taskbegin task="UDP Scan" time="1661327880"/>
+<taskend task="UDP Scan" time="1661327880" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661327880"/>
+<taskend task="Service scan" time="1661327880" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<host starttime="1661327880" endtime="1661327880"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.244.135" addrtype="ipv4"/>
+<address addr="00:0C:29:57:90:96" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="111"><state state="open" reason="udp-response" reason_ttl="64"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2            111/tcp   rpcbind&#xa;  100000  2            111/udp   rpcbind&#xa;  100024  1           1024/tcp   status&#xa;  100024  1           1025/udp   status&#xa;"><table key="100024">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">1024</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">1025</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="344" rttvar="3778" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<taskbegin task="NSE" time="1661327880"/>
+<taskend task="NSE" time="1661327880"/>
+<runstats><finished time="1661327880" timestr="Wed Aug 24 03:58:00 2022" summary="Nmap done at Wed Aug 24 03:58:00 2022; 1 IP address (1 host up) scanned in 0.81 seconds" elapsed="0.81" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

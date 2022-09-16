@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 25 01:59:15 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 1433 &quot;-&#45;script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp1433/tcp_1433_mssql_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp1433/xml/tcp_1433_mssql_nmap.xml 10.11.1.13 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 1433 &quot;-&#45;script=banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=mssql.instance-port=1433,mssql.username=sa,mssql.password=sa -oN /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp1433/tcp_1433_mssql_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp1433/xml/tcp_1433_mssql_nmap.xml 10.11.1.13" start="1661407155" startstr="Thu Aug 25 01:59:15 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="1433"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661407156"/>
+<taskend task="NSE" time="1661407156"/>
+<taskbegin task="NSE" time="1661407156"/>
+<taskend task="NSE" time="1661407156"/>
+<taskbegin task="NSE" time="1661407156"/>
+<taskend task="NSE" time="1661407156"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661407156"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661407156"/>
+<taskbegin task="SYN Stealth Scan" time="1661407156"/>
+<taskend task="SYN Stealth Scan" time="1661407157" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661407157"/>
+<taskend task="Service scan" time="1661407163" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661407163"/>
+<taskend task="NSE" time="1661407174"/>
+<taskbegin task="NSE" time="1661407174"/>
+<taskend task="NSE" time="1661407184"/>
+<taskbegin task="NSE" time="1661407184"/>
+<taskend task="NSE" time="1661407186"/>
+<host starttime="1661407157" endtime="1661407186"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-sql-s" product="Microsoft SQL Server 2012" version="11.00.2100.00; RTM" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server:2012:gold</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Forward Secrecy not supported by any cipher&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature (SHA1), score capped at F&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Forward Secrecy not supported by any cipher</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+<elem key="strength">F</elem>
+<elem key="kex_info">rsa 1024</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature (SHA1), score capped at F</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: VULNERABLE&#xa;    IDs:  BID:70574  CVE:CVE-2014-3566&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA&#xa;    References:&#xa;      https://www.securityfocus.com/bid/70574&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>BID:70574</elem>
+<elem>CVE:CVE-2014-3566</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">10</elem>
+<elem key="day">14</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table key="refs">
+<elem>https://www.securityfocus.com/bid/70574</elem>
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+</table>
+</table>
+</script><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: DISCO&#xa;  NetBIOS_Domain_Name: DISCO&#xa;  NetBIOS_Computer_Name: DISCO&#xa;  DNS_Domain_Name: disco&#xa;  DNS_Computer_Name: disco&#xa;  Product_Version: 6.3.9600"><elem key="Target_Name">DISCO</elem>
+<elem key="NetBIOS_Domain_Name">DISCO</elem>
+<elem key="NetBIOS_Computer_Name">DISCO</elem>
+<elem key="DNS_Domain_Name">disco</elem>
+<elem key="DNS_Computer_Name">disco</elem>
+<elem key="Product_Version">6.3.9600</elem>
+</script><script id="ssl-date" output="2022-08-25T05:59:38+00:00; +4s from scanner time."><elem key="delta">4.0</elem>
+<elem key="date">2022-08-25T05:59:38+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Issuer: commonName=SSL_Self_Signed_Fallback&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2022-07-18T21:05:29&#xa;Not valid after:  2052-07-18T21:05:29&#xa;MD5:   62bf 4120 81f9 598e 834c 13d7 c634 502c&#xa;SHA-1: bdc1 ca36 4f59 c7c8 dbc0 9135 3560 ef9b 4e6c 90ba&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB+zCCAWSgAwIBAgIQO1J5zdCGTbREmdAw+6EXszANBgkqhkiG9w0BAQUFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjIwNzE4MjEwNTI5WhgPMjA1MjA3MTgyMTA1MjlaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwI3HOHsbTBCA&#xa;FgQfQ1MQ/8qFeiAZ+oORhUm3YYfQkcDjtQ0Nmy5+i9Xmb1/wFiF7gNsJo7d1TCLt&#xa;BzJiTv4ACyUgWyL/8tXhCTzITv7xnK1LXY3Iw7Xdxz2NQbbwXAL4kOWMjqYqXPpR&#xa;S8vjP1uFX/S5+DbXQlurSRWk0xYMQkMCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAT&#xa;yd2AD7fcH4Nqvrf0J8Kk9MbYcZVRYWrqJptIPNP1TLgRxGK81bac1zP4XA3qFWh/&#xa;FMWUZhTjEKHTXHwMYJchK+/BzN9JAg5nlhA/mnyGgR9Mk/mdQ16U/x5YBBRi+FCh&#xa;diUjkIY4mzTW3IfrQJwJmvdORNxXOS7Lfpl3f856JA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">C08DC7387B1B4C108016041F435310FFCA857A2019FA83918549B76187D091C0E3B50D0D9B2E7E8BD5E66F5FF016217B80DB09A3B7754C22ED0732624EFE000B25205B22FFF2D5E1093CC84EFEF19CAD4B5D8DC8C3B5DDC73D8D41B6F05C02F890E58C8EA62A5CFA514BCBE33F5B855FF4B9F836D7425BAB4915A4D3160C4243</elem>
+<elem key="exponent">65537</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-07-18T21:05:29</elem>
+<elem key="notAfter">2052-07-18T21:05:29</elem>
+</table>
+<elem key="md5">62bf412081f9598e834c13d7c634502c</elem>
+<elem key="sha1">bdc1ca364f59c7c8dbc091353560ef9b4e6c90ba</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB+zCCAWSgAwIBAgIQO1J5zdCGTbREmdAw+6EXszANBgkqhkiG9w0BAQUFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjIwNzE4MjEwNTI5WhgPMjA1MjA3MTgyMTA1MjlaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwI3HOHsbTBCA&#xa;FgQfQ1MQ/8qFeiAZ+oORhUm3YYfQkcDjtQ0Nmy5+i9Xmb1/wFiF7gNsJo7d1TCLt&#xa;BzJiTv4ACyUgWyL/8tXhCTzITv7xnK1LXY3Iw7Xdxz2NQbbwXAL4kOWMjqYqXPpR&#xa;S8vjP1uFX/S5+DbXQlurSRWk0xYMQkMCAwEAATANBgkqhkiG9w0BAQUFAAOBgQAT&#xa;yd2AD7fcH4Nqvrf0J8Kk9MbYcZVRYWrqJptIPNP1TLgRxGK81bac1zP4XA3qFWh/&#xa;FMWUZhTjEKHTXHwMYJchK+/BzN9JAg5nlhA/mnyGgR9Mk/mdQ16U/x5YBBRi+FCh&#xa;diUjkIY4mzTW3IfrQJwJmvdORNxXOS7Lfpl3f856JA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<hostscript><script id="ms-sql-config" output="&#xa;  [10.11.1.13:1433]&#xa;    ERROR: Bad username or password&#xa;"/><script id="ms-sql-xp-cmdshell" output="&#xa;  (Use -&#45;script-args=ms-sql-xp-cmdshell.cmd=&apos;&lt;CMD&gt;&apos; to change command.)&#xa;  [10.11.1.13:1433]&#xa;"/><script id="ms-sql-hasdbaccess" output="&#xa;  [10.11.1.13:1433]&#xa;"/><script id="ms-sql-query" output="&#xa;  (Use -&#45;script-args=ms-sql-query.query=&apos;&lt;QUERY&gt;&apos; to change query.)&#xa;  [10.11.1.13:1433]&#xa;    ERROR: Bad username or password&#xa;"/><script id="ms-sql-info" output="&#xa;  10.11.1.13:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server 2012 RTM&#xa;      number: 11.00.2100.00&#xa;      Product: Microsoft SQL Server 2012&#xa;      Service pack level: RTM&#xa;      Post-SP patches applied: false&#xa;    TCP port: 1433"><table key="10.11.1.13:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2012 RTM</elem>
+<elem key="number">11.00.2100.00</elem>
+<elem key="Product">Microsoft SQL Server 2012</elem>
+<elem key="Service pack level">RTM</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script><script id="ms-sql-empty-password" output="&#xa;  [10.11.1.13:1433]&#xa;    &apos;sa&apos; account password is not blank.&#xa;"/><script id="ms-sql-tables" output="&#xa;  [10.11.1.13:1433]&#xa;"/><script id="ms-sql-dump-hashes" output="&#xa;[10.11.1.13:1433]&#xa;  ERROR: Bad username or password&#xa;"/></hostscript><times srtt="141451" rttvar="141451" to="707255"/>
+</host>
+<taskbegin task="NSE" time="1661407186"/>
+<taskend task="NSE" time="1661407186"/>
+<taskbegin task="NSE" time="1661407186"/>
+<taskend task="NSE" time="1661407186"/>
+<taskbegin task="NSE" time="1661407186"/>
+<taskend task="NSE" time="1661407186"/>
+<runstats><finished time="1661407186" timestr="Thu Aug 25 01:59:46 2022" summary="Nmap done at Thu Aug 25 01:59:46 2022; 1 IP address (1 host up) scanned in 31.12 seconds" elapsed="31.12" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

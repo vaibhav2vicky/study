@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 25 01:57:16 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp135/udp_135_rpc_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp135/xml/udp_135_rpc_nmap.xml 10.11.1.5 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp135/udp_135_rpc_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp135/xml/udp_135_rpc_nmap.xml 10.11.1.5" start="1661407036" startstr="Thu Aug 25 01:57:16 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="135"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661407037"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661407037"/>
+<taskbegin task="UDP Scan" time="1661407037"/>
+<taskend task="UDP Scan" time="1661407037" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661407037"/>
+<taskend task="Service scan" time="1661407037" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<host starttime="1661407037" endtime="1661407037"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="135"><state state="open" reason="udp-response" reason_ttl="127"/><service name="msrpc" method="probed" conf="10"/></port>
+</ports>
+<times srtt="141064" rttvar="141064" to="705320"/>
+</host>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<runstats><finished time="1661407038" timestr="Thu Aug 25 01:57:18 2022" summary="Nmap done at Thu Aug 25 01:57:18 2022; 1 IP address (1 host up) scanned in 1.13 seconds" elapsed="1.13" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 25 01:57:16 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp137/udp_137_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp137/xml/udp_137_smb_nmap.xml 10.11.1.5 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp137/udp_137_smb_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.5/results/10.11.1.5/scans/udp137/xml/udp_137_smb_nmap.xml 10.11.1.5" start="1661407036" startstr="Thu Aug 25 01:57:16 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="NSE" time="1661407037"/>
+<taskend task="NSE" time="1661407037"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661407037"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661407037"/>
+<taskbegin task="UDP Scan" time="1661407037"/>
+<taskend task="UDP Scan" time="1661407037" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661407037"/>
+<taskend task="Service scan" time="1661407038" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<host starttime="1661407037" endtime="1661407038"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="127"/><service name="netbios-ns" product="Microsoft Windows netbios-ns" extrainfo="workgroup: THINC" hostname="ALICE" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: ALICE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:ba:a2:dd (VMware)&#xa;Names:&#xa;  ALICE&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  ALICE&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  THINC&lt;00&gt;            Flags: &lt;group&gt;&lt;active&gt;&#xa;  ALICE&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  THINC&lt;1e&gt;            Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 ba a2 dd 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><times srtt="141734" rttvar="141734" to="708670"/>
+</host>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<taskbegin task="NSE" time="1661407038"/>
+<taskend task="NSE" time="1661407038"/>
+<runstats><finished time="1661407038" timestr="Thu Aug 25 01:57:18 2022" summary="Nmap done at Thu Aug 25 01:57:18 2022; 1 IP address (1 host up) scanned in 1.36 seconds" elapsed="1.36" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

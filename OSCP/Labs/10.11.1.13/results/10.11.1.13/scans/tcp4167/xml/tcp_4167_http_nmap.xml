@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Thu Aug 25 02:11:26 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -p 4167 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp4167/tcp_4167_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp4167/xml/tcp_4167_http_nmap.xml 10.11.1.13 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -p 4167 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp4167/tcp_4167_http_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.13/results/10.11.1.13/scans/tcp4167/xml/tcp_4167_http_nmap.xml 10.11.1.13" start="1661407886" startstr="Thu Aug 25 02:11:26 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="4167"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1661407887"/>
+<taskend task="NSE" time="1661407887"/>
+<taskbegin task="NSE" time="1661407887"/>
+<taskend task="NSE" time="1661407887"/>
+<taskbegin task="NSE" time="1661407887"/>
+<taskend task="NSE" time="1661407887"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1661407887"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1661407887"/>
+<taskbegin task="SYN Stealth Scan" time="1661407887"/>
+<taskend task="SYN Stealth Scan" time="1661407887" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1661407887"/>
+<taskend task="Service scan" time="1661407899" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1661407899"/>
+<taskprogress task="NSE" time="1661407930" percent="99.02" remaining="1" etc="1661407930"/>
+<taskprogress task="NSE" time="1661407960" percent="99.02" remaining="1" etc="1661407961"/>
+<taskprogress task="NSE" time="1661407990" percent="99.67" remaining="1" etc="1661407990"/>
+<taskprogress task="NSE" time="1661408020" percent="99.67" remaining="1" etc="1661408020"/>
+<taskprogress task="NSE" time="1661408050" percent="99.67" remaining="1" etc="1661408050"/>
+<taskprogress task="NSE" time="1661408080" percent="99.67" remaining="1" etc="1661408081"/>
+<taskprogress task="NSE" time="1661408110" percent="99.67" remaining="1" etc="1661408111"/>
+<taskprogress task="NSE" time="1661408140" percent="99.67" remaining="1" etc="1661408141"/>
+<taskprogress task="NSE" time="1661408170" percent="99.67" remaining="1" etc="1661408171"/>
+<taskprogress task="NSE" time="1661408200" percent="99.67" remaining="1" etc="1661408201"/>
+<taskprogress task="NSE" time="1661408230" percent="99.67" remaining="2" etc="1661408231"/>
+<taskprogress task="NSE" time="1661408260" percent="99.67" remaining="2" etc="1661408261"/>
+<taskprogress task="NSE" time="1661408290" percent="99.67" remaining="2" etc="1661408291"/>
+<taskprogress task="NSE" time="1661408320" percent="99.67" remaining="2" etc="1661408321"/>
+<taskprogress task="NSE" time="1661408350" percent="99.67" remaining="2" etc="1661408351"/>
+<taskprogress task="NSE" time="1661408380" percent="99.67" remaining="2" etc="1661408382"/>
+<taskprogress task="NSE" time="1661408410" percent="99.67" remaining="2" etc="1661408412"/>
+<taskprogress task="NSE" time="1661408440" percent="99.67" remaining="2" etc="1661408442"/>
+<taskprogress task="NSE" time="1661408470" percent="99.67" remaining="2" etc="1661408472"/>
+<taskprogress task="NSE" time="1661408500" percent="99.67" remaining="2" etc="1661408502"/>
+<taskprogress task="NSE" time="1661408530" percent="99.67" remaining="3" etc="1661408532"/>
+<taskprogress task="NSE" time="1661408560" percent="99.67" remaining="3" etc="1661408562"/>
+<taskprogress task="NSE" time="1661408590" percent="99.67" remaining="3" etc="1661408592"/>
+<taskprogress task="NSE" time="1661408620" percent="99.67" remaining="3" etc="1661408622"/>
+<taskend task="NSE" time="1661408640"/>
+<taskbegin task="NSE" time="1661408640"/>
+<taskend task="NSE" time="1661408640"/>
+<taskbegin task="NSE" time="1661408640"/>
+<taskend task="NSE" time="1661408640"/>
+<host starttime="1661407887" endtime="1661408640"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="4167"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-chrono" output="Request times for /; avg: 301.96ms; min: 297.31ms; max: 307.31ms"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 503&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">503</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-date" output="Thu, 25 Aug 2022 06:11:44 GMT; +3s from local time."><elem key="date">2022-08-25T06:11:44+00:00</elem>
+<elem key="delta">3.0</elem>
+</script><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-config-backup" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-title" output="Service Unavailable"><elem key="title">Service Unavailable</elem>
+</script><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="http-security-headers" output=""></script><script id="http-vhosts" output="&#xa;128 names had status 503"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=10.11.1.13&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 503&#xa;  &#x9;http://10.11.1.13:4167/&#xa;"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+</ports>
+<times srtt="142891" rttvar="142891" to="714455"/>
+</host>
+<taskbegin task="NSE" time="1661408640"/>
+<taskend task="NSE" time="1661408640"/>
+<taskbegin task="NSE" time="1661408640"/>
+<taskend task="NSE" time="1661408640"/>
+<taskbegin task="NSE" time="1661408640"/>
+<taskend task="NSE" time="1661408640"/>
+<runstats><finished time="1661408640" timestr="Thu Aug 25 02:24:00 2022" summary="Nmap done at Thu Aug 25 02:24:00 2022; 1 IP address (1 host up) scanned in 754.29 seconds" elapsed="754.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

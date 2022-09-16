@@ -1,0 +1,86 @@
+```bash
+nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN "/home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/_quick_tcp_nmap.txt" -oX "/home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/xml/_quick_tcp_nmap.xml" 10.11.1.146
+```
+
+[/home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/_quick_tcp_nmap.txt](file:///home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/_quick_tcp_nmap.txt):
+
+```
+# Nmap 7.92 scan initiated Thu Aug 25 05:23:23 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/_quick_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.146/results/10.11.1.146/scans/xml/_quick_tcp_nmap.xml 10.11.1.146
+Nmap scan report for 10.11.1.146
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-25 05:23:24 EDT for 80s
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE     REASON         VERSION
+22/tcp  open  ssh         syn-ack ttl 63 OpenSSH 7.4p1 Ubuntu 10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e3:73:a9:48:81:9d:90:bc:70:75:81:8a:3d:e8:95:6f (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDlrmnbyVOMFMbqRmKO9h0Omv6odlv6tAqlZbKeiOhsYz6AqzfpGQmARw4ws8+qGGdSj0B5ICTNUoYGrpYuS0YNXZBwi1pt6K0WqYv8wyrqoQeWK+jlz9FOdzES2d8WbxVtesp96PGlHnM5nJs4COJt7WsdA1QBF2+xkmZjImSawdoAlsmtpMBxP6vPjnGBsBnNFnIKoHdWfz5TriY958//Zco/TYK3pwM4xKy4ip0zZ3T8xqKmwqhbD0vwRbV5qZMugOlgPtxUP4/UzudiuvO1COqDBNemA5S9jBy8yqqLyA0qfdg0N6Gm8X2iBNHw2D0RZ1C8PjoyGPeDvV34Frkt
+|   256 0e:76:22:d0:20:ca:1e:96:e9:7b:a5:9a:86:e7:f6:d4 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBk5w06Kdjm6NPbI4k1oJG79cOii6bdCfSXlp7QjZMqyiVgtooCGdF2KmS0gtEfXaC4nt0MFhf4QQzORdxdtZjw=
+|   256 57:e1:e4:06:a3:79:6d:03:53:6c:d6:7b:67:ed:86:dc (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFCXoJ6KMRCRIT3IzvO/fDY3Z99e4CicyEerj+lO6CBM
+139/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 4.5.4-Ubuntu (workgroup: WORKGROUP)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X|4.X (85%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 3.12 (85%), Linux 3.11 - 4.1 (85%), Linux 4.10 (85%), Linux 4.4 (85%), Linux 4.9 (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=8/25%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=63073FDC%P=x86_64-pc-linux-gnu)
+SEQ(SP=103%GCD=1%ISR=10B%TI=Z%II=I%TS=21)
+OPS(O1=M54EST11NW7%O2=M54EST11NW7%O3=M54ENNT11NW7%O4=M54EST11NW7%O5=M54EST11NW7%O6=M54EST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M54ENNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.001 days (since Thu Aug 25 05:23:48 2022)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: SUSIE; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-time: 
+|   date: 2022-08-25T09:24:05
+|_  start_date: N/A
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.5.4-Ubuntu)
+|   Computer name: \x00
+|   NetBIOS computer name: SUSIE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2022-08-25T05:24:04-04:00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 25335/tcp): CLEAN (Timeout)
+|   Check 2 (port 54885/tcp): CLEAN (Timeout)
+|   Check 3 (port 61782/udp): CLEAN (Timeout)
+|   Check 4 (port 33830/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 1h19m58s, deviation: 2h18m34s, median: -1s
+
+TRACEROUTE (using port 445/tcp)
+HOP RTT       ADDRESS
+1   142.35 ms 192.168.119.1
+2   142.89 ms 10.11.1.146
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Aug 25 05:24:44 2022 -- 1 IP address (1 host up) scanned in 81.04 seconds
+
+```

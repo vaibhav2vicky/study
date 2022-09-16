@@ -1,7 +1,9 @@
-# Nmap 7.92 scan initiated Sat Aug 20 23:33:11 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.71/results/10.11.1.71/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.71/results/10.11.1.71/scans/xml/_full_tcp_nmap.xml 10.11.1.71
+# Nmap 7.92 scan initiated Thu Aug 25 05:21:21 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/kali/study/OSCP/Labs/10.11.1.71/results/10.11.1.71/scans/_full_tcp_nmap.txt -oX /home/kali/study/OSCP/Labs/10.11.1.71/results/10.11.1.71/scans/xml/_full_tcp_nmap.xml 10.11.1.71
+Increasing send delay for 10.11.1.71 from 5 to 10 due to 15 out of 36 dropped probes since last increase.
+Warning: 10.11.1.71 giving up on port because retransmission cap hit (6).
 Nmap scan report for 10.11.1.71
-Host is up, received user-set (0.15s latency).
-Scanned at 2022-08-20 23:33:12 EDT for 439s
+Host is up, received user-set (0.14s latency).
+Scanned at 2022-08-25 05:21:21 EDT for 921s
 Not shown: 65533 closed tcp ports (reset)
 PORT   STATE SERVICE REASON         VERSION
 22/tcp open  ssh     syn-ack ttl 63 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
@@ -21,7 +23,7 @@ OS fingerprint not ideal because: Didn't receive UDP response. Please try again 
 Aggressive OS guesses: Fortinet FortiGate 100D firewall (87%)
 No exact OS matches for host (test conditions non-ideal).
 TCP/IP fingerprint:
-SCAN(V=7.92%E=4%D=8/20%OT=22%CT=1%CU=%PV=Y%G=N%TM=6301A92F%P=x86_64-pc-linux-gnu)
+SCAN(V=7.92%E=4%D=8/25%OT=22%CT=1%CU=%PV=Y%G=N%TM=630742AA%P=x86_64-pc-linux-gnu)
 ECN(R=N)
 T1(R=N)
 T2(R=N)
@@ -35,11 +37,11 @@ IE(R=N)
 
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
-TRACEROUTE (using port 110/tcp)
+TRACEROUTE (using port 554/tcp)
 HOP RTT       ADDRESS
-1   152.17 ms 192.168.119.1
+1   142.20 ms 192.168.119.1
 2   ... 30
 
 Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sat Aug 20 23:40:31 2022 -- 1 IP address (1 host up) scanned in 440.60 seconds
+# Nmap done at Thu Aug 25 05:36:42 2022 -- 1 IP address (1 host up) scanned in 921.76 seconds
