@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Feb 18 14:00:48 2022 as: nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.102 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.102" start="1645210848" startstr="Fri Feb 18 14:00:48 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1645210848" endtime="1645211298"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.137.102" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65534" proto="tcp" ports="1-3388,3390-65535"/>
+</extraports>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: EXAM&#xa;  NetBIOS_Domain_Name: EXAM&#xa;  NetBIOS_Computer_Name: CLIENT01&#xa;  DNS_Domain_Name: exam.com&#xa;  DNS_Computer_Name: client01.exam.com&#xa;  DNS_Tree_Name: exam.com&#xa;  Product_Version: 10.0.18362&#xa;  System_Time: 2022-02-18T19:08:17+00:00"><elem key="Target_Name">EXAM</elem>
+<elem key="NetBIOS_Domain_Name">EXAM</elem>
+<elem key="NetBIOS_Computer_Name">CLIENT01</elem>
+<elem key="DNS_Domain_Name">exam.com</elem>
+<elem key="DNS_Computer_Name">client01.exam.com</elem>
+<elem key="DNS_Tree_Name">exam.com</elem>
+<elem key="Product_Version">10.0.18362</elem>
+<elem key="System_Time">2022-02-18T19:08:17+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=client01.exam.com&#xa;Not valid before: 2021-10-12T12:22:26&#xa;Not valid after:  2022-04-13T12:22:26"><table key="subject">
+<elem key="commonName">client01.exam.com</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">client01.exam.com</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">F38724E86BEB7EE9469C9B8F0A6B729B8BEB2B58E9133777D67ABC6A9F4591E2B51B9D8F571C71B54678F7D2CE4B1958747BADDC8F2E9C0A6A533EFE929E665F5C4B8FC6C1034B58DB2961735D2021F5E889FAC6BC39E26CF4D84950ACBF1789FADA91B74042F4716287835974B180653FAD2A2658A2CAFD19970618D072F9A090096F40B83BD7D3D43ED70B1CD38777D8AFE4C53121EACC75F6C41E7ECB5C739509422098FBAA2F416C4E395ABC34D79EA75FAACC6BFF3ABC627F859B5709E2D4D6A819309C8E93D14770DDA2B4F26834BFFE2EC407D2197E316E6BDD9184EC570D23057BA0F8532FA5018F7BD1EB0E2048586007185F9129D70BAB38B67CF9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2021-10-12T12:22:26</elem>
+<elem key="notAfter">2022-04-13T12:22:26</elem>
+</table>
+<elem key="md5">76b24f945b4d4d2cd510a0b979c66983</elem>
+<elem key="sha1">5e3416f851cbf4226c00271aa61162508cc68eeb</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC5jCCAc6gAwIBAgIQTTZF4SP4bb9OXJFl5hbbCTANBgkqhkiG9w0BAQsFADAc&#xa;MRowGAYDVQQDExFjbGllbnQwMS5leGFtLmNvbTAeFw0yMTEwMTIxMjIyMjZaFw0y&#xa;MjA0MTMxMjIyMjZaMBwxGjAYBgNVBAMTEWNsaWVudDAxLmV4YW0uY29tMIIBIjAN&#xa;BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA84ck6GvrfulGnJuPCmtym4vrK1jp&#xa;Ezd31nq8ap9FkeK1G52PVxxxtUZ499LOSxlYdHut3I8unApqUz7+kp5mX1xLj8bB&#xa;A0tY2ylhc10gIfXoifrGvDnibPTYSVCsvxeJ+tqRt0BC9HFih4NZdLGAZT+tKiZY&#xa;osr9GZcGGNBy+aCQCW9AuDvX09Q+1wsc04d32K/kxTEh6sx19sQefstcc5UJQiCY&#xa;+6ovQWxOOVq8NNeep1+qzGv/Orxif4WbVwni1NaoGTCcjpPRR3DdorTyaDS//i7E&#xa;B9IZfjFua92RhOxXDSMFe6D4Uy+lAY970esOIEhYYAcYX5Ep1wurOLZ8+QIDAQAB&#xa;oyQwIjATBgNVHSUEDDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcN&#xa;AQELBQADggEBALWZ+kYNQwhevaTL6NRehsipbMkHLUaufKgES0eE4Jzihm+sPd6B&#xa;mhed5VKILmw9dprczOeZEn6mluX+ZTLTS32GoKjCVXq5P1tmwUP9swufAnnbhNqn&#xa;jpT2Sv3SqFTZ6crTpH85xPJI7Wa70+4+D19+iH1+Eu7kS5bamRkdBIwSj+Rk2vLw&#xa;fGq0LRzK0+sF4eSBasDm9uSY7IhhH7BG8dL2xNRrKb5NErU/xRwDSMCW8kkJbbLu&#xa;r28AxmzkB8QCMWqgmrsPfpbWVXvn9cJQ4Jt/X2l2eUYDMJIfRhDNg7nSfEmKubw3&#xa;dK72u21SRQ4U6UE7DvfleHL9JEJse5t1x1c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2022-02-18T19:08:18+00:00; 0s from scanner time."><elem key="date">2022-02-18T19:08:18+00:00</elem>
+<elem key="delta">0.0</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="3389"/>
+<osmatch name="AVtech Room Alert 26W environmental monitor" accuracy="87" line="9134">
+<osclass type="specialized" vendor="AVtech" osfamily="embedded" accuracy="87"/>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="256" difficulty="Good luck!" values="251AC9B2,1D1F3A7E,18F12360,2870351B,672BEC79,96769CFB"/>
+<ipidsequence class="Incremental" values="8F85,8F86,8F87,8F88,8F89,8F8A"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="192.168.49.1" rtt="286.64"/>
+<hop ttl="2" ipaddr="192.168.137.102" rtt="286.73"/>
+</trace>
+<times srtt="285062" rttvar="2466" to="294926"/>
+</host>
+<runstats><finished time="1645211298" timestr="Fri Feb 18 14:08:18 2022" summary="Nmap done at Fri Feb 18 14:08:18 2022; 1 IP address (1 host up) scanned in 450.64 seconds" elapsed="450.64" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

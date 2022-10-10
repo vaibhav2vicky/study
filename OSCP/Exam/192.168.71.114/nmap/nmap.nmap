@@ -1,0 +1,116 @@
+# Nmap 7.92 scan initiated Fri Oct  7 22:51:33 2022 as: nmap -sC -sV -oA nmap/nmap 192.168.71.114
+Nmap scan report for 192.168.71.114
+Host is up (0.28s latency).
+Not shown: 993 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           Wing FTP Server
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rwxrwxrwx 1 user group            406  Mar 01 01:17 backup.xml.txt [NSE: writeable]
+| -rwxrwxrwx 1 user group         354700  Mar 01 01:16 logfile [NSE: writeable]
+| -rwxrwxrwx 1 user group         195000  Mar 01 01:16 PhotoAcq.dll [NSE: writeable]
+| -rwxrwxrwx 1 user group         172000  Mar 01 01:16 PhotoViewer.dll [NSE: writeable]
+| -rwxrwxrwx 1 user group           8099  Mar 01 01:16 Resources.dll [NSE: writeable]
+| -rwxrwxrwx 1 user group          64900  Mar 01 01:15 TableTextService.dll [NSE: writeable]
+| -rwxrwxrwx 1 user group          34700  Mar 01 01:15 uhssvc.exe [NSE: writeable]
+| -rwxrwxrwx 1 user group          54330  Mar 01 01:15 UnifiedInstaller.msi [NSE: writeable]
+| -rwxrwxrwx 1 user group          68330  Mar 01 01:15 UpdateAssistant.msi [NSE: writeable]
+|_-rwxrwxrwx 1 user group          18500  Mar 01 01:14 WordpadFilter.dll [NSE: writeable]
+|_ftp-bounce: server forbids bouncing to low ports <1025
+| ftp-syst: 
+|   STAT: 
+| Status for user anonymous:
+|     Connected for 0 minutes, 2 seconds
+|     1 users online.
+|     Uploaded 0 files, 0.000 KB, 0.000 KB/sec average
+|     Downloaded 0 files, 0.000 KB, 0.000 KB/sec average
+|_End of status.
+80/tcp   open  http          Wing FTP Server(Offensive Security)
+| fingerprint-strings: 
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 HTTP OK
+|     Server: Wing FTP Server(Offensive Security)
+|     Content-Type: text/html
+|     Content-Length: 678
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Connection: close
+|     <html>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <meta http-equiv="pragma" content="no-cache" />
+|     <meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+|     <meta http-equiv="Expires" content="0" />
+|     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'><script>top.location='login.html';</script>
+|_    <noscript><center><H2>The web client requires that you have Javascript enabled on your browser.<br>If you're not sure how to do this,
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Wing FTP Server(Offensive Security)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: OSCP
+|   NetBIOS_Domain_Name: OSCP
+|   NetBIOS_Computer_Name: OSCP
+|   DNS_Domain_Name: OSCP
+|   DNS_Computer_Name: OSCP
+|   Product_Version: 10.0.19041
+|_  System_Time: 2022-09-23T11:28:13+00:00
+| ssl-cert: Subject: commonName=OSCP
+| Not valid before: 2022-09-19T17:21:59
+|_Not valid after:  2023-03-21T17:21:59
+|_ssl-date: 2022-09-23T11:28:34+00:00; -14d05h55m45s from scanner time.
+5357/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Service Unavailable
+|_http-server-header: Microsoft-HTTPAPI/2.0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.92%I=7%D=10/7%Time=6340602D%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,3CB,"HTTP/1\.0\x20200\x20HTTP\x20OK\r\nServer:\x20Wing\x20FTP\x2
+SF:0Server\(Offensive\x20Security\)\r\nContent-Type:\x20text/html\r\nConte
+SF:nt-Length:\x20678\r\nStrict-Transport-Security:\x20max-age=31536000;\x2
+SF:0includeSubDomains\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-XSS-Protectio
+SF:n:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r\nConnect
+SF:ion:\x20close\r\n\r\n\n<html>\n<meta\x20http-equiv=\"Content-Type\"\x20
+SF:content=\"text/html;\x20charset=utf-8\"\x20/>\n<meta\x20http-equiv=\"X-
+SF:UA-Compatible\"\x20content=\"IE=edge\">\n<meta\x20name=\"viewport\"\x20
+SF:content=\"width=device-width,\x20initial-scale=1\">\n<meta\x20http-equi
+SF:v=\"pragma\"\x20content=\"no-cache\"\x20/>\n<meta\x20http-equiv=\"cache
+SF:-control\"\x20content=\"no-cache,\x20must-revalidate\"\x20/>\n<meta\x20
+SF:http-equiv=\"Expires\"\x20content=\"0\"\x20/>\n<meta\x20http-equiv='Con
+SF:tent-Type'\x20content='text/html;\x20charset=utf-8'><script>top\.locati
+SF:on='login\.html';</script>\n<noscript><center><H2>The\x20web\x20client\
+SF:x20requires\x20that\x20you\x20have\x20Javascript\x20enabled\x20on\x20yo
+SF:ur\x20browser\.<br>If\x20you're\x20not\x20sure\x20how\x20to\x20do\x20th
+SF:is,")%r(HTTPOptions,3CB,"HTTP/1\.0\x20200\x20HTTP\x20OK\r\nServer:\x20W
+SF:ing\x20FTP\x20Server\(Offensive\x20Security\)\r\nContent-Type:\x20text/
+SF:html\r\nContent-Length:\x20678\r\nStrict-Transport-Security:\x20max-age
+SF:=31536000;\x20includeSubDomains\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-
+SF:XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosni
+SF:ff\r\nConnection:\x20close\r\n\r\n\n<html>\n<meta\x20http-equiv=\"Conte
+SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n<meta\x20ht
+SF:tp-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n<meta\x20name=\"v
+SF:iewport\"\x20content=\"width=device-width,\x20initial-scale=1\">\n<meta
+SF:\x20http-equiv=\"pragma\"\x20content=\"no-cache\"\x20/>\n<meta\x20http-
+SF:equiv=\"cache-control\"\x20content=\"no-cache,\x20must-revalidate\"\x20
+SF:/>\n<meta\x20http-equiv=\"Expires\"\x20content=\"0\"\x20/>\n<meta\x20ht
+SF:tp-equiv='Content-Type'\x20content='text/html;\x20charset=utf-8'><scrip
+SF:t>top\.location='login\.html';</script>\n<noscript><center><H2>The\x20w
+SF:eb\x20client\x20requires\x20that\x20you\x20have\x20Javascript\x20enable
+SF:d\x20on\x20your\x20browser\.<br>If\x20you're\x20not\x20sure\x20how\x20t
+SF:o\x20do\x20this,");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-09-23T11:28:14
+|_  start_date: N/A
+|_clock-skew: mean: -14d05h55m44s, deviation: 0s, median: -14d05h55m45s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct  7 22:54:20 2022 -- 1 IP address (1 host up) scanned in 167.15 seconds

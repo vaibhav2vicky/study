@@ -1,4 +1,0 @@
-# Nmap 7.92 scan initiated Sat Feb 19 06:06:19 2022 as: nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.101
-Host: 192.168.137.101 ()	Status: Up
-Host: 192.168.137.101 ()	Ports: 21/open/tcp//ftp//FileZilla ftpd 0.9.41 beta/, 80/open/tcp//http//Microsoft IIS httpd 10.0/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 445/open/tcp//microsoft-ds?///, 1433/open/tcp//ms-sql-s//Microsoft SQL Server 2019 15.00.2000.00; RTM/, 3306/open/tcp//mysql?///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/, 8080/open/tcp//http//Apache httpd 2.4.46 ((Win64) OpenSSL|1.1.1h PHP|7.2.34)/, 8443/open/tcp//http//Apache httpd 2.4.46 (OpenSSL|1.1.1h PHP|7.2.34)/	Ignored State: filtered (65526)	Seq Index: 260	IP ID Seq: Incremental
-# Nmap done at Sat Feb 19 06:16:33 2022 -- 1 IP address (1 host up) scanned in 614.26 seconds

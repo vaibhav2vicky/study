@@ -1,4 +1,0 @@
-# Nmap 7.92 scan initiated Fri Feb 18 17:31:02 2022 as: nmap -sC -sV -A -p- -Pn -T4 -oA nmap/initial 192.168.137.110
-Host: 192.168.137.110 ()	Status: Up
-Host: 192.168.137.110 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.4 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.46 ((Fedora))/, 7070/open/tcp//ssl|realserver?///	Ignored State: filtered (65532)	Seq Index: 250	IP ID Seq: All zeros
-# Nmap done at Fri Feb 18 17:36:43 2022 -- 1 IP address (1 host up) scanned in 341.38 seconds

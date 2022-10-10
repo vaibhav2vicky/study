@@ -1,0 +1,52 @@
+# Nmap 7.92 scan initiated Fri Oct  7 23:17:06 2022 as: nmap -sC -sV -oA nmap/nmap -p- 192.168.71.110
+Nmap scan report for 192.168.71.110
+Host is up (0.28s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+21/tcp   open  ftp
+| fingerprint-strings: 
+|   GenericLines, NULL, SMBProgNeg: 
+|     220 in.ftpd (2.10) ready.
+|   Help: 
+|     220 in.ftpd (2.10) ready.
+|     214-The following commands are recognized.
+|     ABOR DELE USER PASS SYST TYPE PORT EPRT RETR MKD RMD REST MDTM PASV
+|     EPSV QUIT LIST NLST MLST MLSD CLNT OPTS PWD STOR CWD CDUP SIZE NOOP
+|     HELP FEAT
+|     Help OK.
+|   SSLSessionReq: 
+|     220 in.ftpd (2.10) ready.
+|     command '
+|_    recognized by server.
+|_ftp-bounce: bounce working!
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r-- 1     0     0         2944 Sep  8 10:47 splunk.deb
+| -rw-r--r-- 1     0     0       182100 Sep  8 10:47 uftpd.deb
+|_-rw-r--r-- 1     0     0        20268 Sep  8 10:47 zssh.deb
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 3f:b5:7a:c9:c3:88:e6:94:c2:d3:2e:31:6d:3f:f7:24 (RSA)
+|   256 64:7e:2b:2b:8b:8e:09:fc:be:2a:d3:3f:27:ec:a7:c2 (ECDSA)
+|_  256 cd:c7:0b:cb:cc:e0:9b:f0:17:b8:34:71:b3:ca:f3:14 (ED25519)
+80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+8080/tcp open  http    lighttpd 1.4.55
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: lighttpd/1.4.55
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port21-TCP:V=7.92%I=7%D=10/7%Time=63406A8F%P=x86_64-pc-linux-gnu%r(NULL
+SF:,1B,"220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n")%r(GenericLines,1B,"2
+SF:20\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n")%r(Help,ED,"220\x20in\.ftpd
+SF:\x20\(2\.10\)\x20ready\.\r\n214-The\x20following\x20commands\x20are\x20
+SF:recognized\.\r\n\x20ABOR\x20DELE\x20USER\x20PASS\x20SYST\x20TYPE\x20POR
+SF:T\x20EPRT\x20RETR\x20MKD\x20RMD\x20REST\x20MDTM\x20PASV\r\n\x20EPSV\x20
+SF:QUIT\x20LIST\x20NLST\x20MLST\x20MLSD\x20CLNT\x20OPTS\x20PWD\x20STOR\x20
+SF:CWD\x20CDUP\x20SIZE\x20NOOP\r\n\x20HELP\x20FEAT\r\n214\x20Help\x20OK\.\
+SF:r\n")%r(SSLSessionReq,47,"220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n50
+SF:0\x20command\x20'\x16\x03'\x20not\x20recognized\x20by\x20server\.\r\n")
+SF:%r(SMBProgNeg,1B,"220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct  7 23:36:42 2022 -- 1 IP address (1 host up) scanned in 1175.94 seconds

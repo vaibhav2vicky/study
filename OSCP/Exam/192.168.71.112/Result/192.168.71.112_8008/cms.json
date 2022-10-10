@@ -1,0 +1,8 @@
+{
+    "cms_id": "grav",
+    "cms_name": "GravCMS",
+    "cms_url": "https://getgrav.org/",
+    "detection_param": "header",
+    "last_scanned": "2022-10-08 19:17:36.140539",
+    "url": "http://192.168.71.112:8008"
+}

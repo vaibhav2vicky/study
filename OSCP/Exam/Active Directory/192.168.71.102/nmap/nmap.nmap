@@ -1,0 +1,13 @@
+# Nmap 7.92 scan initiated Fri Oct  7 22:49:42 2022 as: nmap -sC -sV -oA nmap/nmap -Pn 192.168.71.102
+Nmap scan report for 192.168.71.102
+Host is up (0.28s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH for_Windows_8.1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 22:dd:9e:24:c4:57:35:e7:91:47:ba:ae:ba:e2:d0:39 (RSA)
+|   256 99:8f:59:d8:5c:7e:e0:60:03:b7:27:b2:54:77:04:b5 (ECDSA)
+|_  256 67:70:80:14:41:ed:60:c9:02:f0:5b:93:99:58:97:2d (ED25519)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct  7 22:50:11 2022 -- 1 IP address (1 host up) scanned in 28.97 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Oct  7 23:17:06 2022 as: nmap -sC -sV -oA nmap/nmap -p- 192.168.71.110
+Host: 192.168.71.110 ()	Status: Up
+Host: 192.168.71.110 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/, 8080/open/tcp//http//lighttpd 1.4.55/	Ignored State: closed (65531)
+# Nmap done at Fri Oct  7 23:36:42 2022 -- 1 IP address (1 host up) scanned in 1175.94 seconds

@@ -1,0 +1,82 @@
+# Nmap 7.92 scan initiated Fri Feb 18 16:02:00 2022 as: nmap -sC -sV -A -p- -Pn -oA nmap/initial 192.168.137.111
+Nmap scan report for 192.168.137.111
+Host is up (0.29s latency).
+Not shown: 65527 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           Microsoft ftpd
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Samuel's Personal Site
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+1978/tcp open  unisql?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NCP, NULL, NotesRPC, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, WMSRequest, X11Probe, afp, giop, ms-sql-s, oracle-tns: 
+|     system windows 6.2
+|_    luminateOK
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=oscp
+| Not valid before: 2021-11-21T08:58:45
+|_Not valid after:  2022-05-23T08:58:45
+|_ssl-date: 2022-02-18T21:13:30+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: OSCP
+|   NetBIOS_Domain_Name: OSCP
+|   NetBIOS_Computer_Name: OSCP
+|   DNS_Domain_Name: oscp
+|   DNS_Computer_Name: oscp
+|   Product_Version: 10.0.18362
+|_  System_Time: 2022-02-18T21:12:51+00:00
+7680/tcp open  pando-pub?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1978-TCP:V=7.92%I=7%D=2/18%Time=62100B2C%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(GenericLines,1E,"sys
+SF:tem\x20windows\x206\.2\nluminateOK\n")%r(GetRequest,1E,"system\x20windo
+SF:ws\x206\.2\nluminateOK\n")%r(HTTPOptions,1E,"system\x20windows\x206\.2\
+SF:nluminateOK\n")%r(RTSPRequest,1E,"system\x20windows\x206\.2\nluminateOK
+SF:\n")%r(RPCCheck,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(DNSVers
+SF:ionBindReqTCP,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(DNSStatus
+SF:RequestTCP,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(Help,1E,"sys
+SF:tem\x20windows\x206\.2\nluminateOK\n")%r(SSLSessionReq,1E,"system\x20wi
+SF:ndows\x206\.2\nluminateOK\n")%r(TerminalServerCookie,1E,"system\x20wind
+SF:ows\x206\.2\nluminateOK\n")%r(TLSSessionReq,1E,"system\x20windows\x206\
+SF:.2\nluminateOK\n")%r(Kerberos,1E,"system\x20windows\x206\.2\nluminateOK
+SF:\n")%r(SMBProgNeg,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(X11Pr
+SF:obe,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(FourOhFourRequest,1
+SF:E,"system\x20windows\x206\.2\nluminateOK\n")%r(LPDString,1E,"system\x20
+SF:windows\x206\.2\nluminateOK\n")%r(LDAPSearchReq,1E,"system\x20windows\x
+SF:206\.2\nluminateOK\n")%r(LDAPBindReq,1E,"system\x20windows\x206\.2\nlum
+SF:inateOK\n")%r(SIPOptions,1E,"system\x20windows\x206\.2\nluminateOK\n")%
+SF:r(LANDesk-RC,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(TerminalSe
+SF:rver,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(NCP,1E,"system\x20
+SF:windows\x206\.2\nluminateOK\n")%r(NotesRPC,1E,"system\x20windows\x206\.
+SF:2\nluminateOK\n")%r(JavaRMI,1E,"system\x20windows\x206\.2\nluminateOK\n
+SF:")%r(WMSRequest,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(oracle-
+SF:tns,1E,"system\x20windows\x206\.2\nluminateOK\n")%r(ms-sql-s,1E,"system
+SF:\x20windows\x206\.2\nluminateOK\n")%r(afp,1E,"system\x20windows\x206\.2
+SF:\nluminateOK\n")%r(giop,1E,"system\x20windows\x206\.2\nluminateOK\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2008|XP (85%)
+OS CPE: cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_xp::sp3
+Aggressive OS guesses: Microsoft Windows Server 2008 SP1 or Windows Server 2008 R2 (85%), Microsoft Windows XP SP3 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-02-18T21:12:51
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   294.91 ms 192.168.49.1
+2   295.00 ms 192.168.137.111
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Feb 18 16:13:32 2022 -- 1 IP address (1 host up) scanned in 692.66 seconds

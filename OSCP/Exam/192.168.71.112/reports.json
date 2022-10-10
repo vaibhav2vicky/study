@@ -1,0 +1,27 @@
+{
+    "last_updated": "2022-10-08 19:17:53.229894",
+    "results": [
+        {
+            "http://192.168.71.112:8000": {
+                "cms_id": "",
+                "date": "2022-10-08 19:16:19.475709",
+                "report": "/home/vicky/study/OSCP/Exam/192.168.71.112/Result/192.168.71.112_8000/cms.json"
+            },
+            "http://192.168.71.112:8002": {
+                "cms_id": "",
+                "date": "2022-10-08 19:16:47.597329",
+                "report": "/home/vicky/study/OSCP/Exam/192.168.71.112/Result/192.168.71.112_8002/cms.json"
+            },
+            "http://192.168.71.112:8008": {
+                "cms_id": "grav",
+                "date": "2022-10-08 19:17:36.140539",
+                "report": "/home/vicky/study/OSCP/Exam/192.168.71.112/Result/192.168.71.112_8008/cms.json"
+            },
+            "http://192.168.71.112:8010": {
+                "cms_id": "",
+                "date": "2022-10-08 19:17:47.121590",
+                "report": "/home/vicky/study/OSCP/Exam/192.168.71.112/Result/192.168.71.112_8010/cms.json"
+            }
+        }
+    ]
+}

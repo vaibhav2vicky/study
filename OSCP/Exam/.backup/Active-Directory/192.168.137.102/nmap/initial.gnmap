@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Feb 18 14:00:48 2022 as: nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.102
+Host: 192.168.137.102 ()	Status: Up
+Host: 192.168.137.102 ()	Ports: 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/	Ignored State: filtered (65534)	Seq Index: 256	IP ID Seq: Incremental
+# Nmap done at Fri Feb 18 14:08:18 2022 -- 1 IP address (1 host up) scanned in 450.64 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Feb 18 13:12:03 2022 as: nmap -sC -sV -A -Pn -p- -oA nmap/initial 192.168.137.112
+Host: 192.168.137.112 ()	Status: Up
+Host: 192.168.137.112 ()	Ports: 21/closed/tcp//ftp///, 80/closed/tcp//http///, 8081/open/tcp//http//nostromo 1.9.9/, 10081/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/, 22022/closed/tcp//unknown///, 34255/closed/tcp/////	Ignored State: filtered (65529)	Seq Index: 254	IP ID Seq: All zeros
+# Nmap done at Fri Feb 18 13:24:28 2022 -- 1 IP address (1 host up) scanned in 745.21 seconds

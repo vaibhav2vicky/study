@@ -1,0 +1,36 @@
+# Nmap 7.92 scan initiated Fri Oct  7 22:49:15 2022 as: nmap -sC -sV -oA nmap/nmap 192.168.71.101
+Nmap scan report for 192.168.71.101
+Host is up (0.28s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: OSCP
+|   NetBIOS_Domain_Name: OSCP
+|   NetBIOS_Computer_Name: MS01
+|   DNS_Domain_Name: oscp.exam
+|   DNS_Computer_Name: ms01.oscp.exam
+|   DNS_Tree_Name: oscp.exam
+|   Product_Version: 10.0.17763
+|_  System_Time: 2022-10-07T17:19:57+00:00
+|_ssl-date: 2022-10-07T17:20:36+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=ms01.oscp.exam
+| Not valid before: 2022-09-14T00:57:28
+|_Not valid after:  2023-03-16T00:57:28
+8080/tcp open  http          Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Loading...
+|_http-open-proxy: Proxy might be redirecting requests
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-10-07T17:19:59
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct  7 22:50:37 2022 -- 1 IP address (1 host up) scanned in 81.84 seconds

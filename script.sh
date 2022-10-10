@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt update && apt upgrade -y && apt install gobuster feroxbuster python3-pip neofetch lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all kali-linux-large -y
+sudo apt update && apt upgrade -y && apt install gobuster feroxbuster python3-pip neofetch lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all kali-linux-large -y
 
 pip3 install pwntools
 

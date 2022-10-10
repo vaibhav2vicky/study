@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Fri Oct  7 23:17:06 2022 as: nmap -sC -sV -oA nmap/nmap -p- 192.168.71.110 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -oA nmap/nmap -p- 192.168.71.110" start="1665164826" startstr="Fri Oct  7 23:17:06 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.71.110" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1665164827" endtime="1665166002"><status state="up" reason="timestamp-reply" reason_ttl="63"/>
+<address addr="192.168.71.110" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="reset" count="65531" proto="tcp" ports="1-20,23-79,81-8079,8081-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" servicefp="SF-Port21-TCP:V=7.92%I=7%D=10/7%Time=63406A8F%P=x86_64-pc-linux-gnu%r(NULL,1B,&quot;220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n&quot;)%r(GenericLines,1B,&quot;220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n&quot;)%r(Help,ED,&quot;220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n214-The\x20following\x20commands\x20are\x20recognized\.\r\n\x20ABOR\x20DELE\x20USER\x20PASS\x20SYST\x20TYPE\x20PORT\x20EPRT\x20RETR\x20MKD\x20RMD\x20REST\x20MDTM\x20PASV\r\n\x20EPSV\x20QUIT\x20LIST\x20NLST\x20MLST\x20MLSD\x20CLNT\x20OPTS\x20PWD\x20STOR\x20CWD\x20CDUP\x20SIZE\x20NOOP\r\n\x20HELP\x20FEAT\r\n214\x20Help\x20OK\.\r\n&quot;)%r(SSLSessionReq,47,&quot;220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n500\x20command\x20&apos;\x16\x03&apos;\x20not\x20recognized\x20by\x20server\.\r\n&quot;)%r(SMBProgNeg,1B,&quot;220\x20in\.ftpd\x20\(2\.10\)\x20ready\.\r\n&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  GenericLines, NULL, SMBProgNeg: &#xa;    220 in.ftpd (2.10) ready.&#xa;  Help: &#xa;    220 in.ftpd (2.10) ready.&#xa;    214-The following commands are recognized.&#xa;    ABOR DELE USER PASS SYST TYPE PORT EPRT RETR MKD RMD REST MDTM PASV&#xa;    EPSV QUIT LIST NLST MLST MLSD CLNT OPTS PWD STOR CWD CDUP SIZE NOOP&#xa;    HELP FEAT&#xa;    Help OK.&#xa;  SSLSessionReq: &#xa;    220 in.ftpd (2.10) ready.&#xa;    command &apos;&#xa;    recognized by server."><elem key="GenericLines, NULL, SMBProgNeg">&#xa;    220 in.ftpd (2.10) ready.</elem>
+<elem key="Help">&#xa;    220 in.ftpd (2.10) ready.&#xa;    214-The following commands are recognized.&#xa;    ABOR DELE USER PASS SYST TYPE PORT EPRT RETR MKD RMD REST MDTM PASV&#xa;    EPSV QUIT LIST NLST MLST MLSD CLNT OPTS PWD STOR CWD CDUP SIZE NOOP&#xa;    HELP FEAT&#xa;    Help OK.</elem>
+<elem key="SSLSessionReq">&#xa;    220 in.ftpd (2.10) ready.&#xa;    command &apos;&#xa;    recognized by server.</elem>
+</script><script id="ftp-bounce" output="bounce working!"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;-rw-r-&#45;r-&#45; 1     0     0         2944 Sep  8 10:47 splunk.deb&#xa;-rw-r-&#45;r-&#45; 1     0     0       182100 Sep  8 10:47 uftpd.deb&#xa;-rw-r-&#45;r-&#45; 1     0     0        20268 Sep  8 10:47 zssh.deb"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  3072 3f:b5:7a:c9:c3:88:e6:94:c2:d3:2e:31:6d:3f:f7:24 (RSA)&#xa;  256 64:7e:2b:2b:8b:8e:09:fc:be:2a:d3:3f:27:ec:a7:c2 (ECDSA)&#xa;  256 cd:c7:0b:cb:cc:e0:9b:f0:17:b8:34:71:b3:ca:f3:14 (ED25519)"><table>
+<elem key="bits">3072</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC+/09K5s2oqyQOCejt718ZfUHGzvWxn+MFCv0aQS4xp13cNh8+aKgcS7ELEMeUsttwzVppaWGsRS3zVGKTMk3l1TuAR5g2WvKQjCf3AdIQwo5lk0Iljm+0mmywBM9i5+MwQ0C0jhDI50caVPpAdtrtL/VoqGMGSdW9HpWHQ08bUB4gEb4lS6fe2a5kqInBmaDnvMrPh3CgqW2biLndiasTh6rS+0DPWwmNZQyDGp28qPAu5d38F4LtwGFY4MFxHL6hchShuxO1EI2PFijMGpjwPUnzYqZYXdTXcGknYZRzLPphoGzopj8Vs7jmEgDTRUnP/y0mg3oKXi/VZbP00Ac2UTaRJtsoZSFdCJW6X3I3e/tA7I5TKVESbGNyfVkTTyM7x/FHQQMtw8G3V2BB/1YvhPCwshi6FX68EQ/wiPoLjnEvr94iBLUB79AckTvYuKsfbjarDRz2Xroa6UOm3YER//AXWzGWPTFQC21dhoDNxau1bQ+VTJtTo5QpkmujGsc=</elem>
+<elem key="fingerprint">3fb57ac9c388e694c2d32e316d3ff724</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPDYH+2Ju4V1bIMfJJt3nstpvv7QtizExjKmYt3V0gQUTtKM+Sc6qRbvOBa+SHPNtItDp0PnM3j8rWCdJHp5b+U=</elem>
+<elem key="fingerprint">647e2b2b8b8e09fcbe2ad33f27eca7c2</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIDK4b6hBOoFN6rbrNSHITgqtFYf9HZuq/EkR/NTD+KUa</elem>
+<elem key="fingerprint">cdc70bcbcce09bf017b83471b3caf314</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" version="1.4.55" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.55</cpe></service><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script><script id="http-server-header" output="lighttpd/1.4.55"><elem>lighttpd/1.4.55</elem>
+</script></port>
+</ports>
+<times srtt="282816" rttvar="1051" to="287020"/>
+</host>
+<runstats><finished time="1665166002" timestr="Fri Oct  7 23:36:42 2022" summary="Nmap done at Fri Oct  7 23:36:42 2022; 1 IP address (1 host up) scanned in 1175.94 seconds" elapsed="1175.94" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

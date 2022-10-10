@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Oct  7 22:49:42 2022 as: nmap -sC -sV -oA nmap/nmap -Pn 192.168.71.102
+Host: 192.168.71.102 ()	Status: Up
+Host: 192.168.71.102 ()	Ports: 22/open/tcp//ssh//OpenSSH for_Windows_8.1 (protocol 2.0)/	Ignored State: filtered (999)
+# Nmap done at Fri Oct  7 22:50:11 2022 -- 1 IP address (1 host up) scanned in 28.97 seconds
