@@ -1,10 +1,12 @@
 #!/bin/bash
 
-sudo apt update && apt upgrade -y && apt install gobuster feroxbuster python3-pip neofetch lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all kali-linux-large -y
+sudo apt update && sudo apt upgrade -y && sudo apt install gobuster feroxbuster python3-pip neofetch lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all kali-linux-large -y
 
 pip3 install pwntools
 
-gem install evil-winrm
+sudo gem install evil-winrm
+
+sudo chown -R $USER:$USER /opt
 
 cd /opt
 
