@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Fri Oct 28 04:55:25 2022 as: nmap -sC -sV -p- -oA nmap/nmap 10.10.11.185 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p- -oA nmap/nmap 10.10.11.185" start="1666947325" startstr="Fri Oct 28 04:55:25 2022" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.11.185" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1666947325" endtime="1666947630"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.10.11.185" addrtype="ipv4"/>
+<hostnames>
+<hostname name="hat-valley.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="reset" count="65533" proto="tcp" ports="1-21,23-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="8.9p1 Ubuntu 3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  256 7254afbaf6e2835941b7cd611c2f418b (ECDSA)&#xa;  256 59365bba3c7821e326b37d23605aec38 (ED25519)"><table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">7254afbaf6e2835941b7cd611c2f418b</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCMaN1wQtPg5uk2w3xD0d0ND6JQgzw40PoqCSBDGB7Q0/f5lQSGU2eSTw4uCdL99hdM/+Uv84ffp2tNkCXyV8l8=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">59365bba3c7821e326b37d23605aec38</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIFsq9sSC1uhq5CBWylh+yiC7jz4tuegMj/4FVTp6bzZy</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.18.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.18.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-title" output="Hat Valley"><elem key="title">Hat Valley</elem>
+</script><script id="http-server-header" output="nginx/1.18.0 (Ubuntu)"><elem>nginx/1.18.0 (Ubuntu)</elem>
+</script></port>
+</ports>
+<times srtt="147235" rttvar="29957" to="267063"/>
+</host>
+<runstats><finished time="1666947630" timestr="Fri Oct 28 05:00:30 2022" summary="Nmap done at Fri Oct 28 05:00:30 2022; 1 IP address (1 host up) scanned in 305.23 seconds" elapsed="305.23" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

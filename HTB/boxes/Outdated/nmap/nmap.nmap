@@ -1,0 +1,52 @@
+# Nmap 7.93 scan initiated Fri Oct 28 12:51:43 2022 as: nmap -sC -sV -oA nmap/nmap 10.10.11.175
+Nmap scan report for 10.10.11.175
+Host is up (0.10s latency).
+Not shown: 988 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+25/tcp   open  smtp          hMailServer smtpd
+| smtp-commands: mail.outdated.htb, SIZE 20480000, AUTH LOGIN, HELP
+|_ 211 DATA HELO EHLO MAIL NOOP QUIT RCPT RSET SAML TURN VRFY
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2022-10-28 23:52:00Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: outdated.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2022-10-28T23:53:24+00:00; +7h00m01s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC.outdated.htb, DNS:outdated.htb, DNS:OUTDATED
+| Not valid before: 2022-06-18T05:50:24
+|_Not valid after:  2024-06-18T06:00:24
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: outdated.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2022-10-28T23:53:24+00:00; +7h00m01s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC.outdated.htb, DNS:outdated.htb, DNS:OUTDATED
+| Not valid before: 2022-06-18T05:50:24
+|_Not valid after:  2024-06-18T06:00:24
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: outdated.htb0., Site: Default-First-Site-Name)
+|_ssl-date: 2022-10-28T23:53:24+00:00; +7h00m01s from scanner time.
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC.outdated.htb, DNS:outdated.htb, DNS:OUTDATED
+| Not valid before: 2022-06-18T05:50:24
+|_Not valid after:  2024-06-18T06:00:24
+3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: outdated.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: 
+| Subject Alternative Name: DNS:DC.outdated.htb, DNS:outdated.htb, DNS:OUTDATED
+| Not valid before: 2022-06-18T05:50:24
+|_Not valid after:  2024-06-18T06:00:24
+|_ssl-date: 2022-10-28T23:53:23+00:00; +7h00m00s from scanner time.
+Service Info: Hosts: mail.outdated.htb, DC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 7h00m00s, deviation: 0s, median: 7h00m00s
+| smb2-time: 
+|   date: 2022-10-28T23:52:43
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 28 12:53:25 2022 -- 1 IP address (1 host up) scanned in 101.80 seconds
