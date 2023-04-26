@@ -24,6 +24,12 @@ git clone https://github.com/carlospolop/PEASS-ng.git
 
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
+git clone https://github.com/expl0itabl3/Toolies.git
+
+git clone https://github.com/flozz/p0wny-shell.git
+
+git clone https://github.com/61106960/adPEAS.git
+
 cd ~
 
 # Uncomment while using first time
