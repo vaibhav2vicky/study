@@ -18,10 +18,6 @@ git clone https://github.com/BloodHoundAD/BloodHound.git
 
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
 
-git clone https://github.com/rebootuser/LinEnum.git
-
-git clone https://github.com/carlospolop/PEASS-ng.git
-
 git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git
 
 git clone https://github.com/expl0itabl3/Toolies.git
@@ -29,6 +25,8 @@ git clone https://github.com/expl0itabl3/Toolies.git
 git clone https://github.com/flozz/p0wny-shell.git
 
 git clone https://github.com/61106960/adPEAS.git
+
+git clone https://github.com/fortra/impacket.git
 
 cd ~
 
