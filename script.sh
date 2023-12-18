@@ -26,6 +26,8 @@ git clone https://github.com/fortra/impacket.git
 
 cd ~
 
+git clone https://github.com/vaibhav2vicky/study.git
+
 # Uncomment while using first time
 
 # reboot
