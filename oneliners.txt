@@ -5,3 +5,11 @@ ffuf -w seclists/Discovery/Web-Content/directory-list-2.3-big.txt -u https://exa
 
 //Dorks
 inurl:redirectUrl=http site:.gov:inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http
+
+
+//nuclei
+subfinder -d xyz.com -all  | nuclei -t crlf.yaml -rl 50
+subfinder -d xyz.com -all  | nuclei -t openRedirect.yaml -rl 100
+subfinder -d xyz.com -all  | nuclei -t iis.yaml
+subfinder -d xyz.com -all  | nuclei -t cors.yaml -rl 100
+subfinder -d xyz.com -all  | waybackurls | gf sqli | uro | nuclei -t errorsqli.yaml -rl 50
