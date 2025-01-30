@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update && sudo apt upgrade -y && sudo apt install gobuster feroxbuster pipx neofetch lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all bat golang-go cargo -y
+sudo apt update && sudo apt upgrade -y && sudo apt install gobuster feroxbuster pipx lolcat apt-transport-https bloodhound seclists socat kali-wallpapers-all bat golang-go cargo -y
 
 sudo gem install evil-winrm
 
